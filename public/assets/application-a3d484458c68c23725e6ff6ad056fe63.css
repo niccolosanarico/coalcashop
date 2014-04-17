@@ -1,0 +1,3759 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/*--------------------------------------*/
+/* Colors
+/*--------------------------------------*/
+/* Spree green    */
+/* Error red      */
+/*--------------------------------------*/
+/* Fonts import from remote
+/*--------------------------------------*/
+@import url(//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic|&subset=latin,cyrillic,greek,greek-ext,latin-ext,cyrillic-ext);
+/*--------------------------------------*/
+/* Font families
+/*--------------------------------------*/
+/*--------------------------------------
+  | Font sizes
+  |--------------------------------------
+  |- Navigation                         
+  |                                    */
+/*|------------------------------------
+  |- Product Listing                         
+  |                                  */
+/*|------------------------------------
+  |- Product Details
+  |                                  */
+/*|------------------------------------
+  |- Basic
+  |                                  */
+/*--------------------------------------*/
+/* Colors
+/*--------------------------------------*/
+/* Spree green    */
+/* Error red      */
+/*--------------------------------------*/
+/* Fonts import from remote
+/*--------------------------------------*/
+@import url(//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic|&subset=latin,cyrillic,greek,greek-ext,latin-ext,cyrillic-ext);
+/*--------------------------------------*/
+/* Font families
+/*--------------------------------------*/
+/*--------------------------------------
+  | Font sizes
+  |--------------------------------------
+  |- Navigation                         
+  |                                    */
+/*|------------------------------------
+  |- Product Listing                         
+  |                                  */
+/*|------------------------------------
+  |- Product Details
+  |                                  */
+/*|------------------------------------
+  |- Basic
+  |                                  */
+/*!
+ *  Font Awesome 3.2.1
+ *  the iconic font designed for Bootstrap
+ *  ------------------------------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation can be
+ *  found at http://fontawesome.io.  Stay up to date on Twitter at
+ *  http://twitter.com/fontawesome.
+ *
+ *  License
+ *  ------------------------------------------------------------------------------
+ *  - The Font Awesome font is licensed under SIL OFL 1.1 -
+ *    http://scripts.sil.org/OFL
+ *  - Font Awesome CSS, LESS, and SASS files are licensed under MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - Font Awesome documentation licensed under CC BY 3.0 -
+ *    http://creativecommons.org/licenses/by/3.0/
+ *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
+ *    "Font Awesome by Dave Gandy - http://fontawesome.io"
+ *
+ *  Author - Dave Gandy
+ *  ------------------------------------------------------------------------------
+ *  Email: dave@fontawesome.io
+ *  Twitter: http://twitter.com/davegandy
+ *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(/assets/fontawesome-webfont.eot);
+  src: url(/assets/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/fontawesome-webfont.woff) format("woff"), url(/assets/fontawesome-webfont.ttf) format("truetype"), url(/assets/fontawesome-webfont.svg#fontawesomeregular) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* FONT AWESOME CORE
+ * -------------------------- */
+/* line 39, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  *margin-right: .3em;
+}
+
+/* line 48, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: FontAwesome;
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+
+/* makes the font 33% larger relative to the icon container */
+/* line 55, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: 1.3333333333333333em;
+}
+
+/* makes sure icons active on rollover in links */
+/* line 61, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline;
+}
+
+/* increased font size for icon-large */
+/* line 66, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+[class^="icon-"].icon-fixed-width,
+[class*=" icon-"].icon-fixed-width {
+  display: inline-block;
+  width: 1.1428571428571428em;
+  text-align: right;
+  padding-right: 0.2857142857142857em;
+}
+
+/* line 73, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+[class^="icon-"].icon-fixed-width.icon-large,
+[class*=" icon-"].icon-fixed-width.icon-large {
+  width: 1.4285714285714286em;
+}
+
+/* line 76, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icons-ul {
+  margin-left: 2.142857142857143em;
+  list-style-type: none;
+}
+
+/* line 80, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icons-ul > li {
+  position: relative;
+}
+
+/* line 83, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icons-ul .icon-li {
+  position: absolute;
+  left: -2.142857142857143em;
+  width: 2.142857142857143em;
+  text-align: center;
+  line-height: inherit;
+}
+
+/* line 91, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+[class^="icon-"].hide,
+[class*=" icon-"].hide {
+  display: none;
+}
+
+/* line 94, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-muted {
+  color: #eeeeee;
+}
+
+/* line 97, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-light {
+  color: #ffffff;
+}
+
+/* line 100, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-dark {
+  color: #333333;
+}
+
+/* line 103, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-border {
+  border: solid 1px #eeeeee;
+  padding: .2em .25em .15em;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 109, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-2x {
+  font-size: 2em;
+}
+
+/* line 112, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-2x.icon-border {
+  border-width: 2px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 117, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-3x {
+  font-size: 3em;
+}
+
+/* line 120, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-3x.icon-border {
+  border-width: 3px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 125, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-4x {
+  font-size: 4em;
+}
+
+/* line 128, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-4x.icon-border {
+  border-width: 4px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* line 133, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-5x {
+  font-size: 5em;
+}
+
+/* line 136, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-5x.icon-border {
+  border-width: 5px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+
+/* line 141, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 144, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 148, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+[class^="icon-"].pull-left,
+[class*=" icon-"].pull-left {
+  margin-right: .3em;
+}
+
+/* line 152, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+[class^="icon-"].pull-right,
+[class*=" icon-"].pull-right {
+  margin-left: .3em;
+}
+
+/* BOOTSTRAP SPECIFIC CLASSES
+ * -------------------------- */
+/* Bootstrap 2.0 sprites.less reset */
+/* line 159, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+
+/* more sprites.less reset */
+/* line 183, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"] {
+  background-image: none;
+}
+
+/* keeps Bootstrap styles with and without icons the same */
+/* line 190, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.btn [class^="icon-"].icon-large,
+.nav [class^="icon-"].icon-large,
+.btn [class*=" icon-"].icon-large,
+.nav [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
+
+/* line 196, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.btn [class^="icon-"].icon-spin,
+.nav [class^="icon-"].icon-spin,
+.btn [class*=" icon-"].icon-spin,
+.nav [class*=" icon-"].icon-spin {
+  display: inline-block;
+}
+
+/* line 206, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.nav-tabs [class^="icon-"],
+.nav-pills [class^="icon-"],
+.nav-tabs [class*=" icon-"],
+.nav-pills [class*=" icon-"],
+.nav-tabs [class^="icon-"].icon-large,
+.nav-pills [class^="icon-"].icon-large,
+.nav-tabs [class*=" icon-"].icon-large,
+.nav-pills [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
+
+/* line 212, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.btn [class^="icon-"].pull-left.icon-2x,
+.btn [class*=" icon-"].pull-left.icon-2x,
+.btn [class^="icon-"].pull-right.icon-2x,
+.btn [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .18em;
+}
+
+/* line 216, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.btn [class^="icon-"].icon-spin.icon-large,
+.btn [class*=" icon-"].icon-spin.icon-large {
+  line-height: .8em;
+}
+
+/* line 222, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.btn.btn-small [class^="icon-"].pull-left.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-small [class^="icon-"].pull-right.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .25em;
+}
+
+/* line 226, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.btn.btn-large [class^="icon-"],
+.btn.btn-large [class*=" icon-"] {
+  margin-top: 0;
+}
+
+/* line 232, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .05em;
+}
+
+/* line 236, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x {
+  margin-right: .2em;
+}
+
+/* line 240, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-left: .2em;
+}
+
+/* Fixes alignment in nav lists */
+/* line 245, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.nav-list [class^="icon-"],
+.nav-list [class*=" icon-"] {
+  line-height: inherit;
+}
+
+/* EXTRAS
+ * -------------------------- */
+/* Stacked and layered icon */
+/* line 251, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: -35%;
+}
+
+/* line 260, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-stack [class^="icon-"],
+.icon-stack [class*=" icon-"] {
+  display: block;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  line-height: inherit;
+  *line-height: 2em;
+}
+
+/* line 270, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-stack .icon-stack-base {
+  font-size: 2em;
+  *line-height: 1em;
+}
+
+/* Animated rotating icon */
+/* line 275, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-spin {
+  display: inline-block;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+/* Prevent stack and spinners from being taken inline when inside a link */
+/* line 284, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+a .icon-stack,
+a .icon-spin {
+  display: inline-block;
+  text-decoration: none;
+}
+
+@-moz-keyframes spin {
+  /* line 289, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  /* line 292, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  /* line 297, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 300, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin {
+  /* line 305, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+  0% {
+    -o-transform: rotate(0deg);
+  }
+
+  /* line 308, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@-ms-keyframes spin {
+  /* line 313, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+
+  /* line 316, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  /* line 321, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+  0% {
+    transform: rotate(0deg);
+  }
+
+  /* line 324, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+/* Icon rotations and mirroring */
+/* line 329, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-rotate-90:before {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+/* line 337, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-rotate-180:before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+/* line 345, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-rotate-270:before {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+/* line 353, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-flip-horizontal:before {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+/* line 360, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-flip-vertical:before {
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+/* ensure rotation occurs inside anchor tags */
+/* line 372, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+a .icon-rotate-90:before,
+a .icon-rotate-180:before,
+a .icon-rotate-270:before,
+a .icon-flip-horizontal:before,
+a .icon-flip-vertical:before {
+  display: inline-block;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+/* line 377, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-glass:before {
+  content: "\f000";
+}
+
+/* line 380, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-music:before {
+  content: "\f001";
+}
+
+/* line 383, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-search:before {
+  content: "\f002";
+}
+
+/* line 386, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-envelope-alt:before {
+  content: "\f003";
+}
+
+/* line 389, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-heart:before {
+  content: "\f004";
+}
+
+/* line 392, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-star:before {
+  content: "\f005";
+}
+
+/* line 395, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-star-empty:before {
+  content: "\f006";
+}
+
+/* line 398, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-user:before {
+  content: "\f007";
+}
+
+/* line 401, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-film:before {
+  content: "\f008";
+}
+
+/* line 404, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-th-large:before {
+  content: "\f009";
+}
+
+/* line 407, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-th:before {
+  content: "\f00a";
+}
+
+/* line 410, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-th-list:before {
+  content: "\f00b";
+}
+
+/* line 413, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-ok:before {
+  content: "\f00c";
+}
+
+/* line 416, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-remove:before {
+  content: "\f00d";
+}
+
+/* line 419, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-zoom-in:before {
+  content: "\f00e";
+}
+
+/* line 422, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-zoom-out:before {
+  content: "\f010";
+}
+
+/* line 426, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-power-off:before,
+.icon-off:before {
+  content: "\f011";
+}
+
+/* line 429, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-signal:before {
+  content: "\f012";
+}
+
+/* line 433, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-gear:before,
+.icon-cog:before {
+  content: "\f013";
+}
+
+/* line 436, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-trash:before {
+  content: "\f014";
+}
+
+/* line 439, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-home:before {
+  content: "\f015";
+}
+
+/* line 442, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-file-alt:before {
+  content: "\f016";
+}
+
+/* line 445, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-time:before {
+  content: "\f017";
+}
+
+/* line 448, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-road:before {
+  content: "\f018";
+}
+
+/* line 451, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-download-alt:before {
+  content: "\f019";
+}
+
+/* line 454, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-download:before {
+  content: "\f01a";
+}
+
+/* line 457, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-upload:before {
+  content: "\f01b";
+}
+
+/* line 460, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-inbox:before {
+  content: "\f01c";
+}
+
+/* line 463, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-play-circle:before {
+  content: "\f01d";
+}
+
+/* line 467, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-rotate-right:before,
+.icon-repeat:before {
+  content: "\f01e";
+}
+
+/* line 470, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-refresh:before {
+  content: "\f021";
+}
+
+/* line 473, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-list-alt:before {
+  content: "\f022";
+}
+
+/* line 476, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-lock:before {
+  content: "\f023";
+}
+
+/* line 479, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-flag:before {
+  content: "\f024";
+}
+
+/* line 482, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-headphones:before {
+  content: "\f025";
+}
+
+/* line 485, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-volume-off:before {
+  content: "\f026";
+}
+
+/* line 488, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-volume-down:before {
+  content: "\f027";
+}
+
+/* line 491, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-volume-up:before {
+  content: "\f028";
+}
+
+/* line 494, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-qrcode:before {
+  content: "\f029";
+}
+
+/* line 497, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-barcode:before {
+  content: "\f02a";
+}
+
+/* line 500, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-tag:before {
+  content: "\f02b";
+}
+
+/* line 503, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-tags:before {
+  content: "\f02c";
+}
+
+/* line 506, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-book:before {
+  content: "\f02d";
+}
+
+/* line 509, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bookmark:before {
+  content: "\f02e";
+}
+
+/* line 512, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-print:before {
+  content: "\f02f";
+}
+
+/* line 515, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-camera:before {
+  content: "\f030";
+}
+
+/* line 518, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-font:before {
+  content: "\f031";
+}
+
+/* line 521, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bold:before {
+  content: "\f032";
+}
+
+/* line 524, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-italic:before {
+  content: "\f033";
+}
+
+/* line 527, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-text-height:before {
+  content: "\f034";
+}
+
+/* line 530, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-text-width:before {
+  content: "\f035";
+}
+
+/* line 533, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-align-left:before {
+  content: "\f036";
+}
+
+/* line 536, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-align-center:before {
+  content: "\f037";
+}
+
+/* line 539, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-align-right:before {
+  content: "\f038";
+}
+
+/* line 542, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-align-justify:before {
+  content: "\f039";
+}
+
+/* line 545, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-list:before {
+  content: "\f03a";
+}
+
+/* line 548, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-indent-left:before {
+  content: "\f03b";
+}
+
+/* line 551, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-indent-right:before {
+  content: "\f03c";
+}
+
+/* line 554, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-facetime-video:before {
+  content: "\f03d";
+}
+
+/* line 557, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-picture:before {
+  content: "\f03e";
+}
+
+/* line 560, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-pencil:before {
+  content: "\f040";
+}
+
+/* line 563, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-map-marker:before {
+  content: "\f041";
+}
+
+/* line 566, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-adjust:before {
+  content: "\f042";
+}
+
+/* line 569, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-tint:before {
+  content: "\f043";
+}
+
+/* line 572, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-edit:before {
+  content: "\f044";
+}
+
+/* line 575, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-share:before {
+  content: "\f045";
+}
+
+/* line 578, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-check:before {
+  content: "\f046";
+}
+
+/* line 581, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-move:before {
+  content: "\f047";
+}
+
+/* line 584, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-step-backward:before {
+  content: "\f048";
+}
+
+/* line 587, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-fast-backward:before {
+  content: "\f049";
+}
+
+/* line 590, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-backward:before {
+  content: "\f04a";
+}
+
+/* line 593, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-play:before {
+  content: "\f04b";
+}
+
+/* line 596, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-pause:before {
+  content: "\f04c";
+}
+
+/* line 599, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-stop:before {
+  content: "\f04d";
+}
+
+/* line 602, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-forward:before {
+  content: "\f04e";
+}
+
+/* line 605, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-fast-forward:before {
+  content: "\f050";
+}
+
+/* line 608, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-step-forward:before {
+  content: "\f051";
+}
+
+/* line 611, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-eject:before {
+  content: "\f052";
+}
+
+/* line 614, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-chevron-left:before {
+  content: "\f053";
+}
+
+/* line 617, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-chevron-right:before {
+  content: "\f054";
+}
+
+/* line 620, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-plus-sign:before {
+  content: "\f055";
+}
+
+/* line 623, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-minus-sign:before {
+  content: "\f056";
+}
+
+/* line 626, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-remove-sign:before {
+  content: "\f057";
+}
+
+/* line 629, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-ok-sign:before {
+  content: "\f058";
+}
+
+/* line 632, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-question-sign:before {
+  content: "\f059";
+}
+
+/* line 635, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-info-sign:before {
+  content: "\f05a";
+}
+
+/* line 638, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-screenshot:before {
+  content: "\f05b";
+}
+
+/* line 641, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-remove-circle:before {
+  content: "\f05c";
+}
+
+/* line 644, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-ok-circle:before {
+  content: "\f05d";
+}
+
+/* line 647, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-ban-circle:before {
+  content: "\f05e";
+}
+
+/* line 650, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-arrow-left:before {
+  content: "\f060";
+}
+
+/* line 653, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-arrow-right:before {
+  content: "\f061";
+}
+
+/* line 656, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-arrow-up:before {
+  content: "\f062";
+}
+
+/* line 659, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-arrow-down:before {
+  content: "\f063";
+}
+
+/* line 663, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-mail-forward:before,
+.icon-share-alt:before {
+  content: "\f064";
+}
+
+/* line 666, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-resize-full:before {
+  content: "\f065";
+}
+
+/* line 669, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-resize-small:before {
+  content: "\f066";
+}
+
+/* line 672, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-plus:before {
+  content: "\f067";
+}
+
+/* line 675, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-minus:before {
+  content: "\f068";
+}
+
+/* line 678, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-asterisk:before {
+  content: "\f069";
+}
+
+/* line 681, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-exclamation-sign:before {
+  content: "\f06a";
+}
+
+/* line 684, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-gift:before {
+  content: "\f06b";
+}
+
+/* line 687, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-leaf:before {
+  content: "\f06c";
+}
+
+/* line 690, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-fire:before {
+  content: "\f06d";
+}
+
+/* line 693, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-eye-open:before {
+  content: "\f06e";
+}
+
+/* line 696, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-eye-close:before {
+  content: "\f070";
+}
+
+/* line 699, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-warning-sign:before {
+  content: "\f071";
+}
+
+/* line 702, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-plane:before {
+  content: "\f072";
+}
+
+/* line 705, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-calendar:before {
+  content: "\f073";
+}
+
+/* line 708, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-random:before {
+  content: "\f074";
+}
+
+/* line 711, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-comment:before {
+  content: "\f075";
+}
+
+/* line 714, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-magnet:before {
+  content: "\f076";
+}
+
+/* line 717, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-chevron-up:before {
+  content: "\f077";
+}
+
+/* line 720, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-chevron-down:before {
+  content: "\f078";
+}
+
+/* line 723, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-retweet:before {
+  content: "\f079";
+}
+
+/* line 726, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-shopping-cart:before {
+  content: "\f07a";
+}
+
+/* line 729, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-folder-close:before {
+  content: "\f07b";
+}
+
+/* line 732, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-folder-open:before {
+  content: "\f07c";
+}
+
+/* line 735, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-resize-vertical:before {
+  content: "\f07d";
+}
+
+/* line 738, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-resize-horizontal:before {
+  content: "\f07e";
+}
+
+/* line 741, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bar-chart:before {
+  content: "\f080";
+}
+
+/* line 744, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-twitter-sign:before {
+  content: "\f081";
+}
+
+/* line 747, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-facebook-sign:before {
+  content: "\f082";
+}
+
+/* line 750, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-camera-retro:before {
+  content: "\f083";
+}
+
+/* line 753, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-key:before {
+  content: "\f084";
+}
+
+/* line 757, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-gears:before,
+.icon-cogs:before {
+  content: "\f085";
+}
+
+/* line 760, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-comments:before {
+  content: "\f086";
+}
+
+/* line 763, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-thumbs-up-alt:before {
+  content: "\f087";
+}
+
+/* line 766, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-thumbs-down-alt:before {
+  content: "\f088";
+}
+
+/* line 769, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-star-half:before {
+  content: "\f089";
+}
+
+/* line 772, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-heart-empty:before {
+  content: "\f08a";
+}
+
+/* line 775, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-signout:before {
+  content: "\f08b";
+}
+
+/* line 778, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-linkedin-sign:before {
+  content: "\f08c";
+}
+
+/* line 781, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-pushpin:before {
+  content: "\f08d";
+}
+
+/* line 784, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-external-link:before {
+  content: "\f08e";
+}
+
+/* line 787, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-signin:before {
+  content: "\f090";
+}
+
+/* line 790, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-trophy:before {
+  content: "\f091";
+}
+
+/* line 793, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-github-sign:before {
+  content: "\f092";
+}
+
+/* line 796, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-upload-alt:before {
+  content: "\f093";
+}
+
+/* line 799, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-lemon:before {
+  content: "\f094";
+}
+
+/* line 802, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-phone:before {
+  content: "\f095";
+}
+
+/* line 806, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-unchecked:before,
+.icon-check-empty:before {
+  content: "\f096";
+}
+
+/* line 809, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bookmark-empty:before {
+  content: "\f097";
+}
+
+/* line 812, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-phone-sign:before {
+  content: "\f098";
+}
+
+/* line 815, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-twitter:before {
+  content: "\f099";
+}
+
+/* line 818, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-facebook:before {
+  content: "\f09a";
+}
+
+/* line 821, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-github:before {
+  content: "\f09b";
+}
+
+/* line 824, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-unlock:before {
+  content: "\f09c";
+}
+
+/* line 827, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-credit-card:before {
+  content: "\f09d";
+}
+
+/* line 830, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-rss:before {
+  content: "\f09e";
+}
+
+/* line 833, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-hdd:before {
+  content: "\f0a0";
+}
+
+/* line 836, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bullhorn:before {
+  content: "\f0a1";
+}
+
+/* line 839, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bell:before {
+  content: "\f0a2";
+}
+
+/* line 842, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-certificate:before {
+  content: "\f0a3";
+}
+
+/* line 845, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-hand-right:before {
+  content: "\f0a4";
+}
+
+/* line 848, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-hand-left:before {
+  content: "\f0a5";
+}
+
+/* line 851, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-hand-up:before {
+  content: "\f0a6";
+}
+
+/* line 854, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-hand-down:before {
+  content: "\f0a7";
+}
+
+/* line 857, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-circle-arrow-left:before {
+  content: "\f0a8";
+}
+
+/* line 860, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-circle-arrow-right:before {
+  content: "\f0a9";
+}
+
+/* line 863, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-circle-arrow-up:before {
+  content: "\f0aa";
+}
+
+/* line 866, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-circle-arrow-down:before {
+  content: "\f0ab";
+}
+
+/* line 869, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-globe:before {
+  content: "\f0ac";
+}
+
+/* line 872, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-wrench:before {
+  content: "\f0ad";
+}
+
+/* line 875, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-tasks:before {
+  content: "\f0ae";
+}
+
+/* line 878, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-filter:before {
+  content: "\f0b0";
+}
+
+/* line 881, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-briefcase:before {
+  content: "\f0b1";
+}
+
+/* line 884, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-fullscreen:before {
+  content: "\f0b2";
+}
+
+/* line 887, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-group:before {
+  content: "\f0c0";
+}
+
+/* line 890, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-link:before {
+  content: "\f0c1";
+}
+
+/* line 893, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-cloud:before {
+  content: "\f0c2";
+}
+
+/* line 896, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-beaker:before {
+  content: "\f0c3";
+}
+
+/* line 899, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-cut:before {
+  content: "\f0c4";
+}
+
+/* line 902, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-copy:before {
+  content: "\f0c5";
+}
+
+/* line 906, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-paperclip:before,
+.icon-paper-clip:before {
+  content: "\f0c6";
+}
+
+/* line 909, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-save:before {
+  content: "\f0c7";
+}
+
+/* line 912, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-sign-blank:before {
+  content: "\f0c8";
+}
+
+/* line 915, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-reorder:before {
+  content: "\f0c9";
+}
+
+/* line 918, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-list-ul:before {
+  content: "\f0ca";
+}
+
+/* line 921, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-list-ol:before {
+  content: "\f0cb";
+}
+
+/* line 924, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-strikethrough:before {
+  content: "\f0cc";
+}
+
+/* line 927, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-underline:before {
+  content: "\f0cd";
+}
+
+/* line 930, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-table:before {
+  content: "\f0ce";
+}
+
+/* line 933, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-magic:before {
+  content: "\f0d0";
+}
+
+/* line 936, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-truck:before {
+  content: "\f0d1";
+}
+
+/* line 939, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-pinterest:before {
+  content: "\f0d2";
+}
+
+/* line 942, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-pinterest-sign:before {
+  content: "\f0d3";
+}
+
+/* line 945, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-google-plus-sign:before {
+  content: "\f0d4";
+}
+
+/* line 948, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+
+/* line 951, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-money:before {
+  content: "\f0d6";
+}
+
+/* line 954, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-caret-down:before {
+  content: "\f0d7";
+}
+
+/* line 957, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-caret-up:before {
+  content: "\f0d8";
+}
+
+/* line 960, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-caret-left:before {
+  content: "\f0d9";
+}
+
+/* line 963, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-caret-right:before {
+  content: "\f0da";
+}
+
+/* line 966, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-columns:before {
+  content: "\f0db";
+}
+
+/* line 969, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-sort:before {
+  content: "\f0dc";
+}
+
+/* line 972, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-sort-down:before {
+  content: "\f0dd";
+}
+
+/* line 975, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-sort-up:before {
+  content: "\f0de";
+}
+
+/* line 978, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-envelope:before {
+  content: "\f0e0";
+}
+
+/* line 981, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+
+/* line 985, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-rotate-left:before,
+.icon-undo:before {
+  content: "\f0e2";
+}
+
+/* line 988, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-legal:before {
+  content: "\f0e3";
+}
+
+/* line 991, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-dashboard:before {
+  content: "\f0e4";
+}
+
+/* line 994, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-comment-alt:before {
+  content: "\f0e5";
+}
+
+/* line 997, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-comments-alt:before {
+  content: "\f0e6";
+}
+
+/* line 1000, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bolt:before {
+  content: "\f0e7";
+}
+
+/* line 1003, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-sitemap:before {
+  content: "\f0e8";
+}
+
+/* line 1006, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-umbrella:before {
+  content: "\f0e9";
+}
+
+/* line 1009, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-paste:before {
+  content: "\f0ea";
+}
+
+/* line 1012, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-lightbulb:before {
+  content: "\f0eb";
+}
+
+/* line 1015, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-exchange:before {
+  content: "\f0ec";
+}
+
+/* line 1018, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-cloud-download:before {
+  content: "\f0ed";
+}
+
+/* line 1021, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-cloud-upload:before {
+  content: "\f0ee";
+}
+
+/* line 1024, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-user-md:before {
+  content: "\f0f0";
+}
+
+/* line 1027, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-stethoscope:before {
+  content: "\f0f1";
+}
+
+/* line 1030, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-suitcase:before {
+  content: "\f0f2";
+}
+
+/* line 1033, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bell-alt:before {
+  content: "\f0f3";
+}
+
+/* line 1036, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-coffee:before {
+  content: "\f0f4";
+}
+
+/* line 1039, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-food:before {
+  content: "\f0f5";
+}
+
+/* line 1042, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-file-text-alt:before {
+  content: "\f0f6";
+}
+
+/* line 1045, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-building:before {
+  content: "\f0f7";
+}
+
+/* line 1048, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-hospital:before {
+  content: "\f0f8";
+}
+
+/* line 1051, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-ambulance:before {
+  content: "\f0f9";
+}
+
+/* line 1054, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-medkit:before {
+  content: "\f0fa";
+}
+
+/* line 1057, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-fighter-jet:before {
+  content: "\f0fb";
+}
+
+/* line 1060, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-beer:before {
+  content: "\f0fc";
+}
+
+/* line 1063, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-h-sign:before {
+  content: "\f0fd";
+}
+
+/* line 1066, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-plus-sign-alt:before {
+  content: "\f0fe";
+}
+
+/* line 1069, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-double-angle-left:before {
+  content: "\f100";
+}
+
+/* line 1072, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-double-angle-right:before {
+  content: "\f101";
+}
+
+/* line 1075, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-double-angle-up:before {
+  content: "\f102";
+}
+
+/* line 1078, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-double-angle-down:before {
+  content: "\f103";
+}
+
+/* line 1081, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-angle-left:before {
+  content: "\f104";
+}
+
+/* line 1084, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-angle-right:before {
+  content: "\f105";
+}
+
+/* line 1087, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-angle-up:before {
+  content: "\f106";
+}
+
+/* line 1090, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-angle-down:before {
+  content: "\f107";
+}
+
+/* line 1093, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-desktop:before {
+  content: "\f108";
+}
+
+/* line 1096, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-laptop:before {
+  content: "\f109";
+}
+
+/* line 1099, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-tablet:before {
+  content: "\f10a";
+}
+
+/* line 1102, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-mobile-phone:before {
+  content: "\f10b";
+}
+
+/* line 1105, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-circle-blank:before {
+  content: "\f10c";
+}
+
+/* line 1108, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-quote-left:before {
+  content: "\f10d";
+}
+
+/* line 1111, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-quote-right:before {
+  content: "\f10e";
+}
+
+/* line 1114, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-spinner:before {
+  content: "\f110";
+}
+
+/* line 1117, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-circle:before {
+  content: "\f111";
+}
+
+/* line 1121, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-mail-reply:before,
+.icon-reply:before {
+  content: "\f112";
+}
+
+/* line 1124, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-github-alt:before {
+  content: "\f113";
+}
+
+/* line 1127, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-folder-close-alt:before {
+  content: "\f114";
+}
+
+/* line 1130, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-folder-open-alt:before {
+  content: "\f115";
+}
+
+/* line 1133, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-expand-alt:before {
+  content: "\f116";
+}
+
+/* line 1136, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-collapse-alt:before {
+  content: "\f117";
+}
+
+/* line 1139, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-smile:before {
+  content: "\f118";
+}
+
+/* line 1142, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-frown:before {
+  content: "\f119";
+}
+
+/* line 1145, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-meh:before {
+  content: "\f11a";
+}
+
+/* line 1148, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-gamepad:before {
+  content: "\f11b";
+}
+
+/* line 1151, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-keyboard:before {
+  content: "\f11c";
+}
+
+/* line 1154, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-flag-alt:before {
+  content: "\f11d";
+}
+
+/* line 1157, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-flag-checkered:before {
+  content: "\f11e";
+}
+
+/* line 1160, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-terminal:before {
+  content: "\f120";
+}
+
+/* line 1163, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-code:before {
+  content: "\f121";
+}
+
+/* line 1166, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-reply-all:before {
+  content: "\f122";
+}
+
+/* line 1169, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-mail-reply-all:before {
+  content: "\f122";
+}
+
+/* line 1173, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-star-half-full:before,
+.icon-star-half-empty:before {
+  content: "\f123";
+}
+
+/* line 1176, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-location-arrow:before {
+  content: "\f124";
+}
+
+/* line 1179, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-crop:before {
+  content: "\f125";
+}
+
+/* line 1182, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-code-fork:before {
+  content: "\f126";
+}
+
+/* line 1185, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-unlink:before {
+  content: "\f127";
+}
+
+/* line 1188, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-question:before {
+  content: "\f128";
+}
+
+/* line 1191, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-info:before {
+  content: "\f129";
+}
+
+/* line 1194, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-exclamation:before {
+  content: "\f12a";
+}
+
+/* line 1197, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-superscript:before {
+  content: "\f12b";
+}
+
+/* line 1200, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-subscript:before {
+  content: "\f12c";
+}
+
+/* line 1203, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-eraser:before {
+  content: "\f12d";
+}
+
+/* line 1206, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-puzzle-piece:before {
+  content: "\f12e";
+}
+
+/* line 1209, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-microphone:before {
+  content: "\f130";
+}
+
+/* line 1212, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-microphone-off:before {
+  content: "\f131";
+}
+
+/* line 1215, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-shield:before {
+  content: "\f132";
+}
+
+/* line 1218, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-calendar-empty:before {
+  content: "\f133";
+}
+
+/* line 1221, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-fire-extinguisher:before {
+  content: "\f134";
+}
+
+/* line 1224, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-rocket:before {
+  content: "\f135";
+}
+
+/* line 1227, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-maxcdn:before {
+  content: "\f136";
+}
+
+/* line 1230, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-chevron-sign-left:before {
+  content: "\f137";
+}
+
+/* line 1233, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-chevron-sign-right:before {
+  content: "\f138";
+}
+
+/* line 1236, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-chevron-sign-up:before {
+  content: "\f139";
+}
+
+/* line 1239, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-chevron-sign-down:before {
+  content: "\f13a";
+}
+
+/* line 1242, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-html5:before {
+  content: "\f13b";
+}
+
+/* line 1245, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-css3:before {
+  content: "\f13c";
+}
+
+/* line 1248, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-anchor:before {
+  content: "\f13d";
+}
+
+/* line 1251, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-unlock-alt:before {
+  content: "\f13e";
+}
+
+/* line 1254, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bullseye:before {
+  content: "\f140";
+}
+
+/* line 1257, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-ellipsis-horizontal:before {
+  content: "\f141";
+}
+
+/* line 1260, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-ellipsis-vertical:before {
+  content: "\f142";
+}
+
+/* line 1263, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-rss-sign:before {
+  content: "\f143";
+}
+
+/* line 1266, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-play-sign:before {
+  content: "\f144";
+}
+
+/* line 1269, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-ticket:before {
+  content: "\f145";
+}
+
+/* line 1272, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-minus-sign-alt:before {
+  content: "\f146";
+}
+
+/* line 1275, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-check-minus:before {
+  content: "\f147";
+}
+
+/* line 1278, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-level-up:before {
+  content: "\f148";
+}
+
+/* line 1281, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-level-down:before {
+  content: "\f149";
+}
+
+/* line 1284, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-check-sign:before {
+  content: "\f14a";
+}
+
+/* line 1287, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-edit-sign:before {
+  content: "\f14b";
+}
+
+/* line 1290, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-external-link-sign:before {
+  content: "\f14c";
+}
+
+/* line 1293, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-share-sign:before {
+  content: "\f14d";
+}
+
+/* line 1296, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-compass:before {
+  content: "\f14e";
+}
+
+/* line 1299, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-collapse:before {
+  content: "\f150";
+}
+
+/* line 1302, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-collapse-top:before {
+  content: "\f151";
+}
+
+/* line 1305, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-expand:before {
+  content: "\f152";
+}
+
+/* line 1309, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-euro:before,
+.icon-eur:before {
+  content: "\f153";
+}
+
+/* line 1312, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-gbp:before {
+  content: "\f154";
+}
+
+/* line 1316, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-dollar:before,
+.icon-usd:before {
+  content: "\f155";
+}
+
+/* line 1320, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-rupee:before,
+.icon-inr:before {
+  content: "\f156";
+}
+
+/* line 1324, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-yen:before,
+.icon-jpy:before {
+  content: "\f157";
+}
+
+/* line 1328, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-renminbi:before,
+.icon-cny:before {
+  content: "\f158";
+}
+
+/* line 1332, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-won:before,
+.icon-krw:before {
+  content: "\f159";
+}
+
+/* line 1336, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bitcoin:before,
+.icon-btc:before {
+  content: "\f15a";
+}
+
+/* line 1339, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-file:before {
+  content: "\f15b";
+}
+
+/* line 1342, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-file-text:before {
+  content: "\f15c";
+}
+
+/* line 1345, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-sort-by-alphabet:before {
+  content: "\f15d";
+}
+
+/* line 1348, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-sort-by-alphabet-alt:before {
+  content: "\f15e";
+}
+
+/* line 1351, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-sort-by-attributes:before {
+  content: "\f160";
+}
+
+/* line 1354, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-sort-by-attributes-alt:before {
+  content: "\f161";
+}
+
+/* line 1357, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-sort-by-order:before {
+  content: "\f162";
+}
+
+/* line 1360, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-sort-by-order-alt:before {
+  content: "\f163";
+}
+
+/* line 1363, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-thumbs-up:before {
+  content: "\f164";
+}
+
+/* line 1366, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-thumbs-down:before {
+  content: "\f165";
+}
+
+/* line 1369, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-youtube-sign:before {
+  content: "\f166";
+}
+
+/* line 1372, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-youtube:before {
+  content: "\f167";
+}
+
+/* line 1375, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-xing:before {
+  content: "\f168";
+}
+
+/* line 1378, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-xing-sign:before {
+  content: "\f169";
+}
+
+/* line 1381, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-youtube-play:before {
+  content: "\f16a";
+}
+
+/* line 1384, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-dropbox:before {
+  content: "\f16b";
+}
+
+/* line 1387, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-stackexchange:before {
+  content: "\f16c";
+}
+
+/* line 1390, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-instagram:before {
+  content: "\f16d";
+}
+
+/* line 1393, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-flickr:before {
+  content: "\f16e";
+}
+
+/* line 1396, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-adn:before {
+  content: "\f170";
+}
+
+/* line 1399, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bitbucket:before {
+  content: "\f171";
+}
+
+/* line 1402, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bitbucket-sign:before {
+  content: "\f172";
+}
+
+/* line 1405, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-tumblr:before {
+  content: "\f173";
+}
+
+/* line 1408, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-tumblr-sign:before {
+  content: "\f174";
+}
+
+/* line 1411, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-long-arrow-down:before {
+  content: "\f175";
+}
+
+/* line 1414, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-long-arrow-up:before {
+  content: "\f176";
+}
+
+/* line 1417, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-long-arrow-left:before {
+  content: "\f177";
+}
+
+/* line 1420, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-long-arrow-right:before {
+  content: "\f178";
+}
+
+/* line 1423, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-apple:before {
+  content: "\f179";
+}
+
+/* line 1426, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-windows:before {
+  content: "\f17a";
+}
+
+/* line 1429, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-android:before {
+  content: "\f17b";
+}
+
+/* line 1432, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-linux:before {
+  content: "\f17c";
+}
+
+/* line 1435, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-dribbble:before {
+  content: "\f17d";
+}
+
+/* line 1438, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-skype:before {
+  content: "\f17e";
+}
+
+/* line 1441, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-foursquare:before {
+  content: "\f180";
+}
+
+/* line 1444, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-trello:before {
+  content: "\f181";
+}
+
+/* line 1447, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-female:before {
+  content: "\f182";
+}
+
+/* line 1450, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-male:before {
+  content: "\f183";
+}
+
+/* line 1453, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-gittip:before {
+  content: "\f184";
+}
+
+/* line 1456, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-sun:before {
+  content: "\f185";
+}
+
+/* line 1459, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-moon:before {
+  content: "\f186";
+}
+
+/* line 1462, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-archive:before {
+  content: "\f187";
+}
+
+/* line 1465, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-bug:before {
+  content: "\f188";
+}
+
+/* line 1468, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-vk:before {
+  content: "\f189";
+}
+
+/* line 1471, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-weibo:before {
+  content: "\f18a";
+}
+
+/* line 1474, /Users/ilnico/.rvm/gems/ruby-1.9.3-p385/gems/spree_core-2.2.1/vendor/assets/stylesheets/font-awesome.scss */
+.icon-renren:before {
+  content: "\f18b";
+}
+
+/*--------------------------------------*/
+/* Basic styles
+/*--------------------------------------*/
+/* line 7, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #404042;
+  line-height: 18px;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Line style */
+/* line 18, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+hr {
+  height: 0;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  border-bottom: 1px solid #d9d9db;
+}
+
+/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+/* line 27, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+::-moz-selection {
+  background: #fde900;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 28, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+::selection {
+  background: #fde900;
+  color: white;
+  text-shadow: none;
+}
+
+/*  j.mp/webkit-tap-highlight-color */
+/* line 31, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+a:link {
+  -webkit-tap-highlight-color: #fde900;
+}
+
+/* line 33, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+ins {
+  background-color: #fde900;
+  color: white;
+  text-decoration: none;
+}
+
+/* line 34, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+mark {
+  background-color: #fde900;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*--------------------------------------*/
+/* Links
+/*--------------------------------------*/
+/* line 39, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+a {
+  text-decoration: none;
+  color: #fde900;
+}
+/* line 43, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+a:hover {
+  color: #caba00;
+}
+/* line 47, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+a:active, a:focus {
+  outline: none;
+}
+
+/*--------------------------------------*/
+/* Lists
+/*--------------------------------------*/
+/* line 55, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+ul, ol {
+  margin-left: 0;
+  margin-top: 0;
+  -webkit-padding-start: 0px;
+  padding-left: 0;
+  list-style-position: inside;
+}
+/* line 63, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+ul.inline li, ol.inline li {
+  display: inline-block;
+}
+
+/* line 70, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+dl dt, dl dd {
+  display: inline-block;
+  width: 50%;
+  padding: 5px;
+}
+/* line 75, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+dl dt.odd, dl dd.odd {
+  background-color: #d9d9db;
+}
+/* line 79, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+dl dt {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 83, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+dl dd {
+  margin-left: -23px;
+}
+
+/*--------------------------------------*/
+/* Headers
+/*--------------------------------------*/
+/* line 91, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+h1 {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+/* line 92, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+h2 {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+/* line 93, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+h3 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* line 94, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+h4 {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/* line 95, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+h5 {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* line 96, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+h6 {
+  font-size: 12px;
+  line-height: 22px;
+}
+
+/* line 98, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #404042;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*--------------------------------------*/
+/* Forms
+/*--------------------------------------*/
+/* line 115, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+textarea, input[type="date"],
+input[type="datetime"], input[type="datetime-local"],
+input[type="email"], input[type="month"], input[type="number"],
+input[type="password"], input[type="search"], input[type="tel"],
+input[type="text"], input[type="time"], input[type="url"],
+input[type="week"] {
+  border: 1px solid #d9d9db;
+  padding: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 125, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+textarea:active, textarea:focus, input[type="date"]:active, input[type="date"]:focus,
+input[type="datetime"]:active,
+input[type="datetime"]:focus, input[type="datetime-local"]:active, input[type="datetime-local"]:focus,
+input[type="email"]:active,
+input[type="email"]:focus, input[type="month"]:active, input[type="month"]:focus, input[type="number"]:active, input[type="number"]:focus,
+input[type="password"]:active,
+input[type="password"]:focus, input[type="search"]:active, input[type="search"]:focus, input[type="tel"]:active, input[type="tel"]:focus,
+input[type="text"]:active,
+input[type="text"]:focus, input[type="time"]:active, input[type="time"]:focus, input[type="url"]:active, input[type="url"]:focus,
+input[type="week"]:active,
+input[type="week"]:focus {
+  border-color: #fde900;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+/* line 134, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+textarea.error, input[type="date"].error,
+input[type="datetime"].error, input[type="datetime-local"].error,
+input[type="email"].error, input[type="month"].error, input[type="number"].error,
+input[type="password"].error, input[type="search"].error, input[type="tel"].error,
+input[type="text"].error, input[type="time"].error, input[type="url"].error,
+input[type="week"].error {
+  border-color: #e45353;
+}
+
+/* line 139, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+label.error {
+  display: block;
+  font-size: 11px;
+  color: #e45353;
+  margin-top: 3px;
+}
+
+/* line 146, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+span.required {
+  color: #e45353;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* line 152, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+fieldset {
+  margin: 0;
+  min-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 162, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+input[type="submit"], input[type="button"],
+input[type="reset"], button, a.button {
+  background-color: #fde900;
+  background-image: none;
+  text-shadow: none;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Ubuntu", sans-serif;
+  border: 1px solid rgba(0, 138, 189, 0.75);
+  padding: 6px 10px 5px;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  -khtml-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+}
+/* line 188, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+input[type="submit"].large, input[type="button"].large,
+input[type="reset"].large, button.large, a.button.large {
+  padding: 7px 10px;
+  font-size: 14px;
+}
+/* line 193, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+input[type="submit"].gray, input[type="button"].gray,
+input[type="reset"].gray, button.gray, a.button.gray {
+  background-color: #727276;
+  border-color: #59595c;
+}
+/* line 198, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+input[type="submit"]:hover, input[type="button"]:hover,
+input[type="reset"]:hover, button:hover, a.button:hover {
+  background-image: none;
+  background-color: #404042;
+  border-color: #404042;
+  color: white;
+}
+
+/* line 207, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.ie8 a.button {
+  line-height: 16px;
+}
+
+/* line 212, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+input[type="checkbox"], label {
+  vertical-align: middle;
+}
+
+/* line 216, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+a.button {
+  display: inline-block;
+  line-height: 15px;
+  margin-top: -2px;
+  vertical-align: bottom;
+}
+
+/*--------------------------------------*/
+/* Footer
+/*--------------------------------------*/
+/* line 226, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+footer#footer {
+  padding: 10px 0;
+  border-top: 1px solid #d9d9db;
+}
+
+/*--------------------------------------*/
+/* Paragraphs
+/*--------------------------------------*/
+/* line 234, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+p {
+  padding: 10px 0;
+}
+
+/*--------------------------------------*/
+/* Tables
+/*--------------------------------------*/
+/* line 242, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+table thead {
+  background-color: #d9d9db;
+  text-transform: uppercase;
+}
+/* line 247, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+table thead tr th {
+  padding: 5px 10px;
+}
+/* line 254, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+table tbody tr, table tfoot tr {
+  border-bottom: 1px solid #d9d9db;
+}
+/* line 257, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+table tbody tr td, table tfoot tr td {
+  vertical-align: middle;
+  padding: 5px 10px;
+}
+/* line 262, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
+  background-color: #fffffd;
+}
+
+/*--------------------------------------*/
+/* Navigation
+/*--------------------------------------*/
+/* line 272, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav#top-nav-bar {
+  text-align: right;
+  margin-top: 20px;
+}
+/* line 277, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav#top-nav-bar ul li {
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+/* line 281, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav#top-nav-bar ul li a {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* line 290, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav #main-nav-bar {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+  border-bottom: 1px solid #d9d9db;
+  padding-bottom: 6px;
+}
+/* line 299, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav #main-nav-bar li a {
+  font-size: 16px;
+  padding: 5px;
+}
+/* line 305, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav #main-nav-bar li:first-child a {
+  padding-left: 0;
+}
+/* line 310, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav #main-nav-bar li#link-to-cart {
+  float: right;
+  padding-left: 24px;
+  background: url(/assets/spree/frontend/cart.png) no-repeat left center;
+}
+/* line 315, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav #main-nav-bar li#link-to-cart:hover {
+  border-color: #fde900;
+}
+/* line 318, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav #main-nav-bar li#link-to-cart:hover .amount {
+  border-color: #fde900;
+}
+/* line 323, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav #main-nav-bar li#link-to-cart a {
+  font-weight: normal;
+  font-size: 16px;
+  color: #fde900;
+}
+/* line 328, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav #main-nav-bar li#link-to-cart a .amount {
+  font-size: 18px;
+  font-weight: bold;
+  border-left: 1px solid #d9d9db;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+/* line 341, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+figure#logo img {
+  padding-top: 25px;
+}
+
+/* line 347, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav#taxonomies .taxonomy-root {
+  text-transform: uppercase;
+  border-bottom: 1px solid #d9d9db;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+/* line 356, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+nav#taxonomies .taxons-list li a {
+  font-size: 12px;
+}
+
+/* line 363, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#breadcrumbs {
+  border-bottom: 1px solid #d9d9db;
+  padding: 3px 0;
+  margin-bottom: 15px;
+}
+/* line 369, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#breadcrumbs li a {
+  color: #fde900;
+}
+/* line 372, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#breadcrumbs li span {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/*--------------------------------------*/
+/* Flash notices & errors
+/*--------------------------------------*/
+/* line 382, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.flash, .errorExplanation {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* line 388, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.flash.notice, .notice.errorExplanation {
+  background-color: #fde900;
+}
+/* line 391, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.flash.success, .success.errorExplanation {
+  background-color: #8dba53;
+}
+/* line 394, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.flash.error, .errorExplanation {
+  background-color: #e45353;
+}
+
+/* line 403, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.errorExplanation p {
+  font-weight: normal;
+}
+/* line 407, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.errorExplanation ul {
+  list-style: disc outside;
+  margin-left: 30px;
+}
+/* line 411, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.errorExplanation ul li {
+  font-weight: normal;
+}
+
+/*--------------------------------------*/
+/* Main search bar
+/*--------------------------------------*/
+/* line 420, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#search-bar {
+  display: block;
+}
+
+/*--------------------------------------*/
+/* Products
+/*--------------------------------------*/
+/* line 428, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+[data-hook="product_show"] h6 {
+  font-size: 14px;
+}
+
+/* line 433, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.product-section-title {
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+/* line 438, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.add-to-cart {
+  margin-top: 15px;
+}
+/* line 441, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.add-to-cart input[type="number"] {
+  margin-right: 3px;
+  width: 60px;
+  vertical-align: middle;
+  padding: 8px 10px;
+}
+
+/* line 449, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total {
+  font-weight: bold;
+  color: #fde900;
+}
+/* line 453, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+span.price.selling, #checkout-summary table tr[data-hook="item_total"] td:last-child strong.selling, #checkout-summary table .selling#summary-order-total, #order_details td.price span.selling, #order_details td.total span.selling, #order_summary td.price span.selling, #order_summary td.total span.selling, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.selling.order-total {
+  font-size: 20px;
+}
+/* line 456, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+span.price.diff, #checkout-summary table tr[data-hook="item_total"] td:last-child strong.diff, #checkout-summary table .diff#summary-order-total, #order_details td.price span.diff, #order_details td.total span.diff, #order_summary td.price span.diff, #order_summary td.total span.diff, table#cart-detail tbody#line_items tr td.diff[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td.diff[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.diff.order-total {
+  font-weight: bold;
+}
+
+/* line 461, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.taxon-title {
+  font-size: 20px;
+}
+
+/* line 465, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.search-results-title {
+  font-size: 14px;
+}
+
+/* line 470, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+ul#products:after {
+  content: " ";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+/* line 479, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+ul#products li {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* line 484, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+ul#products li a {
+  display: block;
+}
+/* line 487, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+ul#products li a.info {
+  height: 35px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #bbbbbb;
+  border-bottom: 1px solid #d9d9db;
+  overflow: hidden;
+}
+/* line 497, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+ul#products li .product-image {
+  border: 1px solid #d9d9db;
+  padding: 5px;
+  min-height: 110px;
+  background-color: white;
+}
+/* line 503, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+ul#products li .product-image:hover {
+  border-color: #fde900;
+}
+/* line 507, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+ul#products li .product-image img {
+  max-width: 100%;
+  /* Fluid images for product */
+}
+/* line 513, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+ul#products li .price {
+  color: #fde900;
+  font-size: 16px;
+  padding-top: 5px;
+  display: block;
+}
+
+/* line 522, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.subtaxon-title {
+  text-transform: uppercase;
+}
+/* line 525, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.subtaxon-title a {
+  color: #fde900;
+}
+
+/* line 530, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.search-results-title {
+  text-transform: uppercase;
+  border-bottom: 1px solid #d9d9db;
+  margin-bottom: 10px;
+}
+
+/* line 537, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#sidebar_products_search .navigation {
+  margin-bottom: 15px;
+}
+/* line 541, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#sidebar_products_search .filter-title {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 5px;
+  color: #fde900;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* line 553, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.taxon {
+  overflow: hidden;
+}
+
+/* line 558, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#product-images #main-image {
+  text-align: center;
+  border: 1px solid #d9d9db;
+  background-color: white;
+}
+/* line 563, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#product-images #main-image img {
+  min-height: 240px;
+  max-width: 100%;
+  /* Fluid images for product */
+}
+/* line 569, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#product-images #product-thumbnails li {
+  background-color: white;
+}
+
+/* line 576, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#product-description .product-title {
+  border-bottom: 1px solid #d9d9db;
+  margin-bottom: 15px;
+  color: #404042;
+  font-size: 24px;
+}
+/* line 583, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#product-description [data-hook="product-description"] {
+  font-size: 12px;
+  color: #404042;
+}
+
+/* line 589, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#product-thumbnails {
+  margin-top: 10px;
+}
+/* line 592, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#product-thumbnails li {
+  margin-right: 6px;
+  border: 1px solid #d9d9db;
+}
+/* line 596, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#product-thumbnails li img {
+  padding: 5px;
+}
+/* line 600, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#product-thumbnails li:hover, #product-thumbnails li.selected {
+  border-color: #fde900;
+}
+
+/* line 606, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#product-properties {
+  border: 1px solid #d9d9db;
+  padding: 10px;
+  width: 100%;
+}
+
+/* line 614, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#product-variants ul li {
+  padding: 5px;
+}
+
+/* line 621, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#cart-form #inside-product-cart-form:after {
+  content: " ";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/*--------------------------------------*/
+/* Checkout
+/*--------------------------------------*/
+/* line 634, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.out-of-stock {
+  background: #df0000;
+  color: white;
+  padding: 5px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+/* line 642, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.progress-steps {
+  list-style: decimal inside;
+  overflow: auto;
+}
+/* line 646, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.progress-steps li {
+  float: left;
+  margin-right: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  color: #727276;
+}
+/* line 654, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.progress-steps li.current-first, .progress-steps li.current {
+  background-color: #fde900;
+  color: white;
+}
+/* line 659, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.progress-steps li.completed-first, .progress-steps li.completed {
+  background-color: #d9d9db;
+  color: white;
+}
+/* line 663, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.progress-steps li.completed-first a, .progress-steps li.completed a {
+  color: white;
+}
+/* line 667, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.progress-steps li.completed-first:hover, .progress-steps li.completed:hover {
+  background-color: #fde900;
+  color: white;
+}
+/* line 671, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.progress-steps li.completed-first:hover a, .progress-steps li.completed:hover a {
+  color: white;
+}
+/* line 674, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.progress-steps li.completed-first:hover a:hover, .progress-steps li.completed:hover a:hover {
+  color: white;
+}
+
+/* line 683, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#payment-methods {
+  list-style: none;
+}
+/* line 687, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#payment-methods li fieldset {
+  border: none;
+  padding: 0;
+}
+
+/* line 696, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#checkout-summary {
+  text-align: center;
+  border: 1px solid #d9d9db;
+  margin-top: 23px;
+  margin-left: 0;
+}
+/* line 702, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#checkout-summary h3 {
+  text-transform: uppercase;
+  font-size: 14px;
+  border-bottom: 1px solid #d9d9db;
+}
+/* line 708, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#checkout-summary table {
+  width: 100%;
+}
+/* line 719, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#checkout-summary table tr[data-hook="order_total"] {
+  border-bottom: none;
+}
+/* line 723, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#checkout-summary table #summary-order-total {
+  font-size: 14px;
+}
+
+/* line 731, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#billing, #shipping, #shipping_method,
+#payment, #order_details, #order_summary {
+  margin-top: 10px;
+  border: 1px solid #d9d9db;
+  padding: 10px;
+}
+/* line 736, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#billing legend, #shipping legend, #shipping_method legend,
+#payment legend, #order_details legend, #order_summary legend {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fde900;
+  padding: 5px;
+  margin-left: 15px;
+}
+
+/* line 749, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#billing input[type="text"], #billing input[type="email"],
+#billing input[type="tel"], #billing input[type="number"],
+#billing select, #billing textarea {
+  width: 100%;
+}
+
+/* line 754, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_details, #order_summary {
+  padding: 0;
+}
+/* line 757, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_details div:last-child, #order_summary div:last-child {
+  margin-left: -1px;
+}
+/* line 763, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_details .payment-info .cc-type img, #order_summary .payment-info .cc-type img {
+  vertical-align: middle;
+}
+/* line 775, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_details table tfoot, #order_summary table tfoot {
+  text-align: right;
+  color: #727276;
+}
+/* line 779, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_details table tfoot tr, #order_summary table tfoot tr {
+  border: none;
+}
+/* line 783, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_details table tfoot#order-total, #order_summary table tfoot#order-total {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #404042;
+}
+/* line 788, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_details table tfoot#order-total tr, #order_summary table tfoot#order-total tr {
+  border-top: 1px solid #d9d9db;
+}
+/* line 791, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_details table tfoot#order-total tr td, #order_summary table tfoot#order-total tr td {
+  padding: 10px;
+}
+/* line 797, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_details table tfoot#subtotal, #order_summary table tfoot#subtotal {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #404042;
+}
+/* line 805, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_details .steps-data div.columns, #order_summary .steps-data div.columns {
+  padding: 5px;
+  margin: 0;
+}
+/* line 809, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_details .steps-data div.columns:first-child, #order_summary .steps-data div.columns:first-child {
+  margin-left: 10px;
+}
+/* line 814, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_details .steps-data h6, #order_summary .steps-data h6 {
+  border-bottom: 1px solid #d9d9db;
+  margin-bottom: 5px;
+}
+
+/* line 823, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method p#minstrs {
+  clear: both;
+}
+/* line 826, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method p#minstrs label {
+  width: 100%;
+}
+/* line 831, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method p label {
+  float: left;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 40px;
+  padding: 5px;
+}
+/* line 840, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method .shipment {
+  margin-bottom: 30px;
+}
+/* line 844, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method .stock-shipping-method-title {
+  background-color: #f3f3f4;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 11px;
+}
+/* line 852, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method .stock-location {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: normal;
+  background-color: #fde900;
+  color: white;
+}
+/* line 862, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method .unshippable .stock-location {
+  background-color: #e45353;
+}
+/* line 867, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method .shipping-methods {
+  list-style: none;
+  margin: 0;
+  padding: none;
+}
+/* line 872, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method .shipping-methods .shipping-method {
+  display: inline-block;
+  margin: 5px 10px 5px 0;
+}
+/* line 876, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method .shipping-methods .shipping-method label {
+  font-weight: bold;
+}
+/* line 879, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method .shipping-methods .shipping-method label .rate-cost {
+  color: #fde900;
+}
+/* line 887, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method table.stock-contents thead {
+  background-color: #f3f3f4;
+}
+/* line 890, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method table.stock-contents thead th {
+  font-size: 11px;
+  font-weight: normal;
+}
+/* line 897, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method table.stock-contents tbody tr td {
+  text-align: center;
+}
+/* line 900, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#shipping_method table.stock-contents tbody tr td.item-name {
+  text-align: left;
+}
+
+/* line 909, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+p[data-hook="use_billing"] {
+  float: right;
+  margin-top: -18px;
+  background-color: white;
+  padding: 5px;
+}
+
+/* line 916, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#coupon_status {
+  font-weight: bold;
+  font-size: 125%;
+}
+/* line 919, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#coupon_status.success {
+  color: #8dba53;
+}
+/* line 922, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#coupon_status.error {
+  color: #e45353;
+}
+
+/*--------------------------------------*/
+/* Cart
+/*--------------------------------------*/
+/* line 930, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+table#cart-detail {
+  width: 100%;
+  border-collapse: separate;
+}
+/* line 942, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+table#cart-detail tbody#line_items tr td[data-hook="cart_item_quantity"] .line_item_quantity {
+  width: 65px;
+}
+/* line 947, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+table#cart-detail tbody#line_items tr td[data-hook="cart_item_delete"] .delete {
+  display: block;
+  width: 20px;
+}
+
+/* line 957, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+div[data-hook="inside_cart_form"] .links {
+  margin-top: 15px;
+  text-align: right;
+}
+/* line 962, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+div[data-hook="inside_cart_form"] #subtotal {
+  text-align: right;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+/* line 973, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#empty-cart {
+  margin-top: -50px;
+  float: left;
+}
+
+/* line 978, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.cart-subtotal, .cart-total {
+  background: #00ADEE;
+}
+/* line 981, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.cart-subtotal td h5, .cart-total td h5 {
+  color: #fff;
+}
+
+/* line 986, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+.adjustment:nth-child(even) {
+  background: #eaeaea;
+}
+
+/*--------------------------------------*/
+/* Account
+/*--------------------------------------*/
+/* line 995, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#existing-customer h6, #new-customer h6, #forgot-password h6 {
+  text-transform: uppercase;
+}
+
+/* line 1001, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#registration h6 {
+  text-transform: uppercase;
+}
+/* line 1005, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#registration #existing-customer {
+  width: auto;
+  text-align: left;
+}
+
+/* line 1011, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#user-info {
+  margin-bottom: 15px;
+  border: 1px solid #d9d9db;
+  padding: 10px;
+}
+/* line 1016, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#user-info dd {
+  margin-left: 0px;
+}
+
+/*--------------------------------------*/
+/* Order
+/*--------------------------------------*/
+/* line 1024, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order_summary {
+  margin-top: 0;
+}
+
+/* line 1028, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#order p[data-hook="links"] {
+  margin-left: 10px;
+  overflow: auto;
+}
+
+/* line 1037, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+table.order-summary tbody tr td {
+  width: 10%;
+  text-align: center;
+}
+/* line 1042, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+table.order-summary tbody tr td:first-child a {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fde900;
+}
+
+/* #Media Queries
+================================================== */
+/* Smaller than standard 960 (devices and browsers) */
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 1063, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  .container {
+    padding-left: 10px;
+    width: 758px;
+  }
+
+  /* line 1067, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  footer#footer {
+    width: 748px;
+  }
+
+  /* line 1070, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  p[data-hook="use_billing"] {
+    margin-top: -15px;
+  }
+}
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  /* line 1078, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  html {
+    -webkit-text-size-adjust: none;
+  }
+
+  /* line 1083, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #order_details .steps-data div.columns,
+  #order_summary .steps-data div.columns {
+    padding: 0;
+    margin: 0;
+  }
+  /* line 1087, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #order_details .steps-data div.columns:first-child,
+  #order_summary .steps-data div.columns:first-child {
+    margin: 0;
+  }
+
+  /* line 1092, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  nav#taxonomies {
+    text-align: center;
+  }
+  /* line 1095, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  nav#taxonomies ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  /* line 1101, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  ul#nav-bar {
+    text-align: center;
+  }
+
+  /* line 1105, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  .steps-data div.columns {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  /* line 1111, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #order_details table[data-hook="order_details"], #order table[data-hook="order_details"] {
+    width: 100%;
+  }
+
+  /* line 1117, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #update-cart #subtotal, #update-cart .links {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  /* line 1122, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #update-cart #subtotal {
+    text-align: right;
+  }
+}
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 1131, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  footer#footer {
+    width: auto;
+  }
+
+  /* line 1135, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  input, select {
+    vertical-align: baseline;
+  }
+
+  /* line 1139, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  figure#logo {
+    text-align: center;
+  }
+
+  /* line 1143, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #link-to-login {
+    display: block;
+    text-align: center;
+  }
+
+  /* line 1148, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #search-bar {
+    display: block;
+    text-align: center;
+  }
+  /* line 1152, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #search-bar select {
+    margin-bottom: 10px;
+  }
+
+  /* line 1157, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  ul#products {
+    margin-left: 0;
+    margin-right: -20px;
+  }
+  /* line 1161, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  ul#products li {
+    width: 133px;
+    margin-right: 10px;
+  }
+
+  /* line 1170, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table#cart-detail tbody tr td[data-hook="cart_item_description"], table#cart-detail tbody tr td[data-hook="order_item_description"], table[data-hook="order_details"] tbody tr td[data-hook="cart_item_description"], table[data-hook="order_details"] tbody tr td[data-hook="order_item_description"] {
+    font-size: 11px;
+    line-height: 15px;
+    width: 100px;
+  }
+  /* line 1175, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table#cart-detail tbody tr td[data-hook="cart_item_description"] h4, table#cart-detail tbody tr td[data-hook="order_item_description"] h4, table[data-hook="order_details"] tbody tr td[data-hook="cart_item_description"] h4, table[data-hook="order_details"] tbody tr td[data-hook="order_item_description"] h4 {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 10px;
+  }
+  /* line 1182, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table#cart-detail tbody tr td[data-hook="cart_item_price"], table#cart-detail tbody tr td[data-hook="cart_item_total"],
+  table#cart-detail tbody tr td[data-hook="order_item_price"], table#cart-detail tbody tr td[data-hook="order_item_total"], table[data-hook="order_details"] tbody tr td[data-hook="cart_item_price"], table[data-hook="order_details"] tbody tr td[data-hook="cart_item_total"],
+  table[data-hook="order_details"] tbody tr td[data-hook="order_item_price"], table[data-hook="order_details"] tbody tr td[data-hook="order_item_total"] {
+    font-size: 12px;
+  }
+  /* line 1186, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table#cart-detail tbody tr td[data-hook="cart_item_image"] img, table#cart-detail tbody tr td[data-hook="order_item_image"] img, table[data-hook="order_details"] tbody tr td[data-hook="cart_item_image"] img, table[data-hook="order_details"] tbody tr td[data-hook="order_item_image"] img {
+    width: 70px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 1197, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #empty-cart {
+    clear: both;
+    margin-top: 0;
+    float: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 1205, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  .container .offset-by-nine.coupon-code-field {
+    padding-left: 380px;
+  }
+}
+/* line 1210, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+#update-cart .coupon-code-field {
+  /* yes, this is ugly... */
+  margin-top: -42px !important;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 1217, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #empty-cart,
+  #update-cart .coupon-code-field {
+    /* yes, this is ugly... */
+    margin-top: 0 !important;
+  }
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  /* line 1226, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  .progress-steps li {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+  }
+  /* line 1231, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  .progress-steps li span {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  /* line 1237, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #shipping_method p label {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  /* line 1244, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  p[data-hook="use_billing"] {
+    float: none;
+    margin-top: 0;
+  }
+
+  /* line 1252, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table#cart-detail tbody tr td[data-hook="cart_item_description"], table#cart-detail tbody tr td[data-hook="order_item_description"], table[data-hook="order_details"] tbody tr td[data-hook="cart_item_description"], table[data-hook="order_details"] tbody tr td[data-hook="order_item_description"] {
+    padding: 0 !important;
+    text-indent: -9999px;
+  }
+  /* line 1256, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table#cart-detail tbody tr td[data-hook="cart_item_description"] h4, table#cart-detail tbody tr td[data-hook="order_item_description"] h4, table[data-hook="order_details"] tbody tr td[data-hook="cart_item_description"] h4, table[data-hook="order_details"] tbody tr td[data-hook="order_item_description"] h4 {
+    display: none;
+  }
+  /* line 1261, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table#cart-detail tbody tr td[data-hook="cart_item_image"] img, table#cart-detail tbody tr td[data-hook="order_item_image"] img, table[data-hook="order_details"] tbody tr td[data-hook="cart_item_image"] img, table[data-hook="order_details"] tbody tr td[data-hook="order_item_image"] img {
+    width: 70px;
+  }
+  /* line 1265, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table#cart-detail tbody tr td[data-hook="cart_item_price"], table#cart-detail tbody tr td[data-hook="cart_item_total"], table[data-hook="order_details"] tbody tr td[data-hook="cart_item_price"], table[data-hook="order_details"] tbody tr td[data-hook="cart_item_total"] {
+    font-size: 14px !important;
+  }
+
+  /* line 1272, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table.order-summary {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  /* line 1275, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table.order-summary thead {
+    display: block;
+    float: left;
+  }
+  /* line 1276, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table.order-summary tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  /* line 1277, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table.order-summary thead tr {
+    display: block;
+  }
+  /* line 1278, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table.order-summary th {
+    display: block;
+  }
+  /* line 1279, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table.order-summary tbody tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  /* line 1280, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  table.order-summary td {
+    display: block;
+    min-height: 1.25em;
+  }
+
+  /* line 1283, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  figure#logo {
+    text-align: center;
+  }
+
+  /* line 1287, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #link-to-login {
+    display: block;
+    text-align: center;
+  }
+
+  /* line 1292, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #search-bar {
+    display: block;
+    text-align: center;
+  }
+  /* line 1296, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #search-bar select {
+    margin-bottom: 10px;
+  }
+
+  /* line 1301, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  aside#sidebar {
+    text-align: center;
+  }
+  /* line 1304, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  aside#sidebar ul {
+    padding-left: 0;
+  }
+  /* line 1307, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  aside#sidebar ul li {
+    list-style-type: none;
+  }
+
+  /* line 1314, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  ul#products li {
+    width: 142px;
+    margin-right: 15px;
+  }
+  /* line 1318, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  ul#products li.secondary, ul#products li.omega {
+    margin-right: 0;
+  }
+
+  /* line 1324, /Users/ilnico/Documents/Projects/Coding/coalcashop/app/assets/stylesheets/spree/frontend/screen.css.scss */
+  #content {
+    text-align: center;
+  }
+}
