@@ -1,0 +1,43 @@
+<div id='main-nav-bar' class='navbar-collapse'>
+    <ul class='nav navbar-nav' data-hook>
+        <li id='home-link' data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
+        <li id='about-link' data-hook><a href='#'>Chi siamo</a></li>
+        <li id='catalogue-link' class='dropdown' data-hook>
+            <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Catalogo  <b class='caret'></b></a>
+
+              <% unless @taxons.empty? %>
+
+                <% if @taxons.first.parent.nil? %>
+                  <% taxons = @taxons.first.children %>
+                <% else %>
+                  <% taxons = @taxons %>
+                <% end %>
+
+                <ul class='dropdown-menu' role='menu' data-hook>
+                  <% taxons.each do |taxon| %>
+                    <% cache taxon do %>
+                      <li class='dropdown-submenu'><%= link_to(taxon.name, seo_url(taxon)) %>
+
+                        <% unless taxon.children.empty? %>
+                          <ul class='dropdown-menu'>
+                            <% taxon.children.each do |tc| %>
+                              <li><%= link_to(tc.name, seo_url(tc)) %></li>
+                            <% end %>
+                          </ul>
+                        <% end %>
+
+                      </li>
+                    <% end %>
+                  <% end %>
+                </ul>
+              <% end %>
+
+
+        </li>
+        <li id='terms-link' data-hook><a href='#'>Condizioni</a></li>
+        <li id='contacts-link' data-hook><a href='#'>Contatti</a></li>
+    </ul>
+    <ul class='nav navbar-nav navbar-right' data-hook>
+        <li id='link-to-cart' data-hook><%= link_to_cart %></li>
+    </ul>
+</div>

@@ -4,8 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.4'
 gem 'deface'
 gem 'money', '6.0.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -33,6 +31,26 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'sqlite3'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'email_spec'
+  gem 'cucumber-rails', :require => false
+end
+
+group :production do
+    gem 'pg'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -50,4 +68,3 @@ gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '2-2-stable'
 gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '2-2-stable'
 gem 'spree_i18n', :github => 'spree/spree_i18n', :branch => '2-2-stable'
 gem 'spree_bootstrap_frontend', :github => '200Creative/spree_bootstrap_frontend', :branch => '2-2-stable'
-

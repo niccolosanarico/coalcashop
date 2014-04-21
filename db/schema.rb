@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329163561) do
+ActiveRecord::Schema.define(version: 20140419205657) do
 
   create_table "spree_addresses", force: true do |t|
     t.string   "firstname"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140329163561) do
     t.integer  "country_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "partita_iva"
   end
 
   add_index "spree_addresses", ["firstname"], name: "index_addresses_on_firstname"

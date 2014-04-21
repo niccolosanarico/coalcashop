@@ -9,6 +9,13 @@ Spree.config do |config|
   # Example:
   # Uncomment to override the default site name.
   # config.site_name = "Spree Demo Site"
+
+  # Display field for company name
+  config.company = true
 end
 
 Spree.user_class = "Spree::User"
+
+# Adding attributes to models
+
+Spree::PermittedAttributes.address_attributes << :partita_iva
