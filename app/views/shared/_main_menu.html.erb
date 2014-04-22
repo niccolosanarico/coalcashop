@@ -7,14 +7,9 @@
 
               <% unless @taxons.empty? %>
 
-                <% if @taxons.first.parent.nil? %>
-                  <% taxons = @taxons.first.children %>
-                <% else %>
-                  <% taxons = @taxons %>
-                <% end %>
 
                 <ul class='dropdown-menu' role='menu' data-hook>
-                  <% taxons.each do |taxon| %>
+                  <% @taxons.each do |taxon| %>
                     <% cache taxon do %>
                       <li class='dropdown-submenu'><%= link_to(taxon.name, seo_url(taxon)) %>
 
