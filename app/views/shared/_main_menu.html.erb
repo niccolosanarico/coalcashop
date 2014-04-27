@@ -1,7 +1,19 @@
-<div id='main-nav-bar' class='navbar-collapse'>
+<nav class="navbar" role="navigation" id="main-menu">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-bar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+  <div id='main-nav-bar' class='navbar-collapse collapse'>
     <ul class='nav navbar-nav' data-hook>
         <li id='home-link' data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
-        <li id='about-link' data-hook><a href='#'>Chi siamo</a></li>
+        <li id='about-link' data-hook><%= link_to 'Chi siamo', request.base_url+'/about' %></li>
         <li id='catalogue-link' class='dropdown' data-hook>
             <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Catalogo  <b class='caret'></b></a>
 
@@ -29,10 +41,12 @@
 
 
         </li>
-        <li id='terms-link' data-hook><a href='#'>Condizioni</a></li>
-        <li id='contacts-link' data-hook><a href='#'>Contatti</a></li>
+        <li id='terms-link' data-hook><%= link_to 'Condizioni', request.base_url+'/terms' %></li>
+        <li id='contacts-link' data-hook><%= link_to 'Contatti', request.base_url+'/contacts' %></li>
     </ul>
     <ul class='nav navbar-nav navbar-right' data-hook>
         <li id='link-to-cart' data-hook><%= link_to_cart %></li>
     </ul>
+  </div>
 </div>
+</nav>

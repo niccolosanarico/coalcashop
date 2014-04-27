@@ -9,4 +9,5 @@
  *= require spree/frontend/spree_i18n
  *= require_self
  *= require_tree .
+ *= require spree/frontend/spree_static_content
 */
