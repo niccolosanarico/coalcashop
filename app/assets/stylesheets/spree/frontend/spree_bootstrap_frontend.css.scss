@@ -50,37 +50,76 @@
 }
 
 
+// Coalca variables
+
+$coalca_yellow:                            #fbeb4d;
+
+// Editing default variables
+
+$navbar-default-bg:                        $coalca_yellow;
+$navbar-default-color:                     #000;
+$navbar-default-link-hover-color:          #000;
+$navbar-default-link-hover-bg:             lighten($coalca_yellow, 30%);
+$navbar-default-link-active-color:         #000;
+$navbar-default-link-disabled-color:       #000;
+$navbar-default-link-disabled-bg:          lighten($coalca_yellow, 20%);
+
+$navbar-default-link-color:                #444;
+$navbar-default-border:                    darken($navbar-default-bg, 10%);
+
+$brand-primary:                            darken($coalca_yellow, 35%);
+$breadcrumb-bg:                            lighten($coalca_yellow, 30%);
+
 // Official bootstrap starts here
 
 $icon-font-path: "../../bootstrap/";
 @import "bootstrap";
 
+// Coalca specific classes
+
+.contact-form-line td {
+  padding-bottom: 5px;
+}
+
 // -- Spree Custom Header and Footer ---------------------
 #spree-header {
-  background: #1c5c92 asset-url('spree_header.jpg') center center;
-  background-size: cover;
+  background: #fff;// #1c5c92 asset-url('spree_header.jpg') center center;
+  //background-size: cover;
   margin-bottom: $line-height-computed;
+
   #header {
-    background: rgba(9, 22, 33, 0.4);
+    background: #fff; //background: rgba(9, 22, 33, 0.4);
     padding: $line-height-computed 0;
   }
+
   #logo {
     margin-bottom: 10px;
+    padding-left: 0px;
     img {
       width: 306px;
     }
   }
-  .nav a {
-    color: #fff;
-    &:hover {
-      background:rgba(9, 22, 33, 0.4);
-    }
+
+  .navbar-default .nav li.dropdown.open .dropdown-toggle,
+  .navbar-default .nav li.dropdown.active .dropdown-toggle,
+  .navbar-default .nav li.dropdown .dropdown-toggle.active {
+    background: lighten($coalca_yellow, 20%);
   }
+
+  .navbar-default .nav ul.dropdown-menu {
+    background: lighten($coalca_yellow, 15%);
+  }
+
   .navbar {
     border: 0;
     margin-bottom: 0;
   }
+
+  //.navbar .navbar-header .navbar-toggle .icon-bar {
+  //  background-color: #000;
+  //}
 }
+
 #spree-footer {
   background: $gray-dark;
   padding-top: $padding-base-horizontal;
