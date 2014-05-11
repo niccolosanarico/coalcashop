@@ -64,6 +64,8 @@ $navbar-default-link-active-color:         #000;
 $navbar-default-link-disabled-color:       #000;
 $navbar-default-link-disabled-bg:          lighten($coalca_yellow, 20%);
 
+$navbar-height:                            40px !default;
+
 $navbar-default-link-color:                #444;
 $navbar-default-border:                    darken($navbar-default-bg, 10%);
 
@@ -89,14 +91,15 @@ $icon-font-path: "../../bootstrap/";
 
   #header {
     background: #fff; //background: rgba(9, 22, 33, 0.4);
-    padding: $line-height-computed 0;
+    padding-top: $line-height-computed;
+    padding-bottom: 10px;
   }
 
   #logo {
     margin-bottom: 10px;
     padding-left: 0px;
     img {
-      width: 306px;
+      width: 256px;
     }
   }
 
@@ -115,9 +118,6 @@ $icon-font-path: "../../bootstrap/";
     margin-bottom: 0;
   }
 
-  //.navbar .navbar-header .navbar-toggle .icon-bar {
-  //  background-color: #000;
-  //}
 }
 
 #spree-footer {
@@ -125,6 +125,32 @@ $icon-font-path: "../../bootstrap/";
   padding-top: $padding-base-horizontal;
   margin-top: $line-height-computed;
   color: #fff;
+}
+
+.text-center > a > img {
+  margin-bottom: 10px;
+}
+
+.coalca-info {
+  font-size: 0.8em;
+}
+
+.iva-overview {
+  font-size: 0.7em;
+}
+
+ol {
+  counter-reset: item;
+}
+
+ol li {
+  display: block;
+  margin-bottom: 1em;
+}
+
+ol li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item
 }
 
 // -- Spree Layout Custom Rules -------------------------

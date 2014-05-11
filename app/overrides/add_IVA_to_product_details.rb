@@ -3,6 +3,6 @@ Deface::Override.new(:virtual_path => 'spree/products/_cart_form',
                      :replace => 'span.price',
                      :text => '
                         <span class="lead price" itemprop="price">
-                          <%= display_price(@product) %> + IVA 22%
+                          <%= display_price(@product) %> <span class="iva-overview">+ IVA 22%</span>
                         </span>
                     ')

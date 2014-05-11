@@ -2,7 +2,7 @@
   <b>Coalca s.r.l.</b> <br/>
   Via G. Clerici, 234 <br/>
   20091 - Bresso (MI) <br/>
-  tel. +39 02 2423055 <br/>
+  tel. +39 02 2423055 (orari ufficio, dal lunedi al venerdi)<br/>
   fax  +39 02 22478803 <br/>
   <a href="mailto:info@coalca.it">info@coalca.it</a>
 </div>
@@ -51,10 +51,10 @@
     </td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='100' name='Email' /></div>
     </td></tr>
     <tr class="contact-form-line"><td nowrap='nowrap' align='left'  style='width:200px;'>La tua domanda<span style='color:red;'>*</span>
-    </td><td style='width:250px;' > <textarea style='width:250px;' name='Description' maxlength='1000' width='250' height='250'></textarea></td><td>
-      <span>Scrivi qui la tua domanda o il tuo problema.</span></td><tr><td colspan='2' align='center' style='padding-top: 15px;' >
+    </td><td style='width:250px;' > <textarea style='width:250px;' name='Description' maxlength='1000' width='250' rows="7" ></textarea></td>
+    <td></td><tr><td colspan='2' align='center' style='padding-top: 15px;' >
         <input   style='color:black' type='submit'  value='Conferma' />
-        <input type='reset'  style='color:black' value='Ripristina' /> </td></tr></table>
+        <input type='reset'  style='color:black' value='Annulla' /> </td></tr></table>
 
         <script> var mndFileds=new Array('First Name','Last Name','Account Name','Email','Description');var fldLangVal=new Array('Nome','Cognome','Nome Ditta','E-mail','La tua domanda');function reloadImg(){if(document.getElementById('imgid').src.indexOf('&d') !== -1 ){document.getElementById('imgid').src=document.getElementById('imgid').src.substring(0,document.getElementById('imgid').src.indexOf('&d'))+'&d'+new Date().getTime();}else{document.getElementById('imgid').src = document.getElementById('imgid').src+'&d'+new Date().getTime();}}function checkMandatery(){for(i=0;i<mndFileds.length;i++){ var fieldObj=document.forms['WebToContacts1151529000000068040'][mndFileds[i]];if(fieldObj) {if(((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0){alert(fldLangVal[i] +' non può essere vuoto'); fieldObj.focus(); return false;}else if(fieldObj.nodeName=='SELECT'){if(fieldObj.options[fieldObj.selectedIndex].value=='-None-'){alert(fldLangVal[i] +' non può essere nessuno'); fieldObj.focus(); return false;}} else if(fieldObj.type =='checkbox'){ if (fieldObj.checked == false){     alert('Please accept  '+fldLangVal[i]); fieldObj.focus();return false;}}}}}</script>
 
