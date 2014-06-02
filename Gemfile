@@ -36,6 +36,13 @@ end
 
 group :development, :test do
   gem 'sqlite3'
+
+  gem 'capistrano', '~> 3.2.1'
+  # rails specific capistrano funcitons
+  gem 'capistrano-rails', '~> 1.1.0'
+
+  # integrate bundler with capistrano
+  gem 'capistrano-bundler'
 end
 
 group :test do
@@ -53,16 +60,11 @@ end
 
 group :production do
     gem 'pg'
+    gem 'unicorn'
 end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

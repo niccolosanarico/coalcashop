@@ -1,13 +1,14 @@
+set :stage, :staging
+
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary server in each group
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-role :app, %w{deploy@example.com}
-role :web, %w{deploy@example.com}
-role :db,  %w{deploy@example.com}
-
+role :web, "coalcashop-test.cloudapp.net"
+role :app, "coalcashop-test.cloudapp.net"
+role :db,  "csdb.cloudapp.net"
 
 # Extended Server Syntax
 # ======================
@@ -15,8 +16,20 @@ role :db,  %w{deploy@example.com}
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
+#server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
+server 'coalcashop-test.cloudapp.net', user: 'coalca', roles: %w{web app db}
+server 'csdb.cloudapp.net', user: 'coalca', roles: %w{web app db}
 
+
+# User with no sudo permission
+set :user, "coalca"
+set :use_sudo, false
+set :deploy_to, "/home/coalca/coalcashop"
+#default_run_options[:shell] = '/bin/bash --login'
+#default_environment["RAILS_ENV"] = 'staging'
+
+
+set :linked_files, %w{config/database.yml  config/application.yml}
 
 # Custom SSH Options
 # ==================
