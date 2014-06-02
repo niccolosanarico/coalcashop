@@ -77,4 +77,15 @@ Coalcashop::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.sendgrid.net',
+    port:                 587,
+    domain:               'coalca.it',
+    user_name:            'coalca',
+    password:             'coalc4sendgrid',
+    authentication:       'plain',
+    enable_starttls_auto: true
+  }
 end
