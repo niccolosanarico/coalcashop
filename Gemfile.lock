@@ -1,16 +1,16 @@
 GIT
   remote: git://github.com/200Creative/spree_bootstrap_frontend.git
-  revision: 8d320d64cb63ff749db4d054a6007732f8bdf4c9
+  revision: b438fee221aea44d4389b219c9da4c0a3ce8ae58
   branch: 2-2-stable
   specs:
     spree_bootstrap_frontend (2.2.0)
+      bootstrap-kaminari-views (~> 0.0.3)
       bootstrap-sass (~> 3.1.0)
-      kaminari-bootstrap (~> 3.0.1)
       spree_core (~> 2.2.0)
 
 GIT
   remote: git://github.com/spree/spree_auth_devise.git
-  revision: e75c1f021c4353b2e10474dfb9181dc8d4571b40
+  revision: 64793186744b505c8ce662837c448a3257f58d85
   branch: 2-2-stable
   specs:
     spree_auth_devise (2.2.0)
@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_gateway.git
-  revision: 10430c4e9742f93fc7441903391f0cde3fb71976
+  revision: ea9dd046848523c79845abbd5462f5e13941276e
   branch: 2-2-stable
   specs:
     spree_gateway (2.2.1)
@@ -31,12 +31,22 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_i18n.git
-  revision: 99ee7bb313fe9d09fe4b9c00ab40b335ebfe438f
+  revision: 5211761ee7dd8f3102af92b0b7b269a72b4281b7
   branch: 2-2-stable
   specs:
     spree_i18n (3.0.0)
       globalize (~> 4.0.0)
+      i18n_data (~> 0.4.1)
       rails-i18n (~> 4.0.0)
+      spree_core (~> 2.2.0)
+
+GIT
+  remote: git://github.com/spree/spree_print_invoice.git
+  revision: 0e53a90f98cba2b18188242d303282124e34e12b
+  branch: 2-2-stable
+  specs:
+    spree_print_invoice (2.0.0)
+      prawn (= 1.0.0)
       spree_core (~> 2.2.0.beta)
 
 GIT
@@ -59,7 +69,7 @@ GEM
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    active_utils (2.0.2)
+    active_utils (2.2.1)
       activesupport (>= 2.3.11)
       i18n
     activemerchant (1.42.9)
@@ -89,15 +99,20 @@ GEM
       activerecord (>= 3.0)
     addressable (2.3.6)
     arel (4.0.2)
-    awesome_nested_set (3.0.0.rc.3)
+    awesome_nested_set (3.0.0.rc.5)
       activerecord (>= 4.0.0, < 5)
     aws-sdk (1.27.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
     bcrypt (3.1.7)
+    bootstrap-kaminari-views (0.0.3)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
+    braintree (2.30.2)
+      builder (>= 2.0.0)
     builder (3.1.4)
     cancan (1.6.10)
     canonical-rails (0.0.7)
@@ -108,6 +123,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    childprocess (0.5.3)
+      ffi (~> 1.0, >= 1.0.11)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.4)
@@ -119,19 +136,20 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    colorize (0.7.2)
-    cucumber (1.3.14)
+    colorize (0.7.3)
+    cucumber (1.3.15)
       builder (>= 2.1.2)
       diff-lcs (>= 1.1.3)
       gherkin (~> 2.12)
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.1)
-    cucumber-rails (1.4.0)
-      capybara (>= 1.1.2)
-      cucumber (>= 1.2.0)
-      nokogiri (>= 1.5.0)
-      rails (>= 3.0.0)
-    database_cleaner (1.2.0)
+    cucumber-rails (1.4.1)
+      capybara (>= 1.1.2, < 3)
+      cucumber (>= 1.3.8, < 2)
+      mime-types (~> 1.16)
+      nokogiri (~> 1.5)
+      rails (>= 3, < 5)
+    database_cleaner (1.3.0)
     deface (1.0.0)
       colorize (>= 0.5.8)
       nokogiri (~> 1.6.0)
@@ -145,17 +163,18 @@ GEM
     devise-encryptable (0.1.2)
       devise (>= 2.1.0)
     diff-lcs (1.2.5)
-    email_spec (1.5.0)
+    email_spec (1.6.0)
       launchy (~> 2.1)
       mail (~> 2.2)
     erubis (2.7.0)
-    execjs (2.0.2)
+    execjs (2.1.0)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
     ffaker (1.24.0)
+    ffi (1.9.3)
     friendly_id (5.0.3)
       activerecord (>= 4.0.0)
     gherkin (2.12.2)
@@ -169,6 +188,7 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.9)
+    i18n_data (0.4.1)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -181,26 +201,23 @@ GEM
     kaminari (0.15.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    kaminari-bootstrap (3.0.1)
-      kaminari (>= 0.13.0)
-      rails
     launchy (2.4.2)
       addressable (~> 2.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    mini_portile (0.5.3)
+    mini_portile (0.6.0)
     minitest (4.7.5)
     monetize (0.1.4)
     money (6.0.1)
       i18n (~> 0.6.4)
       monetize (~> 0.1.3)
-    multi_json (1.9.2)
+    multi_json (1.10.1)
     multi_test (0.1.1)
     multi_xml (0.5.5)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
     paperclip (3.4.2)
       activemodel (>= 3.0.0)
@@ -210,10 +227,14 @@ GEM
       mime-types
     paranoia (2.0.2)
       activerecord (~> 4.0)
+    pdf-core (0.2.5)
     pg (0.17.1)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
-    polyglot (0.3.4)
+    polyglot (0.3.5)
+    prawn (1.0.0)
+      pdf-core (~> 0.2.2)
+      ttfunk (~> 1.1.1)
     rabl (0.9.3)
       activesupport (>= 2.3.14)
     rack (1.5.2)
@@ -235,25 +256,30 @@ GEM
       activesupport (= 4.0.4)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.3.1)
+    rake (10.3.2)
     ransack (1.1.0)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       polyamorous (~> 0.6.0)
     rdoc (4.1.1)
       json (~> 1.4)
-    rspec-core (2.14.8)
-    rspec-expectations (2.14.5)
-      diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.14.6)
-    rspec-rails (2.14.2)
+    rspec-core (3.0.0)
+      rspec-support (~> 3.0.0)
+    rspec-expectations (3.0.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.0.0)
+    rspec-mocks (3.0.0)
+      rspec-support (~> 3.0.0)
+    rspec-rails (3.0.0)
       actionpack (>= 3.0)
-      activemodel (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
-      rspec-core (~> 2.14.0)
-      rspec-expectations (~> 2.14.0)
-      rspec-mocks (~> 2.14.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
+      rspec-support (~> 3.0.0)
+    rspec-support (3.0.0)
+    rubyzip (1.1.4)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -266,7 +292,12 @@ GEM
     select2-rails (3.4.9)
       sass-rails
       thor (~> 0.14)
-    shoulda-matchers (2.6.0)
+    selenium-webdriver (2.42.0)
+      childprocess (>= 0.5.0)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0.4)
+    shoulda-matchers (2.6.1)
       activesupport (>= 3.0.0)
     spree (2.2.1)
       spree_api (= 2.2.1)
@@ -328,12 +359,13 @@ GEM
     state_machine (1.2.0)
     stringex (1.5.1)
     thor (0.19.1)
-    thread_safe (0.3.3)
+    thread_safe (0.3.4)
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.9.2)
+    ttfunk (1.1.1)
     turbolinks (2.2.2)
       coffee-rails
     tzinfo (0.3.39)
@@ -348,6 +380,7 @@ GEM
       tzinfo
     warden (1.2.3)
       rack (>= 1.0)
+    websocket (1.0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -355,6 +388,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  braintree
   capybara
   coffee-rails (~> 4.0.0)
   cucumber-rails
@@ -371,12 +405,14 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.2)
   sdoc
+  selenium-webdriver
   shoulda-matchers
   spree (= 2.2.1)
   spree_auth_devise!
   spree_bootstrap_frontend!
   spree_gateway!
   spree_i18n!
+  spree_print_invoice!
   spree_static_content!
   sqlite3
   turbolinks

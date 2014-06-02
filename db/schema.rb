@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140426231136) do
+ActiveRecord::Schema.define(version: 20140602121643) do
 
   create_table "spree_addresses", force: true do |t|
     t.string   "firstname"
@@ -264,6 +264,8 @@ ActiveRecord::Schema.define(version: 20140426231136) do
     t.datetime "approved_at"
     t.boolean  "confirmation_delivered",                                     default: false
     t.boolean  "considered_risky",                                           default: false
+    t.integer  "invoice_number"
+    t.date     "invoice_date"
   end
 
   add_index "spree_orders", ["completed_at"], name: "index_spree_orders_on_completed_at"

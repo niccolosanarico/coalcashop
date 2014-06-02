@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Coalcashop
   class Application < Rails::Application
-    
+
     config.to_prepare do
       # Load application's model / class decorators
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
@@ -32,5 +32,8 @@ module Coalcashop
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :it
+    config.i18n.enforce_available_locales = true
+
+
   end
 end

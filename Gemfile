@@ -5,6 +5,9 @@ gem 'rails', '4.0.4'
 gem 'deface'
 gem 'money', '6.0.1'
 
+# Payments
+gem 'braintree'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
@@ -43,6 +46,7 @@ group :test do
   gem 'launchy'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+  gem 'selenium-webdriver'
   gem 'email_spec'
   gem 'cucumber-rails', :require => false
 end
@@ -69,3 +73,4 @@ gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '2-2-s
 gem 'spree_i18n', :github => 'spree/spree_i18n', :branch => '2-2-stable'
 gem 'spree_bootstrap_frontend', :github => '200Creative/spree_bootstrap_frontend', :branch => '2-2-stable'
 gem 'spree_static_content', github: 'spree/spree_static_content', branch: '2-2-stable'
+gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git', branch: '2-2-stable'
