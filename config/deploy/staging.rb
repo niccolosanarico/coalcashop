@@ -34,7 +34,7 @@ set :linked_files, %w{config/database.yml}
 # Unicorn setup
 namespace :unicorn do
   desc "Zero-downtime restart of Unicorn"
-  task :restart, except: { no_release: true } do
+  task :restart, :except => { :no_release => true } do
     run "kill -s USR2 `cat /tmp/unicorn.coalcashop.pid`"
   end
 
