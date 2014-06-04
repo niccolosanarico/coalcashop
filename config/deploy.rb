@@ -1,6 +1,3 @@
-require "bundler/capistrano"
-load "deploy/assets"
-
 set :application, "coalcashop"
 set :repo_url, "https://github.com/niccolosanarico/coalcashop.git"
 set :branch, "master"

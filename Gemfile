@@ -43,6 +43,7 @@ group :development, :test do
 
   # integrate bundler with capistrano
   gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
 end
 
 group :test do
