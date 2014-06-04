@@ -1,6 +1,6 @@
 # config/unicorn.rb
 # Set environment to development unless something else is specified
-env = ENV["RAILS_ENV"] || "development"
+env = ENV["RAILS_ENV"] || "staging"
 
 # See http://unicorn.bogomips.org/Unicorn/Configurator.html for complete documentation.
 worker_processes 4
@@ -18,7 +18,7 @@ timeout 30
 pid "/tmp/unicorn.coalcashop.pid"
 
 # Production specific settings
-if env == "production"
+if env == "staging"
   # Help ensure your application will always spawn in the symlinked
   # "current" directory that Capistrano sets up.
   working_directory "/home/coalca/coalcashop/current"
@@ -26,8 +26,8 @@ if env == "production"
   # feel free to point this anywhere accessible on the filesystem user 'spree'
   shared_path = "/home/coalca/coalcashop/shared"
 
-  stderr_path "#{shared_path}/log/unicorn.stderr.log"
-  stdout_path "#{shared_path}/log/unicorn.stdout.log"
+  stderr_path "#{working_directory}/log/unicorn.stderr.log"
+  stdout_path "#{working_directory}/log/unicorn.stdout.log"
 end
 
 before_fork do |server, worker|
