@@ -40,13 +40,21 @@ namespace :unicorn do
 
   desc "Start unicorn"
   task :start do
-    run "cd #{current_path} ; bundle exec unicorn_rails -c config/unicorn.rb -D"
+    run "cd #{current_path} ; bundle exec unicorn_rails -c config/unicorn.rb -E staging -D"
   end
 
   desc "Stop unicorn"
   task :stop do
-    run "kill -s QUIT `cat /tmp/unicorn.[application's name].pid`"
+    run "kill -s QUIT `cat /tmp/unicorn.coalcashop.pid`"
   end
 end
+
+namespace :images do
+  task :symlink do
+    run "rm -rf #{release_path}/public/spree"
+    run "ln -nfs #{shared_path}/coalca #{release_path}/public/spree"
+  end
+end
+after "bundle:install", "images:symlink"
 
 after "deploy:restart", "unicorn:restart"
