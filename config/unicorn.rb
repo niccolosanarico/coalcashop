@@ -21,13 +21,13 @@ pid "/tmp/unicorn.coalcashop.pid"
 if env == "staging"
   # Help ensure your application will always spawn in the symlinked
   # "current" directory that Capistrano sets up.
-  working_directory "/home/coalca/coalcashop/current"
+  working_directory = "/home/coalca/coalcashop/current"
 
   # feel free to point this anywhere accessible on the filesystem user 'spree'
   shared_path = "/home/coalca/coalcashop/shared"
 
-  stderr_path "#{working_directory}/log/unicorn.stderr.log"
-  stdout_path "#{working_directory}/log/unicorn.stdout.log"
+  stderr_path = "#{working_directory}/log/unicorn.stderr.log"
+  stdout_path = "#{working_directory}/log/unicorn.stdout.log"
 
   # Force the bundler gemfile environment variable to
   # reference the capistrano "current" symlink
