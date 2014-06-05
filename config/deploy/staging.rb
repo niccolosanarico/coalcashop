@@ -55,6 +55,6 @@ namespace :images do
     run "ln -nfs #{shared_path}/coalca #{release_path}/public/spree"
   end
 end
-after "bundle:install", "images:symlink"
+after "deploy:updated", "images:symlink"
 
 after "deploy:restart", "unicorn:restart"
