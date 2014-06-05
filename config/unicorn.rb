@@ -28,6 +28,13 @@ if env == "staging"
 
   stderr_path "#{working_directory}/log/unicorn.stderr.log"
   stdout_path "#{working_directory}/log/unicorn.stdout.log"
+
+  # Force the bundler gemfile environment variable to
+  # reference the capistrano "current" symlink
+  before_exec do |_|
+    ENV["BUNDLE_GEMFILE"] = File.join(working_directory, 'Gemfile')
+  end
+
 end
 
 before_fork do |server, worker|

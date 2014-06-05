@@ -1,3 +1,6 @@
+require "bundler/capistrano"
+require "rvm/capistrano"
+
 set :application, "coalcashop"
 set :repo_url, "https://github.com/niccolosanarico/coalcashop.git"
 set :branch, "master"
