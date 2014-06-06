@@ -62,8 +62,8 @@ namespace :unicorn do
   end
   task :restart do
     on roles (:app) do
-      stop
-      start
+      invoke "unicorn:stop"
+      invoke "unicorn:start"
     end
   end
 
@@ -81,4 +81,4 @@ end
 
 before "deploy:finished", "images:symlink"
 #before "deploy:finished", "unicorn:stop"
-after "deploy:finished", "unicorn:start"
+after "deploy:finished", "unicorn:restart"

@@ -26,8 +26,8 @@ if env == "staging"
   # feel free to point this anywhere accessible on the filesystem user 'spree'
   shared_path = "/home/coalca/coalcashop/shared"
 
-  stderr_path = "#{working_directory}/log/unicorn.stderr.log"
-  stdout_path = "#{working_directory}/log/unicorn.stdout.log"
+  stderr_path = "/home/coalca/coalcashop/current/log/unicorn.stderr.log"
+  stdout_path = "/home/coalca/coalcashop/current/log/unicorn.stdout.log"
 
   # Force the bundler gemfile environment variable to
   # reference the capistrano "current" symlink
