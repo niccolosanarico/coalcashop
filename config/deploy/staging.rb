@@ -35,17 +35,22 @@ set :linked_files, %w{config/database.yml}
 namespace :unicorn do
   desc "Zero-downtime restart of Unicorn"
   task :restart do
-    run "kill -s USR2 `cat /tmp/unicorn.coalcashop.pid`"
+    on roles :app do
+      execute :kill, "-s USR2 `cat /tmp/unicorn.coalcashop.pid`"
+    end
   end
 
   desc "Start unicorn"
   task :start do
-    run "cd #{current_path} ; bundle exec unicorn_rails -c config/unicorn.rb -E staging -D"
+    on roles :app do
+      execute :cd, "#{current_path} ; bundle exec unicorn_rails -c config/unicorn.rb -E staging -D"
+    end
   end
 
   desc "Stop unicorn"
   task :stop do
-    run "kill -s QUIT `cat /tmp/unicorn.coalcashop.pid`"
+    on roles :app do
+      execute :kill, "-s QUIT `cat /tmp/unicorn.coalcashop.pid`"
   end
 end
 
@@ -60,5 +65,4 @@ namespace :images do
 end
 
 after "deploy:updated", "images:symlink"
-
-after "deploy:restart", "unicorn:restart"
+after "deploy:finished", "unicorn:start"
