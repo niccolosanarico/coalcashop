@@ -43,7 +43,7 @@ namespace :unicorn do
   desc "Start unicorn"
   task :start do
     on roles :app do
-      execute :cd, "#{current_path} ; bundle exec unicorn_rails -c config/unicorn.rb -E staging -D"
+      execute :cd, "#{deploy_to}/current ; bundle exec unicorn_rails -c config/unicorn.rb -E staging -D"
     end
   end
 
@@ -51,7 +51,7 @@ namespace :unicorn do
   task :stop do
     on roles :app do
       execute :kill, "-s QUIT `cat /tmp/unicorn.coalcashop.pid`"
-    end  
+    end
   end
 end
 
@@ -66,4 +66,5 @@ namespace :images do
 end
 
 after "deploy:updated", "images:symlink"
+before "deploy:finished", "unicorn:stop"
 after "deploy:finished", "unicorn:start"
