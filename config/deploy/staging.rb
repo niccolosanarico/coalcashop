@@ -50,11 +50,15 @@ namespace :unicorn do
 end
 
 namespace :images do
+  desc "Prepare assets symlink"
   task :symlink do
-    run "rm -rf #{release_path}/public/spree"
-    run "ln -nfs #{shared_path}/coalca #{release_path}/public/spree"
+    on roles :app do
+      execute :rm, "-rf #{release_path}/public/spree"
+      execute :ln, "-nfs #{shared_path}/coalca #{release_path}/public/spree"
+    end
   end
 end
+
 after "deploy:updated", "images:symlink"
 
 after "deploy:restart", "unicorn:restart"
