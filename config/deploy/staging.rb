@@ -66,5 +66,5 @@ namespace :images do
 end
 
 after "deploy:updated", "images:symlink"
-before "deploy:finished", "unicorn:stop"
+#before "deploy:finished", "unicorn:stop"
 after "deploy:finished", "unicorn:start"
