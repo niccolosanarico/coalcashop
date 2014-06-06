@@ -51,6 +51,7 @@ namespace :unicorn do
   task :stop do
     on roles :app do
       execute :kill, "-s QUIT `cat /tmp/unicorn.coalcashop.pid`"
+    end  
   end
 end
 
