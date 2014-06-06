@@ -43,7 +43,8 @@ namespace :unicorn do
   desc "Start unicorn"
   task :start do
     on roles :app do
-      execute :cd, "#{deploy_to}/current ; bundle exec unicorn_rails -c config/unicorn.rb -E staging -D"
+      execute :cd, "#{current_path}"
+      execute "unicorn_rails",  "-c config/unicorn.rb -E staging -D"
     end
   end
 
