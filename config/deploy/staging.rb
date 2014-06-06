@@ -43,8 +43,9 @@ namespace :unicorn do
   desc "Start unicorn"
   task :start do
     on roles :app do
-      execute :cd, "#{current_path}"
-      execute "unicorn_rails",  "-c config/unicorn.rb -E staging -D"
+      within "#{current_path}" do
+        execute "unicorn_rails",  "-c config/unicorn.rb -E staging -D"
+      end
     end
   end
 
@@ -66,6 +67,6 @@ namespace :images do
   end
 end
 
-after "deploy:updated", "images:symlink"
+before "deploy:finished", "images:symlink"
 #before "deploy:finished", "unicorn:stop"
 after "deploy:finished", "unicorn:start"
