@@ -31,7 +31,7 @@ set :unicorn_binary, "unicorn_rails"
 set :unicorn_config, "#{current_path}/config/unicorn.rb"
 set :unicorn_pid, "/tmp/unicorn.coalcashop.pid"
 
-set :linked_files, %w{config/database.yml config/application/yml}
+set :linked_files, %w{config/database.yml config/application.yml}
 
 # Unicorn setup
 namespace :unicorn do
