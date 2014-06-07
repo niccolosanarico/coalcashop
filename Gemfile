@@ -58,10 +58,13 @@ group :test do
   gem 'cucumber-rails', :require => false
 end
 
-group :production do
+group :production, :staging do
     gem 'pg'
     gem 'unicorn'
 end
+
+# Managing environment variables
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

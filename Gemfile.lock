@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_auth_devise.git
-  revision: 321bcd0bffd803882bfeff767e9d588358c52fc9
+  revision: 81a0fbb2db15efbbb50d0d139bbc41aee7fa58a1
   branch: 2-2-stable
   specs:
     spree_auth_devise (2.2.0)
@@ -180,7 +180,7 @@ GEM
       launchy (~> 2.1)
       mail (~> 2.2)
     erubis (2.7.0)
-    execjs (2.1.0)
+    execjs (2.2.0)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.4.1)
@@ -188,6 +188,9 @@ GEM
       railties (>= 3.0.0)
     ffaker (1.24.0)
     ffi (1.9.3)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     friendly_id (5.0.3)
       activerecord (>= 4.0.0)
     gherkin (2.12.2)
@@ -426,6 +429,7 @@ DEPENDENCIES
   deface
   email_spec
   factory_girl_rails
+  figaro
   jbuilder (~> 1.2)
   jquery-rails
   launchy

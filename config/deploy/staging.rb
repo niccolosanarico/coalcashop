@@ -25,14 +25,13 @@ server 'csdb.cloudapp.net', user: 'coalca', roles: %w{db}
 set :user, "coalca"
 set :use_sudo, false
 set :deploy_to, "/home/coalca/coalcashop"
-#default_run_options[:shell] = '/bin/bash --login'
-#default_environment["RAILS_ENV"] = 'staging'
+
 set :rails_env, :staging
 set :unicorn_binary, "unicorn_rails"
 set :unicorn_config, "#{current_path}/config/unicorn.rb"
 set :unicorn_pid, "/tmp/unicorn.coalcashop.pid"
 
-set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml config/application/yml}
 
 # Unicorn setup
 namespace :unicorn do
