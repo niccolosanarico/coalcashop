@@ -83,6 +83,11 @@ $icon-font-path: "../../bootstrap/";
   padding-bottom: 5px;
 }
 
+.taxonomy-root {
+  font-size: $font-size-base;
+  color: $link-hover-color;
+}
+
 // -- Spree Custom Header and Footer ---------------------
 #spree-header {
   background: #fff;// #1c5c92 asset-url('spree_header.jpg') center center;
