@@ -3,6 +3,7 @@
 env = ENV["RAILS_ENV"] || "staging"
 
 # See http://unicorn.bogomips.org/Unicorn/Configurator.html for complete documentation.
+# One worker loads an entire Rails app.
 worker_processes 2
 
 # listen on both a Unix domain socket and a TCP port,
@@ -23,7 +24,7 @@ if env == "staging"
   # "current" directory that Capistrano sets up.
   working_directory = "/home/coalca/coalcashop/current"
 
-  # feel free to point this anywhere accessible on the filesystem user 'spree'
+  # feel free to point this anywhere accessible on the filesystem user 'coalca'
   shared_path = "/home/coalca/coalcashop/shared"
 
   stderr_path = "/home/coalca/coalcashop/current/log/unicorn.stderr.log"
