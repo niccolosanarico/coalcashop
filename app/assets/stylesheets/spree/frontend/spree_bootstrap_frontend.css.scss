@@ -144,16 +144,16 @@ $icon-font-path: "../../bootstrap/";
   font-size: 0.7em;
 }
 
-ol {
+ol.terms {
   counter-reset: item;
 }
 
-ol li {
+ol.terms li {
   display: block;
   margin-bottom: 1em;
 }
 
-ol li:before {
+ol.terms li:before {
   content: counters(item, ".") " ";
   counter-increment: item
 }
