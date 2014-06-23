@@ -158,6 +158,12 @@ ol.terms li:before {
   counter-increment: item
 }
 
+// Existing card selection
+
+table.existing-credit-card-list > tbody > tr > td {
+  padding-left: 1em;
+}
+
 // -- Spree Layout Custom Rules -------------------------
 
 //TODO, bug #6
