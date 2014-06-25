@@ -9,7 +9,7 @@ Spree::BaseHelper.module_eval do
       text = "#{image_tag 'cart.jpg', size: '16x16'} #{text}: (#{Spree.t('empty')})".html_safe
       css_class = 'empty'
     else
-      text = "#{image_tag('cart.png', size: '16x16')} #{text}: (#{current_order.item_count})  <span class='amount'>#{current_order.display_total.to_html}</span>".html_safe
+      text = "#{image_tag('cart.jpg', size: '16x16')} #{text}: (#{current_order.item_count})  <span class='amount'>#{current_order.display_total.to_html}</span>".html_safe
       css_class = 'full'
     end
 
