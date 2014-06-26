@@ -19,6 +19,7 @@
 
               <% unless @taxons.empty? %>
 
+                <% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %>
 
                 <ul class='dropdown-menu' role='menu' data-hook>
                   <% @taxons.each do |taxon| %>
