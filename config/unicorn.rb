@@ -4,11 +4,11 @@ env = ENV["RAILS_ENV"] || "staging"
 
 # See http://unicorn.bogomips.org/Unicorn/Configurator.html for complete documentation.
 # One worker loads an entire Rails app.
-worker_processes 4
+worker_processes 2
 
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
-listen "/tmp/coalcashop.socket", backlog: 64
+listen "/tmp/coalcashop.socket", backlog: 2048
 
 # Preload our app for more speed
 preload_app true
