@@ -68,6 +68,10 @@
       <%= raw(adjustment.label) %> <%= adjustment.display_amount %>
     <% end %>
 
+    <% @order.adjustments.mandatory.each do |adjustment| %>
+      <%= raw(adjustment.label) %> <%= adjustment.display_amount %>
+    <% end %>
+
     <h4><%= Spree.t('order_mailer.confirm_email.total', :total => @order.display_total) %></h4>
 
     <p>Per qualunque domanda relativa al tuo ordine, scrivici a info@coalca.it, indicando nel soggetto il tuo codice ordine: <%= @order.number %>.</p>
