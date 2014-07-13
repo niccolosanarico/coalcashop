@@ -10,7 +10,7 @@ CSV.foreach('20140706_Articoli.csv', converters: :all, headers: true) do |produc
   puts "- Importing #{product['Name']} [SKU: #{product['SKU']}]"
 
 
-  p = Spree::Variant.find_by sku: product['SKU']
+  p = Spree::Variant.find_by sku: "#{product['SKU']}"
 
   if !p.nil?
     # 2a - check for existence of the product, by SKU
@@ -48,7 +48,7 @@ CSV.foreach('20140706_Articoli.csv', converters: :all, headers: true) do |produc
 
       next if image == "." or image == ".."
 
-      prod.images << Spree::Image.create({:attachment => open(URI.parse("images/#{product['SKU']}/#{image}")),
+      prod.images << Spree::Image.create!({:attachment => open(URI.parse("images/#{product['SKU']}/#{image}").to_s),
                                           :viewable => product}, :without_protection => true)
     end
 

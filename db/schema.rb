@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140602121643) do
+ActiveRecord::Schema.define(version: 20140713152330) do
 
   create_table "spree_addresses", force: true do |t|
     t.string   "firstname"
@@ -270,6 +270,7 @@ ActiveRecord::Schema.define(version: 20140602121643) do
 
   add_index "spree_orders", ["completed_at"], name: "index_spree_orders_on_completed_at"
   add_index "spree_orders", ["number"], name: "index_spree_orders_on_number"
+  add_index "spree_orders", ["user_id", "created_by_id"], name: "index_spree_orders_on_user_id_and_created_by_id"
   add_index "spree_orders", ["user_id"], name: "index_spree_orders_on_user_id"
 
   create_table "spree_orders_promotions", id: false, force: true do |t|
@@ -336,7 +337,6 @@ ActiveRecord::Schema.define(version: 20140602121643) do
     t.string   "identifier"
     t.string   "cvv_response_code"
     t.string   "cvv_response_message"
-    t.decimal  "uncaptured_amount",    precision: 10, scale: 2, default: 0.0
   end
 
   add_index "spree_payments", ["order_id"], name: "index_spree_payments_on_order_id"
@@ -439,11 +439,13 @@ ActiveRecord::Schema.define(version: 20140602121643) do
   end
 
   create_table "spree_promotion_actions", force: true do |t|
-    t.integer "promotion_id"
-    t.integer "position"
-    t.string  "type"
+    t.integer  "promotion_id"
+    t.integer  "position"
+    t.string   "type"
+    t.datetime "deleted_at"
   end
 
+  add_index "spree_promotion_actions", ["deleted_at"], name: "index_spree_promotion_actions_on_deleted_at"
   add_index "spree_promotion_actions", ["id", "type"], name: "index_spree_promotion_actions_on_id_and_type"
   add_index "spree_promotion_actions", ["promotion_id"], name: "index_spree_promotion_actions_on_promotion_id"
 

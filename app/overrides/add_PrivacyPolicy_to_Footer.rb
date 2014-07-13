@@ -1,6 +1,7 @@
 Deface::Override.new(:virtual_path => 'spree/shared/_footer',
                      :name => 'add_PrivacyPolicy_to_Footer',
                      :replace => 'div#footer-right',
+                     :original => 'c5818da91b4b4e4ab39c32427d8809ee7c0ff91e',
                      :text => '
                        <div id="footer-right" class="col-md-2" data-hook>
                           <a href="//www.iubenda.com/privacy-policy/983640" class="iubenda-white iubenda-embed" title="Privacy Policy">

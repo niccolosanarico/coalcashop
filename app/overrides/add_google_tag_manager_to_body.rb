@@ -1,6 +1,7 @@
 Deface::Override.new(:virtual_path => 'spree/layouts/spree_application',
                      :name => 'add_google_tag_manager_to_body',
                      :insert_top => 'body',
+                     :original => 'd3bacab5d2ef18d522d121671861f4182719eb96',
                      :text => '
                        <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PLBQC4"
