@@ -70,7 +70,7 @@
     <% end %>
 
     <% @order.all_adjustments.tax.eligible.group_by(&:label).each do |label, adjustments| %>
-      <%= raw(label) %> <%= adjustments.sum(&:amount) %>
+      <%= raw(label) %> <%= Spree::Money.new(adjustments.sum(&:amount), :currency => @order.currency) %> %>
     <% end %>
 
     <h4><%= Spree.t('order_mailer.confirm_email.total', :total => @order.display_total) %></h4>
