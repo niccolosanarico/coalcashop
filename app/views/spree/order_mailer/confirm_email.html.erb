@@ -2,8 +2,33 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+
+    <style>
+      table {
+        border: 1px solid #fbeb4d;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th {
+        border: 1px solid #fbeb4d;
+        background-color: #fbeb4d;
+        text-align:left;
+      }
+      td {
+        padding: 2px;
+      }
+      .border {
+        width:100%;
+        height: 10px;
+        background-color: #fbeb4d;
+      }
+
+    </style>
+
   </head>
   <body>
+    <div class="border"></div>
+
     <p><%= Spree.t('order_mailer.confirm_email.dear_customer') %></p>
 
     <p><%= Spree.t('order_mailer.confirm_email.instructions') %></p>
