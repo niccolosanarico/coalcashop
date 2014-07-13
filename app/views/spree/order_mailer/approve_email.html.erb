@@ -69,7 +69,7 @@
       <%= raw(adjustment.label) %> <%= adjustment.display_amount %>
     <% end %>
 
-    <% @order.adjustments.mandatory.each do |adjustment| %>
+    <% @order.adjustments.tax.each do |adjustment| %>
       <%= raw(adjustment.label) %> <%= adjustment.display_amount %>
     <% end %>
 
