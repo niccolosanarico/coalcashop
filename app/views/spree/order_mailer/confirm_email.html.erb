@@ -74,6 +74,34 @@
 
     <h4><%= Spree.t('order_mailer.confirm_email.total', :total => @order.display_total) %></h4>
 
+    <p>L'ordine verrà spedito a:</p>
+    <div class="">
+      <div class=""><b><%= @order.ship_address.full_name %></b></div>
+      <% unless @order.ship_address.company.blank? %>
+        <div class="">
+          <%= address.company %>
+        </div>
+      <% end %>
+      <div class="">
+        <div class="">
+          <div class="">
+            <%= @order.ship_address.address1 %>
+          </div>
+          <% unless @order.ship_address.address2.blank? %>
+            <div class="">
+              <%= @order.ship_address.address2 %>
+            </div>
+          <% end %>
+        </div>
+        <div class="">
+          <span class=""><%= @order.ship_address.city %></span>
+          <span class=""><%= @order.ship_address.state_text %></span>
+          <span class=""><%= @order.ship_address.zipcode %></span>
+          <div class=""><%= @order.ship_address.country.try(:name) %></div>
+        </div>
+      </div>
+    </div>
+
     <p>Per qualunque domanda relativa al tuo ordine, scrivici a info@coalca.it, indicando nel soggetto il tuo codice ordine: <%= @order.number %>.</p>
 
     <p>Riceverai presto una mail di presa in carico dell'ordine. </p>
