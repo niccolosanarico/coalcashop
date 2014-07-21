@@ -79,7 +79,7 @@
       <div class=""><b><%= @order.ship_address.full_name %></b></div>
       <% unless @order.ship_address.company.blank? %>
         <div class="">
-          <%= address.company %>
+          <%= @order.ship_address.company %>
         </div>
       <% end %>
       <div class="">

@@ -21,7 +21,7 @@ L'ordine verrà spedito a:
 
   <%= @order.ship_address.full_name %>
   <% unless @order.ship_address.company.blank? %>
-    <%= address.company %>
+    <%= @order.ship_address.company %>
   <% end %>
   <%= @order.ship_address.address1 %>
   <% unless @order.ship_address.address2.blank? %>

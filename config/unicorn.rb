@@ -1,5 +1,5 @@
 # config/unicorn.rb
-# Set environment to development unless something else is specified
+# Set environment to staging unless something else is specified
 env = ENV["RAILS_ENV"] || "staging"
 
 # See http://unicorn.bogomips.org/Unicorn/Configurator.html for complete documentation.
@@ -14,7 +14,7 @@ listen "/tmp/coalcashop.socket", backlog: 2048
 preload_app true
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
-timeout 60
+timeout 30
 
 pid "/tmp/unicorn.coalcashop.pid"
 
