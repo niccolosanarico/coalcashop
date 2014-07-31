@@ -189,3 +189,14 @@ table.existing-credit-card-list > tbody > tr > td:last-child:after {
 h1 {
   margin-bottom: 30px;
 }
+
+// Wire transfer
+
+.c_hidden {
+  display: none;
+}
+
+.bt_payment_form  td{
+  padding-top: 5px;
+  padding-right: 7px;
+}

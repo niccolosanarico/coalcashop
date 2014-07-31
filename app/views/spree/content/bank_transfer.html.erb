@@ -1,0 +1,36 @@
+<h4>COME PAGARE TRAMITE BONIFICO</h4>
+<b>Istruzioni:</b>
+<ol>
+  <li>
+    Una volta completato l'ordine, provvedete al pagamento tramite bonifico bancario al conto indicato di seguito. Una volta che il bonifico &egrave; stato preso in carico dalla sua banca,
+    ricever&agrave; un codice CRO di conferma bonifico.
+    <% if (banks = Spree::Bank.active).any? %>
+      <div style="padding:20px 0">
+      <table border="1" align='center' width="80%">
+        <tr>
+          <th><center>Banca</center></th>
+          <th><center>Intestato a:</center></th>
+          <th><center>Codice IBAN</center></th>
+        </tr>
+        <% banks.each do |bank| %>
+          <tr>
+            <td><center><%= bank.name %></center></td>
+            <td><center>Coalca s.r.l.</center></td>
+            <td><center><%= bank.account_no %></center></td>
+          </tr>
+        <% end %>
+      </table>
+      </div>
+    <% end %>
+  </li>
+  <li>Inserite il CRO nella pagina di Dettagli Ordine seguendo i seguenti passi:
+    <ol style="padding:10px 0 0 20px" type='a'>
+      <li>Cliccate su "Il mio account".</li>
+      <li>cliccate sull'ordine di cui volete segnalare l'avvenuto pagamento.</li>
+      <li>Cliccate su "Inserisci gli estremi del bonifico" nella colonna a destra, "Informazioni Pagamento".</li>
+      <li>Inserite le informazioni di pagamento e cliccate su "Invia".</li>
+      <br><br>
+      <%= image_tag 'payment_details.png' %>
+    </ol>
+  </li>
+</ol>

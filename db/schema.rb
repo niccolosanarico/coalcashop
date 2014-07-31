@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140713152330) do
+ActiveRecord::Schema.define(version: 20140728201841) do
 
   create_table "spree_addresses", force: true do |t|
     t.string   "firstname"
@@ -69,6 +69,17 @@ ActiveRecord::Schema.define(version: 20140713152330) do
 
   add_index "spree_assets", ["viewable_id"], name: "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], name: "index_assets_on_viewable_type_and_type"
+
+  create_table "spree_banks", force: true do |t|
+    t.string   "name"
+    t.string   "account_no"
+    t.boolean  "active",     default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "spree_banks", ["active"], name: "index_spree_banks_on_active"
+  add_index "spree_banks", ["name", "account_no"], name: "index_spree_banks_on_name_and_account_no", unique: true
 
   create_table "spree_calculators", force: true do |t|
     t.string   "type"
@@ -324,7 +335,7 @@ ActiveRecord::Schema.define(version: 20140713152330) do
   add_index "spree_payment_methods", ["id", "type"], name: "index_spree_payment_methods_on_id_and_type"
 
   create_table "spree_payments", force: true do |t|
-    t.decimal  "amount",               precision: 10, scale: 2, default: 0.0, null: false
+    t.decimal  "amount",                   precision: 10, scale: 2, default: 0.0, null: false
     t.integer  "order_id"
     t.integer  "source_id"
     t.string   "source_type"
@@ -337,6 +348,10 @@ ActiveRecord::Schema.define(version: 20140713152330) do
     t.string   "identifier"
     t.string   "cvv_response_code"
     t.string   "cvv_response_message"
+    t.string   "bank_name"
+    t.string   "account_no"
+    t.string   "transaction_reference_no"
+    t.date     "deposited_on"
   end
 
   add_index "spree_payments", ["order_id"], name: "index_spree_payments_on_order_id"
