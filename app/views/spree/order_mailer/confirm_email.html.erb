@@ -79,20 +79,22 @@
       Per completare l'ordine, occorre completare il pagamento di <%= @order.display_total %> tramite bonifico bancario. Usa le coordinate di seguito indicate:
     </p>
 
-    <% banks.each do |bank| %>
-     <p class="field">
-       <label for="bank_name">Banca</label><br/>
-       <p id="bank_name"><%= bank.name %></p>
-     </p>
-     <p class="field">
-       <label for="bank_to">Intestato a:</label><br/>
-       <p id="bank_to">Coalca s.r.l.</p>
-     </p>
-     <p class="field">
-       <label for="bank_account">IBAN</label><br/>
-       <p id="bank_account"><%= bank.account_no %></p>
-     </p>
+      <% banks.each do |bank| %>
 
+       <p class="field">
+         <label for="bank_name">Banca</label><br/>
+         <p id="bank_name"><%= bank.name %></p>
+       </p>
+       <p class="field">
+         <label for="bank_to">Intestato a:</label><br/>
+         <p id="bank_to">Coalca s.r.l.</p>
+       </p>
+       <p class="field">
+         <label for="bank_account">IBAN</label><br/>
+         <p id="bank_account"><%= bank.account_no %></p>
+       </p>
+
+      <% end %>
     <% end %>
 
     <p>L'ordine verrà spedito a:</p>

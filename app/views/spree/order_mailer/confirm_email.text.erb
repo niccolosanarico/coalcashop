@@ -25,12 +25,12 @@
 
 Per completare l'ordine, occorre completare il pagamento di <%= @order.display_total %> tramite bonifico bancario. Usa le coordinate di seguito indicate:
 
-<% banks.each do |bank| %>
- Banca: <%= bank.name %>
- Intestato a: Coalca s.r.l.
- IBAN:<%= bank.account_no %>
+  <% banks.each do |bank| %>
+   Banca: <%= bank.name %>
+   Intestato a: Coalca s.r.l.
+   IBAN:<%= bank.account_no %>
+  <% end %>
 <% end %>
-
 
 L'ordine verrà spedito a:
 
