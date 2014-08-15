@@ -13,8 +13,8 @@ listen "/tmp/coalcashop.socket", backlog: 2048
 # Preload our app for more speed
 preload_app true
 
-# nuke workers after 30 seconds instead of 60 seconds (the default)
-timeout 30
+# nuke workers after 15 seconds instead of 60 seconds (the default)
+timeout 15
 
 pid "/tmp/unicorn.coalcashop.pid"
 
@@ -29,7 +29,7 @@ if env == "staging"
 
   # feel free to point this anywhere accessible on the filesystem user 'coalca'
   shared_path = "/home/coalca/coalcashop/shared"
-  
+
   # Force the bundler gemfile environment variable to
   # reference the capistrano "current" symlink
   before_exec do |_|
