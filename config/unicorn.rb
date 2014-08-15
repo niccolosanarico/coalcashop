@@ -24,12 +24,12 @@ if env == "staging"
   # "current" directory that Capistrano sets up.
   working_directory "/home/coalca/coalcashop/current"
 
-  # feel free to point this anywhere accessible on the filesystem user 'coalca'
-  shared_path "/home/coalca/coalcashop/shared"
-
   stderr_path "/home/coalca/coalcashop/current/log/unicorn.stderr.log"
   stdout_path "/home/coalca/coalcashop/current/log/unicorn.stdout.log"
 
+  # feel free to point this anywhere accessible on the filesystem user 'coalca'
+  shared_path = "/home/coalca/coalcashop/shared"
+  
   # Force the bundler gemfile environment variable to
   # reference the capistrano "current" symlink
   before_exec do |_|
