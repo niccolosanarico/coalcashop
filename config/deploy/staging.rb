@@ -80,4 +80,4 @@ end
 
 before "deploy:finished", "images:symlink"
 #before "deploy:finished", "unicorn:stop"
-after "deploy:finished", "unicorn:restart"
+after "deploy:finished", "unicorn:reload"

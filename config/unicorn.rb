@@ -43,6 +43,8 @@ before_fork do |server, worker|
   # as there's no need for the master process to hold a connection
   if defined?(ActiveRecord::Base)
     ActiveRecord::Base.connection.disconnect!
+
+    Rails.logger.info('Disconnected from ActiveRecord')
   end
 
   # Before forking, kill the master process that belongs to the .oldbin PID.
@@ -61,6 +63,8 @@ after_fork do |server, worker|
   # the following is *required* for Rails + "preload_app true"
   if defined?(ActiveRecord::Base)
     ActiveRecord::Base.establish_connection
+
+    Rails.logger.info('Connected to ActiveRecord')
   end
 
   # if preload_app is true, then you may also want to check and
