@@ -32,6 +32,7 @@ set :rails_env, :staging
 #set :unicorn_pid, "/tmp/unicorn.coalcashop.pid"
 
 set :linked_files, %w{config/database.yml config/application.yml}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :images do
   desc "Prepare assets symlink"
@@ -43,17 +44,5 @@ namespace :images do
   end
 end
 
-
-namespace :puma do
-  desc "create a shared tmp dir for puma state files"
-  task :after_symlink do
-    on roles :app do
-      execute :rm, "-rf #{release_path}/tmp"
-      execute :ln, "-nfs #{shared_path}/tmp #{release_path}/tmp"
-    end
-  end
-end
-
-before "deploy:finished", "puma:after_symlink"
 before "deploy:finished", "images:symlink"
 after "deploy:finished", "puma:restart"
