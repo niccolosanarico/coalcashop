@@ -27,46 +27,11 @@ set :use_sudo, false
 set :deploy_to, "/home/coalca/coalcashop"
 
 set :rails_env, :staging
-set :unicorn_binary, "unicorn_rails"
-set :unicorn_config, "#{current_path}/config/unicorn.rb"
-set :unicorn_pid, "/tmp/unicorn.coalcashop.pid"
+#set :unicorn_binary, "unicorn_rails"
+#set :unicorn_config, "#{current_path}/config/unicorn.rb"
+#set :unicorn_pid, "/tmp/unicorn.coalcashop.pid"
 
 set :linked_files, %w{config/database.yml config/application.yml}
-
-# Unicorn setup
-namespace :unicorn do
-  desc "Zero-downtime restart of Unicorn"
-
-  task :start do
-    on roles (:app) do
-      within "#{current_path}" do
-        execute :bundle, :exec, "#{fetch(:unicorn_binary)} -c #{fetch(:unicorn_config)} -E #{fetch(:rails_env)} -D"
-      end
-    end
-  end
-  task :stop do
-    on roles (:app) do
-      execute "kill `cat #{fetch(:unicorn_pid)}`"
-    end
-  end
-  task :graceful_stop do
-    on roles (:app) do
-      execute "kill -s QUIT `cat #{fetch(:unicorn_pid)}`"
-    end
-  end
-  task :reload do
-    on roles (:app) do
-      execute "kill -s USR2 `cat #{fetch(:unicorn_pid)}`"
-    end
-  end
-  task :restart do
-    on roles (:app) do
-      invoke "unicorn:stop"
-      invoke "unicorn:start"
-    end
-  end
-
-end
 
 namespace :images do
   desc "Prepare assets symlink"
@@ -79,5 +44,4 @@ namespace :images do
 end
 
 before "deploy:finished", "images:symlink"
-#before "deploy:finished", "unicorn:stop"
-after "deploy:finished", "unicorn:reload"
+after "deploy:finished", "puma:restart"

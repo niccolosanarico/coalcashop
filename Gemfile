@@ -44,6 +44,9 @@ group :development, :test do
   # integrate bundler with capistrano
   gem 'capistrano-bundler'
   gem 'capistrano-rvm'
+
+  #Integrate puma with capistrano
+  gem 'capistrano3-puma'
 end
 
 group :test do
@@ -60,7 +63,9 @@ end
 
 group :production, :staging do
     gem 'pg'
-    gem 'unicorn'
+    #gem 'unicorn'
+    gem 'puma'
+    #gem 'foreman'
 end
 
 # Managing environment variables
