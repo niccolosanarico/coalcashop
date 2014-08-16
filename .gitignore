@@ -17,6 +17,7 @@
 
 # Additionalignore files
 config/database.yml
+config/newrelic.yml
 environments/*.rb
 
 # Ignore application configuration

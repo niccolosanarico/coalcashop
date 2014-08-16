@@ -66,6 +66,7 @@ group :production, :staging do
     #gem 'unicorn'
     gem 'puma'
     #gem 'foreman'
+    gem 'newrelic_rpm'
 end
 
 # Managing environment variables
