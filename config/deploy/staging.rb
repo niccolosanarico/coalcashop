@@ -43,5 +43,16 @@ namespace :images do
   end
 end
 
+desc "create a shared tmp dir for puma state files"
+namespace :puma do
+  task :after_symlink do
+    on roles: :app do
+      run "sudo rm -rf #{release_path}/tmp"
+      run "ln -s #{shared_path}/tmp #{release_path}/tmp"
+    end
+  end
+end
+
+after "deploy:create_symlink", "puma:after_symlink"
 before "deploy:finished", "images:symlink"
 after "deploy:finished", "puma:restart"
