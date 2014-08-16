@@ -16,7 +16,7 @@ SKU Prodotto
 <%= Spree.t('shipment_mailer.shipped_email.track_information', :tracking => @shipment.tracking)     if @shipment.tracking %>
 <%= Spree.t('shipment_mailer.shipped_email.track_link',        :url      => @shipment.tracking_url) if @shipment.tracking_url %>
 
-Per qualunque domanda relativa al tuo ordine, scrivici a info@coalca.it, indicando nel soggetto il tuo codice ordine: <%= @shipment.order.number %>.
+Per qualunque domanda relativa al tuo ordine, scrivici a info@coalca.it.
 
 <%= Spree.t('shipment_mailer.shipped_email.thanks') %>
 
