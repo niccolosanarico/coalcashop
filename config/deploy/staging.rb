@@ -47,7 +47,7 @@ end
 namespace :puma do
   desc "create a shared tmp dir for puma state files"
   task :after_symlink do
-    on roles: :app do
+    on roles :app do
       execute :rm, "-rf #{release_path}/tmp"
       execute :ln, "-nfs #{shared_path}/tmp #{release_path}/tmp"
     end
