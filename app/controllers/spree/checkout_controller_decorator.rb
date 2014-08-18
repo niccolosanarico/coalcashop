@@ -11,7 +11,7 @@ Spree::CheckoutController.class_eval do
 
         if @order.completed?
           session[:order_id] = nil
-          flash.notice = "Il tuo ordine &egrave; stato completato con successo, tra poco riceverai una email con tutti i dettagli. Grazie per l'acquisto!"
+          flash.notice = "Il tuo ordine e' stato completato con successo, tra poco riceverai una email con tutti i dettagli. Grazie per l'acquisto!"
           flash[:commerce_tracking] = "nothing special"
           redirect_to completion_route
         else

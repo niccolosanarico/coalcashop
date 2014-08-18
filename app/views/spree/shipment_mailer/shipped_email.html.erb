@@ -39,7 +39,7 @@
 
     <p><%= Spree.t('shipment_mailer.shipped_email.dear_customer') %></p>
 
-    <p>Abbiamo consegnato al vettore le merci per la spedizione:</p>
+    <p>Abbiamo consegnato al vettore le merci per la spedizione. Puoi seguire <%= link_to "online", order_url(@shipment.order) %> la spedizione.</p>
 
 
     <h4><%= Spree.t('shipment_mailer.shipped_email.shipment_summary') %></h4>
@@ -71,7 +71,7 @@
 
     <p><%= Spree.t('shipment_mailer.shipped_email.thanks') %></p>
 
-    <p>Arrivederci a presto, <br/> lo staff di <%= link_to "Coalca Shop", root_path %></p>
+    <p>Arrivederci a presto, <br/> lo staff di <%= link_to "Coalca Shop", root_url %></p>
 
   </body>
 </html>

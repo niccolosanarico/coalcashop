@@ -44,7 +44,7 @@
     <h4><%= Spree.t('order_mailer.confirm_email.order_summary') %></h4>
 
     <p>
-      Visualizza online i dettagli del tuo ordine #<%= link_to @order.number, order_path(@order) %>.
+      Visualizza online i dettagli del tuo ordine #<%= link_to @order.number, order_url(@order) %>.
     </p>
 
     <table>
@@ -83,30 +83,34 @@
       Per completare l'ordine, occorre effettuare il pagamento di <%= @order.display_total %> tramite bonifico bancario. Usa le coordinate di seguito indicate:
     </p>
 
-      <% banks.each do |bank| %>
+      <% if (banks = Spree::Bank.active).any? %>
 
-       <p class="field">
-         <label for="bank_name">Banca</label><br/>
-         <p id="bank_name"><%= bank.name %></p>
-       </p>
-       <p class="field">
-         <label for="bank_to">Intestato a:</label><br/>
-         <p id="bank_to">Coalca s.r.l.</p>
-       </p>
-       <p class="field">
-         <label for="bank_account">IBAN</label><br/>
-         <p id="bank_account"><%= bank.account_no %></p>
-       </p>
+        <% banks.each do |bank| %>
+
+         <p class="field">
+           <label for="bank_name">Banca</label><br/>
+           <p id="bank_name"><%= bank.name %></p>
+         </p>
+         <p class="field">
+           <label for="bank_to">Intestato a:</label><br/>
+           <p id="bank_to">Coalca s.r.l.</p>
+         </p>
+         <p class="field">
+           <label for="bank_account">IBAN</label><br/>
+           <p id="bank_account"><%= bank.account_no %></p>
+         </p>
+
+        <% end %>
 
       <% end %>
 
       <p>
-        Una volta completato il pagamento, <%= link_to "inserisci gli estremi dell'effettuato bonifico qui", order_path(@order) %>
+        Una volta completato il pagamento, <%= link_to "inserisci gli estremi dell'effettuato bonifico qui", order_url(@order) %>
       </p>
     <% end %>
 
     <p>
-      Visualizza online i dettagli del tuo ordine #<%= link_to @order.number, order_path(@order) %>.
+      Visualizza online i dettagli del tuo ordine #<%= link_to @order.number, order_url(@order) %>.
     </p>
 
     <p>L'ordine verrà spedito a:</p>
