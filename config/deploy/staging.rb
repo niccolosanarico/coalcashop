@@ -8,7 +8,8 @@ set :stage, :staging
 
 role :web, "coalcashop-test.cloudapp.net"
 role :app, "coalcashop-test.cloudapp.net"
-role :db,  "csdb.cloudapp.net"
+role :db, "coalcashop-test.cloudapp.net"
+#role :db,  "csdb.cloudapp.net"
 
 # Extended Server Syntax
 # ======================
@@ -17,8 +18,8 @@ role :db,  "csdb.cloudapp.net"
 # used to set extended properties on the server.
 
 #server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
-server 'coalcashop-test.cloudapp.net', user: 'coalca', roles: %w{web app}
-server 'csdb.cloudapp.net', user: 'coalca', roles: %w{db}
+server 'coalcashop-test.cloudapp.net', user: 'coalca', roles: %w{web app db}
+#server 'csdb.cloudapp.net', user: 'coalca', roles: %w{db}
 
 
 # User with no sudo permission

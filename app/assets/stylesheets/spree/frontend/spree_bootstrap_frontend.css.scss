@@ -71,6 +71,7 @@ $navbar-default-border:                    darken($navbar-default-bg, 10%);
 $brand-primary:                            darken($coalca_yellow, 35%);
 $breadcrumb-bg:                            lighten($coalca_yellow, 30%);
 
+$font-size-base:                           13px;
 
 // Official bootstrap starts here
 
@@ -198,4 +199,88 @@ h1 {
 .bt_payment_form  td{
   padding-top: 5px;
   padding-right: 7px;
+}
+
+.credit_cards {
+  float: right;
+}
+
+.style-two {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#footer-center {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.lower-menu {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5px;
+}
+
+.lower-menu a {
+  color: white;
+  font-weight: bold;
+}
+
+.coalca-nav {
+  ul {
+    list-style-type: none;
+  }
+  li {
+    list-style-type: none;
+    margin-right: 50px;
+    padding-bottom: 10px;
+  }
+  li:last-child {
+    margin-right: 0px;
+  }
+}
+
+// Sidebar adjustments
+
+.list-group {
+  border-bottom: 1px solid grey;
+}
+
+.list-group-item {
+    border: none;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+nav#taxonomies {
+  h4 {
+    border-bottom: 1px solid grey;
+  }
+}
+
+// taxons
+
+.subtaxon-title {
+  div {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  a {
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: $coalca_yellow;
+    text-align: center;
+  }
+}
+
+.subtaxon-section {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  min-height: 100px;
 }
