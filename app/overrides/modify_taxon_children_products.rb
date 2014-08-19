@@ -4,6 +4,11 @@ Deface::Override.new(:virtual_path => 'spree/taxons/show',
                      :text => '<h2 class="taxon-title"><%= @taxon.name %></h2>')
 
 Deface::Override.new(:virtual_path => 'spree/taxons/show',
+                     :name => 'modify_filter_show',
+                     :replace => 'erb[loud]:contains("spree/shared/filters")',
+                     :text => %q(<%= render partial: 'spree/shared/filters' %>))
+
+Deface::Override.new(:virtual_path => 'spree/taxons/show',
                      :name => 'remove_taxon_children',
                      :remove => 'div[data-hook="taxon_children"]')
 
