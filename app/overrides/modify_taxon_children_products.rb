@@ -8,9 +8,18 @@ Deface::Override.new(:virtual_path => 'spree/taxons/show',
                      :remove => 'div[data-hook="taxon_children"]')
 
 Deface::Override.new(:virtual_path => 'spree/taxons/show',
+                     :name => 'add_bootstrap_to_taxon_section',
+                     :replace => 'div[data-hook="taxon_products"]',
+                     :text => %q(
+                      <div data-hook="taxon_products" class="col-sm-12 col-xs-12">
+                        <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
+                      </div>
+                     ))
+
+Deface::Override.new(:virtual_path => 'spree/taxons/show',
                      :name => 'insert_taxon_products',
                      :insert_before => 'div[data-hook="taxon_products"]',
-                     :text => '<% unless params[:keywords].present? %>
+                     :text => '<% unless params[:keywords].present? or not @taxon.children.present? %>
                                  <div data-hook="taxon_children" class="col-md-12 col-sm-12 subtaxon-section">
                                   <% cache [I18n.locale, @taxon] do %>
                                     <%= render :partial => "taxon", :collection => @taxon.children %>

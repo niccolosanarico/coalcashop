@@ -1,0 +1,81 @@
+
+<% address_id = address_type.chars.first %>
+<div class="inner" data-hook=<%="#{address_type}_inner" %>>
+  <div class="row" id=<%="#{address_id}firstname" %>>
+    <div class="col-sm-3"><%= form.label :firstname, Spree.t(:first_name)+"*", :class => "control-label" %></div>
+    <div class="col-sm-9"><%= form.text_field :firstname, { :class => 'required form-control' } %></div>
+  </div><br/>
+  <div class="row" id=<%="#{address_id}lastname" %>>
+    <div class="col-sm-3"><%= form.label :lastname, Spree.t(:last_name)+"*", :class => "control-label" %></div>
+    <div class="col-sm-9"><%= form.text_field :lastname, :class => 'form-control required' %></div>
+  </div><br/>
+  <% if Spree::Config[:company] %>
+    <div class="row" id=<%="#{address_id}company" %>>
+      <div class="col-sm-3"><%= form.label :company, "Società", :class => "control-label" %></div>
+      <div class="col-sm-9"><%= form.text_field :company, :class => "form-control" %></div>
+    </div><br/>
+
+    <div class="row" id=<%="#{address_id}partita_iva" %>>
+     <div class="col-sm-3"><%= form.label :partita_iva, "P.IVA*", :class => "control-label" %></div>
+     <div class="col-sm-9"><%= form.text_field :partita_iva, :class => "form-control required" %></div>
+   </div><br/>
+  <% end %>
+  <div class="row" id=<%="#{address_id}address1" %>>
+    <div class="col-sm-3"><%= form.label :address1, Spree.t(:street_address)+"*", :class => "control-label" %></div>
+    <div class="col-sm-9"><%= form.text_field :address1, :class => 'form-control  required' %></div>
+  </div><br/>
+  <div class="row" id=<%="#{address_id}address2" %>>
+    <div class="col-sm-3"><%= form.label :address2, "Indirizzo/2", :class => "control-label" %></div>
+    <div class="col-sm-9"><%= form.text_field :address2, :class => 'form-control' %></div>
+  </div><br/>
+  <div class="row" id=<%="#{address_id}city" %>>
+    <div class="col-sm-3"><%= form.label :city, Spree.t(:city)+"*", :class => "control-label" %></div>
+    <div class="col-sm-9"><%= form.text_field :city, :class => 'form-control required' %></div>
+  </div><br/>
+  <div class="row" id=<%="#{address_id}country" %>>
+    <div class="col-sm-3"><%= form.label :country_id, Spree.t(:country)+"*", :class => "control-label" %></div>
+    <div id= <%= "#{address_id}country-selection" %> class="col-sm-9"> <%= form.collection_select :country_id,
+      available_countries, :id, :name, {}, {:class => 'form-control required'} %></div>
+  </div><br/>
+
+  <% if Spree::Config[:address_requires_state] %>
+    <div class="row" id=<%="#{address_id}state" %>>
+      <% have_states = !address.country.states.empty? %>
+      <div class="col-sm-2"><%= form.label :state, Spree.t(:state)+"*", :class => "control-label" %></div>
+      <div class="col-sm-1"><span class='required' id=<%="#{address_id}state-required"%>>*</span></div>
+
+      <% state_elements = [
+         form.collection_select(:state_id, address.country.states,
+                            :id, :name,
+                            {:include_blank => true},
+                            {:class => have_states ? 'form-control required' : 'form-control hidden',
+                            :disabled => !have_states}) +
+         form.text_field(:state_name,
+                            :class => !have_states ? 'form-control required' : 'form-control hidden',
+                            :disabled => have_states)
+         ].join.gsub('"', "'").gsub("\n", "")
+      %>
+      <%= javascript_tag do -%>
+        $('#<%="#{address_id}state" %>').append("<%== state_elements %>");
+      <% end %>
+    </div>
+      <noscript>
+        <%= form.text_field :state_name, :class => 'form-control required' %>
+      </noscript>
+  <% end %>
+
+  <div class="row" id=<%="#{address_id}zipcode" %>>
+    <div class="col-sm-3"><%= form.label :zipcode, Spree.t(:zip)+"*", :class => "control-label" %></div>
+    <div class="col-sm-9"><%= form.text_field :zipcode, :class => 'form-control required' %></div>
+  </div><br/>
+  <div class="row" id=<%="#{address_id}phone" %>>
+    <div class="col-sm-3"><%= form.label :phone, Spree.t(:phone)+"*", :class => "control-label" %></div>
+    <div class="col-sm-9"><%= form.phone_field :phone, :class => 'form-control required' %></div>
+  </div><br/>
+  <% if Spree::Config[:alternative_shipping_phone] %>
+    <div class="row" id=<%="#{address_id}altphone" %>>
+      <div class="col-sm-3"><%= form.label :alternative_phone, Spree.t(:alternative_phone), :class => "control-label" %></div>
+      <div class="col-sm-9"><%= form.phone_field :alternative_phone, :class => 'form-control' %></div>
+    </div><br/>
+  <% end %>
+</div>
