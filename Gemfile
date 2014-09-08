@@ -67,6 +67,7 @@ group :production, :staging do
     gem 'puma'
     #gem 'foreman'
     gem 'newrelic_rpm'
+    gem 'sidekiq'
 end
 
 # Managing environment variables
