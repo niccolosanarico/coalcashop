@@ -47,6 +47,7 @@ group :development, :test do
 
   #Integrate puma with capistrano
   gem 'capistrano3-puma'
+  gem 'spree_mixpanel', git: 'git@github.com:marcosteixeira/spree_mixpanel.git', branch: '2-1-stable'
 end
 
 group :test do
@@ -68,7 +69,6 @@ group :production, :staging do
     #gem 'foreman'
     gem 'newrelic_rpm'
     gem 'spree_mixpanel', git: 'git@github.com:marcosteixeira/spree_mixpanel.git', branch: '2-1-stable'
-
 end
 
 # Managing environment variables
