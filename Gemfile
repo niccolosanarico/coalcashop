@@ -67,6 +67,8 @@ group :production, :staging do
     gem 'puma'
     #gem 'foreman'
     gem 'newrelic_rpm'
+    gem 'spree_mixpanel', git: 'git@github.com:marcosteixeira/spree_mixpanel.git', branch: '2-1-stable'
+
 end
 
 # Managing environment variables
