@@ -98,15 +98,6 @@ GIT
       spree_core (~> 2.2.0)
 
 GIT
-  remote: git://github.com/spree/spree_print_invoice.git
-  revision: b6a1407792e1a51ae2f4828df8bff6ee37acfc67
-  branch: 2-2-stable
-  specs:
-    spree_print_invoice (2.0.0)
-      prawn (= 1.0.0)
-      spree_core (~> 2.2.0)
-
-GIT
   remote: git://github.com/spree/spree_static_content.git
   revision: 84a77297a61f241155c2301c1ba9b960a8354c68
   branch: 2-2-stable
@@ -331,14 +322,10 @@ GEM
       mime-types
     paranoia (2.0.2)
       activerecord (~> 4.0)
-    pdf-core (0.2.5)
     pg (0.17.1)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
     polyglot (0.3.5)
-    prawn (1.0.0)
-      pdf-core (~> 0.2.2)
-      ttfunk (~> 1.1.1)
     puma (2.9.1)
       rack (>= 1.1, < 2.0)
     rabl (0.9.3)
@@ -439,7 +426,6 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.9.2)
-    ttfunk (1.1.1)
     turbolinks (2.3.0)
       coffee-rails
     tzinfo (0.3.41)
@@ -497,7 +483,6 @@ DEPENDENCIES
   spree_gateway!
   spree_i18n!
   spree_mixpanel!
-  spree_print_invoice!
   spree_static_content!
   sqlite3
   turbolinks
