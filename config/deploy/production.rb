@@ -1,4 +1,4 @@
-set :stage, :production
+set :stage, ["production"]
 
 # Simple Role Syntax
 # ==================
@@ -6,9 +6,10 @@ set :stage, :production
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-role :web, ""
-role :app, ""
-role :db,  ""
+role :web, "coalcashop.cloudapp.net"
+role :app, "coalcashop.cloudapp.net"
+role :db, "coalcashop.cloudapp.net"
+#role :db,  "csdb.cloudapp.net"
 
 # Extended Server Syntax
 # ======================
@@ -17,8 +18,8 @@ role :db,  ""
 # used to set extended properties on the server.
 
 #server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
-server 'app', user: 'coalca', roles: %w{web app}
-server 'db', user: 'coalca', roles: %w{db}
+server 'coalcashop.cloudapp.net', user: 'coalca', roles: %w{web app db}
+#server 'csdb.cloudapp.net', user: 'coalca', roles: %w{db}
 
 
 # User with no sudo permission
@@ -26,47 +27,10 @@ set :user, "coalca"
 set :use_sudo, false
 set :deploy_to, "/home/coalca/coalcashop"
 
-set :rails_env, :production
-set :unicorn_binary, "unicorn_rails"
-set :unicorn_config, "#{current_path}/config/unicorn.rb"
-set :unicorn_pid, "/tmp/unicorn.coalcashop.pid"
+set :rails_env, :staging
 
-set :linked_files, %w{config/database.yml config/application.yml}
-
-# Unicorn setup
-namespace :unicorn do
-  desc "Zero-downtime restart of Unicorn"
-
-  task :start do
-    on roles (:app) do
-      within "#{current_path}" do
-        execute :bundle, :exec, "#{fetch(:unicorn_binary)} -c #{fetch(:unicorn_config)} -E #{fetch(:rails_env)} -D"
-      end
-    end
-  end
-  task :stop do
-    on roles (:app) do
-      execute "kill `cat #{fetch(:unicorn_pid)}`"
-    end
-  end
-  task :graceful_stop do
-    on roles (:app) do
-      execute "kill -s QUIT `cat #{fetch(:unicorn_pid)}`"
-    end
-  end
-  task :reload do
-    on roles (:app) do
-      execute "kill -s USR2 `cat #{fetch(:unicorn_pid)}`"
-    end
-  end
-  task :restart do
-    on roles (:app) do
-      invoke "unicorn:stop"
-      invoke "unicorn:start"
-    end
-  end
-
-end
+set :linked_files, %w{ config/database.yml config/application.yml config/newrelic.yml }
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :images do
   desc "Prepare assets symlink"
@@ -79,5 +43,4 @@ namespace :images do
 end
 
 before "deploy:finished", "images:symlink"
-#before "deploy:finished", "unicorn:stop"
-after "deploy:finished", "unicorn:restart"
+after "deploy:finished", "puma:restart"
