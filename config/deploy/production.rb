@@ -1,4 +1,4 @@
-set :stage, ["production"]
+set :stage, :production
 
 # Simple Role Syntax
 # ==================
@@ -27,7 +27,7 @@ set :user, "coalca"
 set :use_sudo, false
 set :deploy_to, "/home/coalca/coalcashop"
 
-set :rails_env, :staging
+set :rails_env, :production
 
 set :linked_files, %w{ config/database.yml config/application.yml config/newrelic.yml }
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
