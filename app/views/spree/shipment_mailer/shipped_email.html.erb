@@ -3,6 +3,11 @@
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
     <style>
+      @import url(http://fonts.googleapis.com/css?family=Lato:400,300italic);
+
+      body {
+          font-family: lato, helvetica;
+      }
       table {
         border: 1px solid #fbeb4d;
         border-collapse: collapse;
@@ -21,26 +26,51 @@
         padding: 2px;
       }
 
-      .border {
+      .border-group {
         width:100%;
         height: 20px;
         background-color: #fbeb4d;
         padding: 3px;
-        font-weight: bold;
-        font-size: 1.2em;
       }
 
+      ..border-title {
+        font-weight: bold;
+        font-size: 1.2em;
+        float:left;
+      }
+
+      .border-title a {
+        text-decoration:none;
+        color: black;
+      }
+
+
+      .border-element {
+        float:left;
+        margin-left: 30px;
+      }
+
+      .title-section {
+        width: 100%;
+        text-align: right;
+      }
     </style>
 
   </head>
   <body>
+    <div class="border-group">
+      <div class="border-title"><%= link_to "COALCA Shop", root_path %></div>
+      <div class="border-element"><%= link_to "Il tuo account", account_path %></div>
+    </div>
 
-    <div class="border">COALCA Shop</div>
+    <div class="title-section">
+      <h3 style="padding-right: 40px; margin-bottom:-0.1em">Spedizione Ordine</h3>
+      <div style="padding-right: 40px;">Ordine n&ordm; <%= link_to @order.number, order_path(@order) %></div>
+    </div>
 
     <p><%= Spree.t('shipment_mailer.shipped_email.dear_customer') %></p>
 
     <p>Abbiamo consegnato al vettore le merci per la spedizione. Puoi seguire <%= link_to "online", order_url(@shipment.order) %> la spedizione.</p>
-
 
     <h4><%= Spree.t('shipment_mailer.shipped_email.shipment_summary') %></h4>
 

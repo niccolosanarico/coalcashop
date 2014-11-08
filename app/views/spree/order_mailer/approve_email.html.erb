@@ -3,6 +3,11 @@
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
     <style>
+      @import url(http://fonts.googleapis.com/css?family=Lato:700,400,300italic);
+
+      body {
+          font-family: lato, helvetica;
+      }
       table {
         border: 1px solid #fbeb4d;
         border-collapse: collapse;
@@ -21,25 +26,65 @@
         padding: 2px;
       }
 
-      .border {
+      .border-group {
         width:100%;
         height: 20px;
         background-color: #fbeb4d;
         padding: 3px;
-        font-weight: bold;
-        font-size: 1.2em;
       }
 
+      .border-title {
+        font-weight: bold;
+        font-size: 1.2em;
+        float:left;
+      }
+
+      .border-title a {
+        text-decoration:none;
+        color: black;
+      }
+
+      .border-element {
+        float:left;
+        margin-left: 30px;
+      }
+
+      .title-section {
+        width: 100%;
+        text-align: right;
+      }
+
+      .summary {
+        text-align: right;
+        margin-right: 30%;
+      }
+
+      .address-information {
+        background: #DDD;
+        border-top: 2px solid #777;
+        padding: 15px;
+      }
+
+      .address {
+        font-weight: bold;
+      }
     </style>
 
   </head>
   <body>
+    <div class="border-group">
+      <div class="border-title"><a href=""><%= link_to "COALCA Shop", root_path %></a></div>
+      <div class="border-element"><%= link_to "Il tuo account", account_path %></div>
+    </div>
 
-    <div class="border">COALCA Shop</div>
+    <div class="title-section">
+      <h3 style="padding-right: 40px; margin-bottom:-0.1em">Approvazione Ordine</h3>
+      <div style="padding-right: 40px;">Ordine n&ordm; <%= link_to @order.number, order_url(@order) %></div>
+    </div>
 
     <p><%= Spree.t('order_mailer.confirm_email.dear_customer') %></p>
 
-    <p>Abbiamo approvato il tuo ordine #<%= @order.number %> e stiamo preparando le merci per la consegna. Di seguito un riepilogo:</p>
+    <p>Abbiamo approvato il tuo ordine n&ordm; <%= @order.number %> e stiamo preparando le merci per la consegna. Di seguito un riepilogo:</p>
 
 
     <h4><%= Spree.t('order_mailer.confirm_email.order_summary') %></h4>
@@ -63,46 +108,46 @@
     <% end %>
     </table>
 
-    <h4><%= Spree.t('order_mailer.confirm_email.subtotal', :subtotal => @order.display_item_total) %></h4>
+    <div class="summary">
+      <h4><%= Spree.t('order_mailer.confirm_email.subtotal', :subtotal => @order.display_item_total) %></h4>
 
-    <% @order.adjustments.eligible.each do |adjustment| %>
-      <%= raw(adjustment.label) %> <%= adjustment.display_amount %>
-    <% end %>
-
-    <% @order.all_adjustments.tax.eligible.group_by(&:label).each do |label, adjustments| %>
-      <%= raw(label) %> <%= Spree::Money.new(adjustments.sum(&:amount), :currency => @order.currency) %>
-    <% end %>
-
-    <h4><%= Spree.t('order_mailer.confirm_email.total', :total => @order.display_total) %></h4>
-
-    <p>
-      Visualizza online i dettagli del tuo ordine #<%= link_to @order.number, order_url(@order) %>.
-    </p>
-
-    <p>L'ordine verrà spedito a:</p>
-    <div class="">
-      <div class=""><b><%= @order.ship_address.full_name %></b></div>
-      <% unless @order.ship_address.company.blank? %>
-        <div class="">
-          <%= @order.ship_address.company %>
-        </div>
+      <% @order.adjustments.eligible.each do |adjustment| %>
+        <%= raw(adjustment.label) %> <%= adjustment.display_amount %>
       <% end %>
-      <div class="">
+
+      <% @order.all_adjustments.tax.eligible.group_by(&:label).each do |label, adjustments| %>
+        <%= raw(label) %> <%= Spree::Money.new(adjustments.sum(&:amount), :currency => @order.currency) %>
+      <% end %>
+
+      <h4><%= Spree.t('order_mailer.confirm_email.total', :total => @order.display_total) %></h4>
+    </div>
+
+    <div class="address-information">
+      <p>L'ordine verrà spedito a:</p>
+      <div class="address">
+        <div class=""><b><%= @order.ship_address.full_name %></b></div>
+        <% unless @order.ship_address.company.blank? %>
+          <div class="">
+            <%= @order.ship_address.company %>
+          </div>
+        <% end %>
         <div class="">
           <div class="">
-            <%= @order.ship_address.address1 %>
-          </div>
-          <% unless @order.ship_address.address2.blank? %>
             <div class="">
-              <%= @order.ship_address.address2 %>
+              <%= @order.ship_address.address1 %>
             </div>
-          <% end %>
-        </div>
-        <div class="">
-          <span class=""><%= @order.ship_address.city %></span>
-          <span class=""><%= @order.ship_address.state_text %></span>
-          <span class=""><%= @order.ship_address.zipcode %></span>
-          <div class=""><%= @order.ship_address.country.try(:name) %></div>
+            <% unless @order.ship_address.address2.blank? %>
+              <div class="">
+                <%= @order.ship_address.address2 %>
+              </div>
+            <% end %>
+          </div>
+          <div class="">
+            <span class=""><%= @order.ship_address.city %></span>
+            <span class=""><%= @order.ship_address.state_text %></span>
+            <span class=""><%= @order.ship_address.zipcode %></span>
+            <div class=""><%= @order.ship_address.country.try(:name) %></div>
+          </div>
         </div>
       </div>
     </div>
