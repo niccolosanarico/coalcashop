@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140815104427) do
+ActiveRecord::Schema.define(version: 20141105134835) do
 
   create_table "spree_addresses", force: true do |t|
     t.string   "firstname"
@@ -164,11 +164,11 @@ ActiveRecord::Schema.define(version: 20140815104427) do
     t.integer  "variant_id"
     t.integer  "order_id"
     t.integer  "quantity",                                                    null: false
-    t.decimal  "price",                precision: 8,  scale: 2,               null: false
+    t.decimal  "price",                precision: 10, scale: 2,               null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "currency"
-    t.decimal  "cost_price",           precision: 8,  scale: 2
+    t.decimal  "cost_price",           precision: 10, scale: 2
     t.integer  "tax_category_id"
     t.decimal  "adjustment_total",     precision: 10, scale: 2, default: 0.0
     t.decimal  "additional_tax_total", precision: 10, scale: 2, default: 0.0
@@ -277,6 +277,7 @@ ActiveRecord::Schema.define(version: 20140815104427) do
     t.boolean  "considered_risky",                                           default: false
     t.integer  "invoice_number"
     t.date     "invoice_date"
+    t.integer  "state_lock_version",                                         default: 0,       null: false
   end
 
   add_index "spree_orders", ["completed_at"], name: "index_spree_orders_on_completed_at"
@@ -368,8 +369,8 @@ ActiveRecord::Schema.define(version: 20140815104427) do
   add_index "spree_preferences", ["key"], name: "index_spree_preferences_on_key", unique: true
 
   create_table "spree_prices", force: true do |t|
-    t.integer  "variant_id",                         null: false
-    t.decimal  "amount",     precision: 8, scale: 2
+    t.integer  "variant_id",                          null: false
+    t.decimal  "amount",     precision: 10, scale: 2
     t.string   "currency"
     t.datetime "deleted_at"
   end
@@ -849,18 +850,18 @@ ActiveRecord::Schema.define(version: 20140815104427) do
   add_index "spree_users", ["spree_api_key"], name: "index_spree_users_on_spree_api_key"
 
   create_table "spree_variants", force: true do |t|
-    t.string   "sku",                                     default: "",    null: false
-    t.decimal  "weight",          precision: 8, scale: 2, default: 0.0
-    t.decimal  "height",          precision: 8, scale: 2
-    t.decimal  "width",           precision: 8, scale: 2
-    t.decimal  "depth",           precision: 8, scale: 2
+    t.string   "sku",                                      default: "",    null: false
+    t.decimal  "weight",          precision: 8,  scale: 2, default: 0.0
+    t.decimal  "height",          precision: 8,  scale: 2
+    t.decimal  "width",           precision: 8,  scale: 2
+    t.decimal  "depth",           precision: 8,  scale: 2
     t.datetime "deleted_at"
-    t.boolean  "is_master",                               default: false
+    t.boolean  "is_master",                                default: false
     t.integer  "product_id"
-    t.decimal  "cost_price",      precision: 8, scale: 2
+    t.decimal  "cost_price",      precision: 10, scale: 2
     t.integer  "position"
     t.string   "cost_currency"
-    t.boolean  "track_inventory",                         default: true
+    t.boolean  "track_inventory",                          default: true
     t.integer  "tax_category_id"
     t.datetime "updated_at"
   end

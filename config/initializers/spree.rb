@@ -18,9 +18,10 @@ Spree.config do |config|
   #Config email
 
   config.override_actionmailer_config = false
+
   config.mails_from = "noreply@coalca.it"
 
-  config.allow_ssl_in_staging = false
+  config.allow_ssl_in_staging = true
 
   config.allow_guest_checkout = false
 end

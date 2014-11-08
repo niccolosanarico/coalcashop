@@ -20,7 +20,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript library
+# Use jquery & angularjs as the JavaScript library
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -47,6 +47,8 @@ group :development, :test do
 
   #Integrate puma with capistrano
   gem 'capistrano3-puma'
+
+  gem 'diffy'
 end
 
 group :test do
