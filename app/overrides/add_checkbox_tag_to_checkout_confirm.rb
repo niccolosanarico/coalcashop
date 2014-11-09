@@ -1,4 +1,4 @@
-Deface::Override.new(:virtual_path => 'spree/checkout/_confirm',
+Deface::Override.new(:virtual_path => 'spree/checkout/_payment',
                      :name => 'add_checkbox_tag_to_checkout_confirm',
                      :replace => 'div.form-buttons',
                      :text => '
@@ -26,8 +26,7 @@ Deface::Override.new(:virtual_path => 'spree/checkout/_confirm',
 
 
 <div class="well text-right form-buttons" data-hook="buttons">
-  <%= submit_tag Spree.t(:place_order), :class => "btn btn-lg btn-success", :id => "checkout_confirm_button", :disabled => true %>
+  <%= submit_tag Spree.t(:save_and_continue), class: "btn btn-lg btn-success continue button primary", id: "checkout_confirm_button", :disabled => true  %>
   <script>Spree.disableSaveOnClick();</script>
 </div>
-
 ')

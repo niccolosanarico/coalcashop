@@ -75,13 +75,13 @@
 
   <body>
     <div class="border-group">
-      <div class="border-title"><%= link_to "COALCA Shop", root_path %></div>
-      <div class="border-element"><%= link_to "Il tuo account", account_path %></div>
+      <div class="border-title"><%= link_to "COALCA Shop", root_url %></div>
+      <div class="border-element"><%= link_to "Il tuo account", account_url(@user) %></div>
     </div>
 
     <div class="title-section">
       <h3 style="padding-right: 40px; margin-bottom:-0.1em">Conferma Ordine</h3>
-      <div style="padding-right: 40px;">Ordine n&ordm; <%= link_to @order.number, order_path(@order) %></div>
+      <div style="padding-right: 40px;">Ordine n&ordm; <%= link_to @order.number, order_url(@order) %></div>
     </div>
 
     <p><%= Spree.t('order_mailer.confirm_email.dear_customer') %></p>
@@ -146,15 +146,15 @@
 
          <p class="field">
            <label for="bank_name">Banca</label><br/>
-           <p id="bank_name"><%= bank.name %></p>
+           <p id="bank_name"><strong><%= bank.name %></strong></p>
          </p>
          <p class="field">
            <label for="bank_to">Intestato a:</label><br/>
-           <p id="bank_to">Coalca s.r.l.</p>
+           <p id="bank_to"><strong>Coalca s.r.l.</strong></p>
          </p>
          <p class="field">
            <label for="bank_account">IBAN</label><br/>
-           <p id="bank_account"><%= bank.account_no %></p>
+           <p id="bank_account"><strong><%= bank.account_no %></strong></p>
          </p>
 
         <% end %>

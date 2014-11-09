@@ -74,13 +74,13 @@
   </head>
   <body>
     <div class="border-group">
-      <div class="border-title"><%= link_to "COALCA Shop", root_path %></div>
-      <div class="border-element"><%= link_to "Il tuo account", account_path %></div>
+      <div class="border-title"><%= link_to "COALCA Shop", root_url %></div>
+      <div class="border-element"><%= link_to "Il tuo account", account_url %></div>
     </div>
 
     <div class="title-section">
       <h3 style="padding-right: 40px; margin-bottom:-0.1em">Spedizione Ordine</h3>
-      <div style="padding-right: 40px;">Ordine n&ordm; <%= link_to @shipment.order.number, order_path(@shipment.order) %></div>
+      <div style="padding-right: 40px;">Ordine n&ordm; <%= link_to @shipment.order.number, order_url(@shipment.order) %></div>
     </div>
 
     <p><%= Spree.t('shipment_mailer.shipped_email.dear_customer') %></p>
