@@ -19,7 +19,7 @@ Spree.config do |config|
 
   config.override_actionmailer_config = false
 
-  config.mails_from = "noreply@coalca.it"
+  config.mails_from = "Coalca Shop <noreply@coalca.it>"
 
   config.allow_ssl_in_staging = true
 
