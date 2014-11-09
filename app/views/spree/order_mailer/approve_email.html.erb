@@ -115,6 +115,12 @@
         <%= raw(adjustment.label) %> <%= adjustment.display_amount %>
       <% end %>
 
+      <% if @order.shipment_total > 0 %>
+        <%= Spree.t(:shipping_total) %> <%= Spree::Money.new(@order.shipment_total).to_html %>
+      <% else %>
+        <strong><%= Spree.t(:free_shipping) %></strong> <%= Spree.t(:free_shipping_amount) %>
+      <% end %>
+
       <% @order.all_adjustments.tax.eligible.group_by(&:label).each do |label, adjustments| %>
         <%= raw(label) %> <%= Spree::Money.new(adjustments.sum(&:amount), :currency => @order.currency) %>
       <% end %>
