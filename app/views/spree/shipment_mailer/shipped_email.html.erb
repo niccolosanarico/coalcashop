@@ -65,7 +65,7 @@
 
     <div class="title-section">
       <h3 style="padding-right: 40px; margin-bottom:-0.1em">Spedizione Ordine</h3>
-      <div style="padding-right: 40px;">Ordine n&ordm; <%= link_to @order.number, order_path(@order) %></div>
+      <div style="padding-right: 40px;">Ordine n&ordm; <%= link_to @shipment.order.number, order_path(@shipment.order) %></div>
     </div>
 
     <p><%= Spree.t('shipment_mailer.shipped_email.dear_customer') %></p>
