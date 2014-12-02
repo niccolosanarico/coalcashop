@@ -23,7 +23,6 @@
           </td>
           <td style='width:250px;' >
             <input type='text' style='width:250px;'  maxlength='80' name='Last Name' />
-          </div>
         </td>
       </tr>
       <tr class="contact-form-line">
@@ -32,31 +31,40 @@
         </td>
         <td style='width:250px;' >
           <input type='text' style='width:250px;'  maxlength='40' name='First Name' />
-        </div>
-      </td>
+        </td>
     </tr>
     <tr class="contact-form-line"><td nowrap='nowrap' align='left'  style='width:200px;'>Nome Ditta<span style='color:red;'>*</span> </td><td style='width:250px;' >
-      <input type='text' style='width:250px;'  maxlength='100' name='Account Name' /></div>
+      <input type='text' style='width:250px;'  maxlength='100' name='Account Name' />
     </td></tr>
     <tr class="contact-form-line"><td nowrap='nowrap' align='left'  style='width:200px;'>Indirizzo </td><td style='width:250px;' >
-      <input type='text' style='width:250px;'  maxlength='250' name='Mailing Street' /></div>
+      <input type='text' style='width:250px;'  maxlength='250' name='Mailing Street' />
     </td></tr>
     <tr class="contact-form-line"><td nowrap='nowrap' align='left'  style='width:200px;'>Città </td><td style='width:250px;' >
-      <input type='text' style='width:250px;'  maxlength='30' name='Mailing City' /></div>
+      <input type='text' style='width:250px;'  maxlength='30' name='Mailing City' />
     </td></tr>
     <tr class="contact-form-line"><td nowrap='nowrap' align='left'  style='width:200px;'>Telefono </td><td style='width:250px;' >
-      <input type='text' style='width:250px;'  maxlength='50' name='Phone' /></div>
+      <input type='text' style='width:250px;'  maxlength='50' name='Phone' />
     </td></tr>
     <tr class="contact-form-line"><td nowrap='nowrap' align='left'  style='width:200px;'>E-mail<span style='color:red;'>*</span>
-    </td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='100' name='Email' /></div>
+    </td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='100' name='Email' />
     </td></tr>
     <tr class="contact-form-line"><td nowrap='nowrap' align='left'  style='width:200px;'>La tua domanda<span style='color:red;'>*</span>
     </td><td style='width:250px;' > <textarea style='width:250px;' name='Description' maxlength='1000' width='250' rows="7" ></textarea></td>
-    <td></td><tr><td colspan='2' align='center' style='padding-top: 15px;' >
-        <input   style='color:black' type='submit'  value='Conferma' />
-        <input type='reset'  style='color:black' value='Annulla' /> </td></tr></table>
+    <td></td>
 
-        <script> var mndFileds=new Array('First Name','Last Name','Account Name','Email','Description');var fldLangVal=new Array('Nome','Cognome','Nome Ditta','E-mail','La tua domanda');function reloadImg(){if(document.getElementById('imgid').src.indexOf('&d') !== -1 ){document.getElementById('imgid').src=document.getElementById('imgid').src.substring(0,document.getElementById('imgid').src.indexOf('&d'))+'&d'+new Date().getTime();}else{document.getElementById('imgid').src = document.getElementById('imgid').src+'&d'+new Date().getTime();}}function checkMandatery(){for(i=0;i<mndFileds.length;i++){ var fieldObj=document.forms['WebToContacts1151529000000068040'][mndFileds[i]];if(fieldObj) {if(((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0){alert(fldLangVal[i] +' non può essere vuoto'); fieldObj.focus(); return false;}else if(fieldObj.nodeName=='SELECT'){if(fieldObj.options[fieldObj.selectedIndex].value=='-None-'){alert(fldLangVal[i] +' non può essere nessuno'); fieldObj.focus(); return false;}} else if(fieldObj.type =='checkbox'){ if (fieldObj.checked == false){     alert('Please accept  '+fldLangVal[i]); fieldObj.focus();return false;}}}}}</script>
+    <tr class="contact-form-line">
+      <td colspan="2" nowrap='nowrap' align='left'  style='width:450px;'>
+        <input type='checkbox' style='margin-right:10px;' name='Privacy'>Ho letto l'<a href="https://www.iubenda.com/privacy-policy/983640" target=_blank>Informativa sulla Privacy</a> e acconsento al trattamento dei dati personali ai sensi dell'Art. 13 D. lgs. 30 giugno 2003, nr. 196.<span style='color:red;'>*</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan='2' align='center' style='padding-top: 15px;' >
+        <input   style='color:black' type='submit'  value='Conferma' />
+        <input type='reset'  style='color:black' value='Annulla' /> </td>
+    </tr></table>
+
+        <script> var mndFileds=new Array('First Name','Last Name','Account Name','Email','Description', 'Privacy');var fldLangVal=new Array('Nome','Cognome','Nome Ditta','E-mail','La tua domanda', 'Privacy');function reloadImg(){if(document.getElementById('imgid').src.indexOf('&d') !== -1 ){document.getElementById('imgid').src=document.getElementById('imgid').src.substring(0,document.getElementById('imgid').src.indexOf('&d'))+'&d'+new Date().getTime();}else{document.getElementById('imgid').src = document.getElementById('imgid').src+'&d'+new Date().getTime();}}function checkMandatery(){for(i=0;i<mndFileds.length;i++){ var fieldObj=document.forms['WebToContacts1151529000000068040'][mndFileds[i]];if(fieldObj) {if(((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0){alert(fldLangVal[i] +' non può essere vuoto'); fieldObj.focus(); return false;}else if(fieldObj.nodeName=='SELECT'){if(fieldObj.options[fieldObj.selectedIndex].value=='-None-'){alert(fldLangVal[i] +' non può essere nessuno'); fieldObj.focus(); return false;}} else if(fieldObj.type =='checkbox'){ if (fieldObj.checked == false){     alert('Please accept  '+fldLangVal[i]); fieldObj.focus();return false;}}}}}</script>
 
   </form>
 </div>
