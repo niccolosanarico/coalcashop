@@ -31,3 +31,4 @@ Spree.user_class = "Spree::User"
 # Adding attributes to models
 
 Spree::PermittedAttributes.address_attributes << :partita_iva
+Spree::PermittedAttributes.user_attributes << :newsletter_optin
