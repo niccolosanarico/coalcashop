@@ -84,6 +84,8 @@ gem 'spree_mixpanel', git: 'git@github.com:marcosteixeira/spree_mixpanel.git', b
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'mailchimp-api', '~> 2.0.6'
+
 gem 'spree', :github => 'spree/spree', :branch => '2-2-stable'
 gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '2-2-stable'
 gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '2-2-stable'
