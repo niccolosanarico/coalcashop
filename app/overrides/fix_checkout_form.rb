@@ -7,3 +7,10 @@ Deface::Override.new(:virtual_path => 'spree/checkout/payment/_gateway',
                           <%= text_field_tag "#{param_prefix}[name]", "#{@order.billing_firstname} #{@order.billing_lastname}", { id: "name_on_card_#{payment_method.id}", :class => "form-control required"} %>
                         </p>
                     ')
+
+Deface::Override.new(:virtual_path => 'spree/checkout/payment/_gateway',
+                    :name => 'change_credit_card_image',
+                    :replace => 'erb[loud]:contains("image_tag")',
+                    :text => %q(
+                      <%= image_tag '/assets/credit_cards.jpg', :id => 'credit-card-image', :class => 'pull-right cc-smaller-img' %>
+                    ))

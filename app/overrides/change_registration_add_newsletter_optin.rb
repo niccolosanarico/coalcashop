@@ -1,3 +1,16 @@
+#Deface::Override.new(:virtual_path => 'spree/shared/_user_form',
+#                      :name => 'change_registration_add_name_lastname',
+#                      :insert_top => 'fieldset',
+#                      :text => '
+#                      <div class="form-group">
+#                        <%= f.text_field :name, :class => "form-control", :placeholder => "Nome" %>
+#                      </div>
+#                      <div class="form-group">
+#                        <%= f.text_field :lastname, :class => "form-control", :placeholder => "Cognome" %>
+#                      </div>
+#                      <hr/>
+#                      ')
+
 Deface::Override.new(:virtual_path => 'spree/shared/_user_form',
                      :name => 'change_registration_add_newsletter_optin',
                      :insert_bottom => 'fieldset',

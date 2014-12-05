@@ -45,3 +45,15 @@ Deface::Override.new(:virtual_path => 'spree/users/show',
                           </div>
                         <% end %>
                      ))
+
+ Deface::Override.new(  :virtual_path => 'spree/users/show',
+                       :name => 'change_user_details_page_5',
+                       :insert_bottom => 'dd',
+                       :text => %q(
+                         <dt>Nome</dt>
+                         <dd><%= @user.name %></dd>
+                         <dt>Cognome</dt>
+                         <dd><%= @user.lastname %></dd>
+                         <dt>Newsletter</dt>
+                         <dd><%= @user.newsletter_optin ? "Attiva" : "Non attiva" %></dd>
+                       ))

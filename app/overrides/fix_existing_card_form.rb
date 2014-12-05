@@ -12,10 +12,29 @@ Deface::Override.new(:virtual_path => 'spree/checkout/_payment',
                     ')
 
 Deface::Override.new(:virtual_path => 'spree/checkout/_payment',
+                    :name => 'fix_existing_card_form_2',
+                    :replace => 'tr',
+                    :text => %q(
+                      <tr id="<%= dom_id(card,'spree')%>" class="<%= cycle('even', 'odd') %>">
+                        <td>
+                          <table class="existing-cc-ns">
+                            <tr><td><strong><%= card.name %></strong></td></tr>
+                            <tr><td><%= card.display_number %></td></tr>
+                            <tr><td><%= card.month %></td><td><%= card.year %></td></tr>
+                          </table>
+                        </td>
+                        <td>
+                          <%= radio_button_tag "order[existing_card]", card.id, (card == @payment_sources.first), { class: "existing-cc-radio" }  %>
+                        </td>
+                      </tr>
+                    ))
+
+
+Deface::Override.new(:virtual_path => 'spree/checkout/_payment',
                      :name => 'fix_wire_transfer',
                      :remove => 'erb[loud]:contains("banktransfer_instructions")'
                     )
-                    
+
 Deface::Override.new(:virtual_path => 'spree/checkout/_payment',
                      :name => 'fix_wire_transfer_1',
                      #:replace => 'erb[loud]:contains("banktransfer_instructions")',

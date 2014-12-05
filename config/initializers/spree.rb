@@ -32,3 +32,5 @@ Spree.user_class = "Spree::User"
 
 Spree::PermittedAttributes.address_attributes << :partita_iva
 Spree::PermittedAttributes.user_attributes << :newsletter_optin
+Spree::PermittedAttributes.user_attributes << :name
+Spree::PermittedAttributes.user_attributes << :lastname
