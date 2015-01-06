@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~>4.0.4'
 gem 'deface'
-gem 'money', '6.0.1'
+gem 'money', '~>6.5.0'
 
 # Payments
 gem 'braintree'
@@ -80,7 +80,7 @@ gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'spree_mixpanel', git: 'git@github.com:marcosteixeira/spree_mixpanel.git', branch: '2-1-stable'
+gem 'spree_mixpanel', git: 'git@github.com:marcosteixeira/spree_mixpanel.git', branch: '2-2-stable'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
