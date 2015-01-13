@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: git://github.com/niccolosanarico/spree_bank_transfer.git
-  revision: f04d730ef8e6b8a8be11291445c84358dd50ba55
+  revision: ffa04c2b86522ec531d90a2cfdcc0ba41dcb2e82
   branch: 2-3-stable
   specs:
     spree-bank-transfer (2.3.0)
