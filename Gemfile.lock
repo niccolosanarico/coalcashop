@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: 2e9723234283296ea6543d8c867817d4d17dc49c
+  revision: 98ee5eb96519292a905ad796575b525cecbfb6d0
   branch: 2-2-stable
   specs:
     spree (2.2.10.beta)
@@ -165,7 +165,7 @@ GEM
       activerecord (>= 3.0)
     addressable (2.3.6)
     arel (4.0.2)
-    awesome_nested_set (3.0.1)
+    awesome_nested_set (3.0.2)
       activerecord (>= 4.0.0, < 5)
     aws-sdk (1.27.0)
       json (~> 1.4)
@@ -262,7 +262,7 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
-    ffaker (1.25.0)
+    ffaker (1.30.0)
     ffi (1.9.6)
     figaro (1.0.0)
       thor (~> 0.14)
@@ -297,7 +297,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.1.2)
       railties (>= 3.1.0)
-    json (1.8.1)
+    json (1.8.2)
     kaminari (0.15.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -318,7 +318,7 @@ GEM
     multi_xml (0.5.5)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (2.9.1)
+    net-ssh (2.9.2)
     newrelic_rpm (3.9.9.275)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
@@ -346,7 +346,7 @@ GEM
     rabl (0.9.3)
       activesupport (>= 2.3.14)
     rack (1.5.2)
-    rack-test (0.6.2)
+    rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.0.13)
       actionmailer (= 4.0.13)
@@ -441,7 +441,7 @@ GEM
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (0.3.42)
-    uglifier (2.6.1)
+    uglifier (2.7.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     uuidtools (2.1.5)
