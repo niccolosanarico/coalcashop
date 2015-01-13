@@ -10,18 +10,18 @@ require 'spree/product_filters'
 Spree.config do |config|
   # Example:
   # Uncomment to override the default site name.
-  config.site_name = "Coalca Shop"
+  #config.name = "Coalca Shop"
 
   # Display field for company name
   config.company = true
 
   #Config email
 
-  config.override_actionmailer_config = false
+  #config.override_actionmailer_config = false
 
-  config.mails_from = "Coalca Shop <noreply@coalca.it>"
+  #config.mails_from = "Coalca Shop <noreply@coalca.it>"
 
-  config.allow_ssl_in_staging = true
+  #config.allow_ssl_in_staging = true
 
   config.allow_guest_checkout = false
 end

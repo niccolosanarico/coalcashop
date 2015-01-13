@@ -40,4 +40,7 @@ Coalcashop::Application.configure do
     enable_starttls_auto: true
   }
   config.action_mailer.default_url_options = { :host => 'localhost' }
+
+  #update to spree 2.3
+  config.action_mailer.default(from: "Coalca Shop <noreply@coalca.it>")
 end
