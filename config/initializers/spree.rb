@@ -24,6 +24,9 @@ Spree.config do |config|
   #config.allow_ssl_in_staging = true
 
   config.allow_guest_checkout = false
+  config.show_raw_product_description = false
+  config.show_variant_full_price = true
+
 end
 
 Spree.user_class = "Spree::User"

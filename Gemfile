@@ -80,6 +80,9 @@ end
 # Managing environment variables
 gem 'figaro'
 
+# Add markdown compatibility to product descriptions
+gem 'redcarpet'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'spree_mixpanel', git: 'git@github.com:marcosteixeira/spree_mixpanel.git', branch: '2-3-stable'
