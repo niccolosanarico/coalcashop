@@ -28,3 +28,5 @@ it:
       previous: "&lsaquo; Prec."
       next: "Succ. &rsaquo;"
       truncate: "&hellip;"
+  spree:
+    incl: "Incluso"

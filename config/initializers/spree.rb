@@ -37,3 +37,6 @@ Spree::PermittedAttributes.address_attributes << :partita_iva
 Spree::PermittedAttributes.user_attributes << :newsletter_optin
 Spree::PermittedAttributes.user_attributes << :name
 Spree::PermittedAttributes.user_attributes << :lastname
+
+config = Rails.application.config
+config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::Sda
