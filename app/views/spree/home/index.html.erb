@@ -1,4 +1,4 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -7,10 +7,10 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="http://www.coalca.it/mappa/fondosito.jpg" alt="...">
+      <%= image_tag("Coalca_Big.jpg") %>
       <div class="carousel-caption">
-        <h3>Coalca!</h3>
-        <p>Finalmente online!</p>
+        <h3>Coalca Shop</h3>
+        <h4>Finalmente il meglio di Coalca, <br/>comodamente dal tuo PC.</h4>
       </div>
     </div>
   </div>
@@ -24,4 +24,27 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
+
+<div class="row home-taxonomies">
+  <div class="col-md-3 col-xs-12 col-sm-6">
+    <h3><%= link_to "Macchinari", seo_url(Spree::Taxon.find_by_name("Macchinari")) %></h3>
+    <div style="margin: 0 auto;"><%= image_tag "macchinari.jpeg" %></div>
+    <h4>Scopri i migliori prodotti per la preparazione, la manutenzione ed la pulizia.</h4>
+  </div>
+  <div class="col-md-3 col-xs-12 col-sm-6">
+    <h3><%= link_to "Cottura", seo_url(Spree::Taxon.find_by_name("Cottura")) %></h3>
+    <div style="margin: 0 auto;"><%= image_tag "cottura.jpg" %></div>
+    <h4>Le nostre proposte per la cottura, come piastre, friggitrici e forni.</h4>
+  </div>
+  <div class="col-md-3 col-xs-12 col-sm-6">
+    <h3><%= link_to "Arredamento", seo_url(Spree::Taxon.find_by_name("Arredamento")) %></h3>
+    <div style="margin: 0 auto;"><%= image_tag "arredamento.jpg" %></div>
+    <h4>Attrezza la tua cucina con le nostre pratiche soluzioni.</h4>
+  </div>
+  <div class="col-md-3 col-xs-12 col-sm-6">
+    <h3><%= link_to "Minuteria", seo_url(Spree::Taxon.find_by_name("Minuteria")) %></h3>
+    <div style="margin: 0 auto;"><%= image_tag "minuteria.jpg" %></div>
+    <h4>Tanti accessori utili per lavorare meglio.</h4>
+  </div>
 </div>
