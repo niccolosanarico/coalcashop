@@ -32,5 +32,5 @@ it:
     incl: "Incluso"
     show_only_considered_risky: "Mostra solo gli ordini a rischio"
     order_number: "Ordine numero %{number}"
-  spree/order:
-    considered_risky: "Considerato a rischio"  
+    order:
+      considered_risky: "Considerato a rischio"  

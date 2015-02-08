@@ -27,22 +27,17 @@
 </div>
 
 <div class="row home-taxonomies">
-  <div class="col-md-3 col-xs-12 col-sm-6">
+  <div class="col-md-4 col-xs-12 col-sm-4">
     <h3><%= link_to "Macchinari", seo_url(Spree::Taxon.find_by_name("Macchinari")) %></h3>
     <div style="margin: 0 auto;"><%= image_tag "macchinari.jpeg" %></div>
     <h4>Scopri i migliori prodotti per la preparazione, la manutenzione ed la pulizia.</h4>
   </div>
-  <div class="col-md-3 col-xs-12 col-sm-6">
-    <h3><%= link_to "Cottura", seo_url(Spree::Taxon.find_by_name("Cottura")) %></h3>
-    <div style="margin: 0 auto;"><%= image_tag "cottura.jpg" %></div>
-    <h4>Le nostre proposte per la cottura, come piastre, friggitrici e forni.</h4>
-  </div>
-  <div class="col-md-3 col-xs-12 col-sm-6">
-    <h3><%= link_to "Arredamento", seo_url(Spree::Taxon.find_by_name("Arredamento")) %></h3>
+  <div class="col-md-4 col-xs-12 col-sm-4">
+    <h3><%= link_to "Neutro", seo_url(Spree::Taxon.find_by_name("Neutro")) %></h3>
     <div style="margin: 0 auto;"><%= image_tag "arredamento.jpg" %></div>
     <h4>Attrezza la tua cucina con le nostre pratiche soluzioni.</h4>
   </div>
-  <div class="col-md-3 col-xs-12 col-sm-6">
+  <div class="col-md-4 col-xs-12 col-sm-4">
     <h3><%= link_to "Minuteria", seo_url(Spree::Taxon.find_by_name("Minuteria")) %></h3>
     <div style="margin: 0 auto;"><%= image_tag "minuteria.jpg" %></div>
     <h4>Tanti accessori utili per lavorare meglio.</h4>
