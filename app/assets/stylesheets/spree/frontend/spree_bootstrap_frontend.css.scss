@@ -80,6 +80,16 @@ $icon-font-path: "../../bootstrap/";
 
 // Coalca specific classes
 
+input[type=checkbox] {
+  /* All browsers except webkit*/
+  transform: scale(1.3);
+
+  /* Webkit browsers*/
+  -webkit-transform: scale(1.3);
+
+  margin: 10px;
+}
+
 .contact-form-line td {
   padding-bottom: 5px;
 }
@@ -87,6 +97,10 @@ $icon-font-path: "../../bootstrap/";
 .taxonomy-root {
   font-size: $font-size-base;
   color: $link-hover-color;
+}
+
+.taxonomy-item {
+    padding-bottom: 10px;
 }
 
 // -- Spree Custom Header and Footer ---------------------
@@ -165,6 +179,9 @@ ol.terms li:before {
   counter-increment: item;
 }
 
+.variant-description {
+  font-weight: normal;
+}
 // Existing card selection
 
 table.existing-credit-card-list > tbody > tr > td {

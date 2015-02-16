@@ -8,7 +8,7 @@ Deface::Override.new(:virtual_path => 'spree/products/_cart_form',
 Deface::Override.new(:virtual_path => 'spree/products/_cart_form',
                      :name => 'formant_variant_pricing',
                      :insert_top => 'div#product-variants span.diff',
-                     :text => %q( - ))
+                     :text => %q( <br/> ))
 
 Deface::Override.new(:virtual_path => 'spree/products/_cart_form',
                     :name => 'fix_variants_list',

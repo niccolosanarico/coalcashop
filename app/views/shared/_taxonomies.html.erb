@@ -2,9 +2,17 @@
 <nav id="taxonomies" class="sidebar-item" data-hook>
   <% taxonomy = @taxon ? @taxon.root : nil %>
   <% if taxonomy %>
+
     <% cache [I18n.locale, taxonomy, max_level] do %>
       <div class="taxonomy-root"><strong><%= taxonomy.name %></strong></div>
       <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
     <% end %>
+
+  <% else %>
+
+    <div class="taxonomy-root taxonomy-item"><strong><%= link_to "Macchinari", seo_url(Spree::Taxon.find_by_name("Macchinari")) %></strong></div>
+    <div class="taxonomy-root taxonomy-item"><strong><%= link_to "Neutro", seo_url(Spree::Taxon.find_by_name("Neutro")) %></strong></div>
+    <div class="taxonomy-root taxonomy-item"><strong><%= link_to "Minuteria", seo_url(Spree::Taxon.find_by_name("Minuteria")) %></strong></div>
+
   <% end %>
 </nav>
