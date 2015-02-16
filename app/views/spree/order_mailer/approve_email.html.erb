@@ -99,7 +99,7 @@
       </tr>
     <% @order.line_items.each do |item| %>
       <tr>
-        <td><%= item.variant.sku %></td>
+        <td><%= item.variant.sku.empty? ? item.variant.sku : item.variant.product.sku %></td>
         <td><%= raw(item.variant.product.name) %> <%= raw(item.variant.options_text) -%></td>
         <td>(<%=item.quantity%>)</td>
         <td><%= item.single_money %></td>
