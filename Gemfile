@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~>4.1.2'
+gem 'rails', '~>4.1.8'
 gem 'deface'
 gem 'money', '~>6.5.0'
 
@@ -9,7 +9,7 @@ gem 'money', '~>6.5.0'
 gem 'braintree'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.2'
+gem 'sass-rails', :branch=>'4-0-stable'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -85,18 +85,18 @@ gem 'redcarpet'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'spree_mixpanel', git: 'git@github.com:marcosteixeira/spree_mixpanel.git', branch: '2-3-stable'
+gem 'spree_mixpanel', git: 'git@github.com:marcosteixeira/spree_mixpanel.git', branch: '2-4-stable'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
 gem 'gibbon'
 
-gem 'spree', :github => 'spree/spree', :branch => '2-3-stable'
-gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '2-3-stable'
-gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '2-3-stable'
-gem 'spree_i18n', :github => 'spree/spree_i18n', :branch => '2-3-stable'
-gem 'spree_bootstrap_frontend', :github => '200Creative/spree_bootstrap_frontend', :branch => '2-3-stable'
-gem 'spree_static_content', github: 'spree/spree_static_content', branch: '2-3-stable'
+gem 'spree', :github => 'spree/spree', :branch => '2-4-stable'
+gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '2-4-stable'
+gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '2-4-stable'
+gem 'spree_i18n', :github => 'spree/spree_i18n', :branch => '2-4-stable'
+gem 'spree_bootstrap_frontend', :github => '200Creative/spree_bootstrap_frontend', :branch => '2-4-stable'
+gem 'spree_static_content', github: 'spree/spree_static_content', branch: '2-4-stable'
 #gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git', branch: '2-2-stable'
 #gem 'spree-bank-transfer', require: 'spree_bank_transfer', :github => 'vinsol/spree_bank_transfer', :branch => '2-3-stable'
-gem 'spree-bank-transfer', require: 'spree_bank_transfer', :github => 'niccolosanarico/spree_bank_transfer', :branch => '2-3-stable'
+gem 'spree_bank_transfer', github: 'redglory/spree_bank_transfer', :branch => '2-4-stable'
