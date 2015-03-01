@@ -17,23 +17,22 @@
           <td class="panel">
             <table>
               <tr>
-                <td>SKU</td>
-                <td>Prodotto</td>
-                <td>Quantit&agrave;</td>
-                <td>Prezzo unitario</td>
-                <td>Totale</td>
-                <td class="expander"></td>
+                <td style="padding-right: 5px">SKU</td>
+                <td style="padding-right: 5px">Prodotto</td>
+                <td style="padding-right: 5px">Quantit&agrave;</td>
+                <td style="padding-right: 5px">Prezzo unitario</td>
+                <td style="padding-right: 5px">Totale</td>
               </tr>
             <% @order.line_items.each do |item| %>
               <tr>
-                <td><p><%= item.variant.sku %></p></td>
-                <td><p>
+                <td style="padding-right: 5px"><p><%= item.variant.sku %></p></td>
+                <td style="padding-right: 5px"><p>
                   <%= raw(item.variant.product.name) %>
                   <%= raw(item.variant.options_text) -%>
                 </p></td>
-                <td><p><%=item.quantity%></p></td>
-                <td><p><%= item.single_money %></p></td>
-                <td><p><%= item.display_amount %></p></td>
+                <td style="padding-right: 5px"><p><%=item.quantity%></p></td>
+                <td style="padding-right: 5px"><p><%= item.single_money %></p></td>
+                <td style="padding-right: 5px"><p><%= item.display_amount %></p></td>
               </tr>
             <% end %>
             </table>
@@ -138,6 +137,8 @@
             Una volta completato il pagamento, mandaci una email o un fax di notifica ed <%= link_to "inserisci gli estremi dell'effettuato bonifico qui", order_url(@order) %>
           </td>
         </tr>
+
+        <hr/>
 
         <tr>
           <td>
