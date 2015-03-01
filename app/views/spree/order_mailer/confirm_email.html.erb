@@ -22,24 +22,30 @@
                 <td>Quantit&agrave;</td>
                 <td>Prezzo unitario</td>
                 <td>Totale</td>
-
+                <td class="expander"></td>
               </tr>
             <% @order.line_items.each do |item| %>
               <tr>
-                <td><%= item.variant.sku %></td>
-                <td>
+                <td><p><%= item.variant.sku %></p></td>
+                <td><p>
                   <%= raw(item.variant.product.name) %>
                   <%= raw(item.variant.options_text) -%>
-                </td>
-                <td>(<%=item.quantity%>)</td>
-                <td><%= item.single_money %></td>
-                <td><%= item.display_amount %></td>
+                </p></td>
+                <td><p><%=item.quantity%></p></td>
+                <td><p><%= item.single_money %></p></td>
+                <td><p><%= item.display_amount %></p></td>
               </tr>
             <% end %>
             </table>
           </td>
-          <td class="expander"></td>
         </tr>
+
+        <tr>
+          <td>
+          </td>
+        </tr>
+
+        <hr/>
 
         <tr>
           <td>
@@ -79,6 +85,8 @@
             <h5>Totale ordine: <%= @order.display_total %></h5>
           </td>
         </tr>
+
+        <hr/>
 
         <tr>
           <td>
@@ -127,18 +135,19 @@
 
         <tr>
           <td>
-            Una volta completato il pagamento, <%= link_to "inserisci gli estremi dell'effettuato bonifico qui", order_url(@order) %>
+            Una volta completato il pagamento, mandaci una email o un fax di notifica ed <%= link_to "inserisci gli estremi dell'effettuato bonifico qui", order_url(@order) %>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            L'ordine verrà spedito a:
           </td>
         </tr>
 
         <tr>
           <td class="panel">
             <table class="twelve columns">
-              <tr>
-                <td>
-                  L'ordine verrà spedito a:
-                </td>
-              </tr>
               <tr>
                 <td> <b><%= @order.ship_address.full_name %></b>
                 </td>
