@@ -8,6 +8,7 @@
 
       body {
           font-family: lato, helvetica;
+          font-size: 11pt;
       }
       table {
         border: 1px solid #fbeb4d;
@@ -25,6 +26,14 @@
 
       td {
         padding: 2px;
+      }
+
+      h3 {
+          font-size: 18pt;
+      }
+
+      h4 {
+          font-size: 16pt;
       }
 
       .border-group {
@@ -64,6 +73,7 @@
         background: #DDD;
         border-top: 2px solid #777;
         padding: 15px;
+        margin-bottom: 10px;
       }
 
       .address {
@@ -200,7 +210,7 @@
       </div>
     </div>
 
-    <p>Per annullare, modificare o porci qualunque domanda relativa al tuo ordine scrivici a <a href="mailto:info@coalca.it?subject=Domanda riguardo l'ordine <%= @order.number %>">info@coalca.it</a>, indicando nel soggetto il tuo codice: <b><%= @order.number %></b>.</p>
+    <p>Per annullare, modificare o porci qualunque domanda relativa al tuo ordine scrivici a <a href="mailto:ecommerce@coalca.it?subject=Domanda riguardo l'ordine <%= @order.number %>">ecommerce@coalca.it</a>, indicando nel soggetto il tuo codice: <b><%= @order.number %></b>.</p>
 
     <p>Riceverai presto una mail di presa in carico dell'ordine. </p>
 
