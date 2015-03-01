@@ -1,188 +1,165 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-    <style>
-      @import url(http://fonts.googleapis.com/css?family=Lato:700,400,300italic);
-
-      body {
-          font-family: lato, helvetica;
-          font-size: 11pt;
-      }
-      table {
-        border: 1px solid #fbeb4d;
-        border-collapse: collapse;
-        width: 100%;
-        margin-top: 5px;
-        margin-bottom: 5px;
-      }
-
-      th {
-        border: 1px solid #fbeb4d;
-        background-color: #fbeb4d;
-        text-align:left;
-      }
-
-      td {
-        padding: 2px;
-      }
-
-      h3 {
-          font-size: 18pt;
-      }
-
-      h4 {
-          font-size: 16pt;
-      }
-
-      .border-group {
-        width:100%;
-        height: 20px;
-        background-color: #fbeb4d;
-        padding: 3px;
-      }
-
-      .border-title {
-        font-weight: bold;
-        font-size: 1.2em;
-        float:left;
-      }
-
-      .border-title a {
-        text-decoration:none;
-        color: black;
-      }
-
-      .border-element {
-        float:left;
-        margin-left: 30px;
-      }
-
-      .title-section {
-        width: 100%;
-        text-align: right;
-      }
-
-      .summary {
-        text-align: right;
-        margin-right: 30%;
-      }
-
-      .address-information {
-        background: #DDD;
-        border-top: 2px solid #777;
-        padding: 15px;
-        margin-bottom: 10px;
-      }
-
-      .address {
-        font-weight: bold;
-      }
-    </style>
-
-  </head>
-  <body>
-    <div class="border-group">
-      <div class="border-title"><a href=""><%= link_to "COALCA Shop", root_url %></a></div>
-      <div class="border-element"><%= link_to "Il tuo account", account_url(@user) %></div>
-    </div>
-
-    <div class="title-section">
-      <h3 style="padding-right: 40px; margin-bottom:-0.1em">Approvazione Ordine</h3>
-      <div style="padding-right: 40px;">Ordine n&ordm; <%= link_to @order.number, order_url(@order) %></div>
-    </div>
-
-    <p><%= Spree.t('order_mailer.confirm_email.dear_customer') %></p>
-
-    <p>Abbiamo approvato il tuo ordine n&ordm; <%= @order.number %> e stiamo preparando le merci per la consegna. Di seguito un riepilogo:</p>
-
-
-    <h4><%= Spree.t('order_mailer.confirm_email.order_summary') %></h4>
-
-    <table>
-      <tr>
-        <th>SKU</th>
-        <th>Prodotto</th>
-        <th>Quantità</th>
-        <th>Prezzo Unitario</th>
-        <th>Prezzo Totale</th>
-      </tr>
-    <% @order.line_items.each do |item| %>
-      <tr>
-        <td><%= item.variant.sku.empty? ? item.variant.product.sku : item.variant.sku %></td>
-        <td><%= raw(item.variant.product.name) %> <%= raw(item.variant.options_text) -%></td>
-        <td>(<%=item.quantity%>)</td>
-        <td><%= item.single_money %></td>
-        <td><%= item.display_amount %></td>
-      </tr>
-    <% end %>
-    </table>
-
-    <div class="summary">
-      <h4><%= Spree.t('order_mailer.confirm_email.subtotal', :subtotal => @order.display_item_total) %></h4>
-
-      <% @order.adjustments.eligible.each do |adjustment| %>
-        <p><%= raw(adjustment.label) %> <%= adjustment.display_amount %></p>
-      <% end %>
-
+<table>
+  <tr>
+    <td>
+      <p class="lede">
+        <%= Spree.t('order_mailer.confirm_email.dear_customer') %>
+      </p>
       <p>
-        <% if @order.shipment_total > 0 %>
-          <%= raw(Spree.t(:shipping_total)) %> <%= Spree::Money.new(@order.shipment_total).to_html %>
-        <% else %>
-          <strong><%= raw(Spree.t(:free_shipping)) %></strong> <%= Spree.t(:free_shipping_amount) %>
-        <% end %>
+        <p>Abbiamo approvato il tuo ordine n&ordm; <%= @order.number %> e stiamo preparando le merci per la consegna. Di seguito un riepilogo:</p>
+      </p>
+      <p>
+        <strong><%= Spree.t('order_mailer.confirm_email.order_summary') %></strong>
       </p>
 
-       <% @order.all_adjustments.promotion.eligible.group_by(&:label).each do |label, adjustments| %>
-          <p><%= raw(label) %> <%= Spree::Money.new(adjustments.sum(&:amount)).to_html %></p>
-        <% end %>
+      <table>
 
-      <% @order.all_adjustments.tax.eligible.group_by(&:label).each do |label, adjustments| %>
-        <p><%= raw(label) %> <%= Spree::Money.new(adjustments.sum(&:amount), :currency => @order.currency) %></p>
-      <% end %>
-
-      <h4><%= Spree.t('order_mailer.confirm_email.total', :total => @order.display_total) %></h4>
-    </div>
-
-    <div class="address-information">
-      <p>L'ordine verrà spedito a:</p>
-      <div class="address">
-        <div class=""><b><%= @order.ship_address.full_name %></b></div>
-        <% unless @order.ship_address.company.blank? %>
-          <div class="">
-            <%= @order.ship_address.company %>
-          </div>
-        <% end %>
-        <div class="">
-          <div class="">
-            <div class="">
-              <%= @order.ship_address.address1 %>
-            </div>
-            <% unless @order.ship_address.address2.blank? %>
-              <div class="">
-                <%= @order.ship_address.address2 %>
-              </div>
+        <tr>
+          <td class="panel">
+            <table>
+              <tr>
+                <td style="padding-right: 10px"><strong>SKU</strong></td>
+                <td style="padding-right: 10px"><strong>Prodotto</strong></td>
+                <td style="padding-right: 10px"><strong>Quantit&agrave;</strong></td>
+                <td style="padding-right: 10px"><strong>Prezzo unitario</strong></td>
+                <td style="padding-right: 10px"><strong>Totale</strong></td>
+              </tr>
+            <% @order.line_items.each do |item| %>
+              <tr>
+                <td style="padding-right: 10px"><p><%= item.variant.sku %></p></td>
+                <td style="padding-right: 10px"><p>
+                  <%= raw(item.variant.product.name) %>
+                  <%= raw(item.variant.options_text) -%>
+                </p></td>
+                <td style="padding-right: 10px"><p><%=item.quantity%></p></td>
+                <td style="padding-right: 10px"><p><%= item.single_money %></p></td>
+                <td style="padding-right: 10px"><p><%= item.display_amount %></p></td>
+              </tr>
             <% end %>
-          </div>
-          <div class="">
-            <span class=""><%= @order.ship_address.city %></span>
-            <span class=""><%= @order.ship_address.state_text %></span>
-            <span class=""><%= @order.ship_address.zipcode %></span>
-            <div class=""><%= @order.ship_address.country.try(:name) %></div>
-          </div>
-        </div>
-      </div>
-    </div>
+            </table>
+          </td>
+        </tr>
 
-    <p>Riceverai un avviso di spedizione appena le merci saranno disponibili all'invio.
+        <tr>
+          <td>
+          </td>
+        </tr>
 
-    Per qualunque domanda scrivici a ecommerce@coalca.it, indicando nel soggetto il tuo codice ordine: <%= @order.number %>.
+        <hr/>
 
-    In allegato puoi trovare le condizioni di vendita, ti preghiamo di conservarle con cura.</p>
+        <tr>
+          <td>
+            <h6>Subtotale: <%= @order.display_item_total %></h6>
+          </td>
+        </tr>
 
-    <p><%= Spree.t('order_mailer.confirm_email.thanks') %></p>
+        <% if @order.line_item_adjustments.exists? %>
+          <% if @order.all_adjustments.promotion.eligible.exists? %>
+            <% @order.all_adjustments.promotion.eligible.group_by(&:label).each do |label, adjustments| %>
+              <tr>
+                <td><%= Spree.t(:promotion) %> <%= label %>: <%= Spree::Money.new(adjustments.sum(&:amount), currency: @order.currency) %></td>
+              </tr>
+            <% end %>
+          <% end %>
+        <% end %>
+        <% @order.shipments.group_by { |s| s.selected_shipping_rate.try(:name) }.each do |name, shipments| %>
+          <tr>
+            <td><%= Spree.t(:shipping) %> <%= name %>: <%= Spree::Money.new(shipments.sum(&:discounted_cost), currency: @order.currency) %></td>
+          </tr>
+        <% end %>
+        <% if @order.all_adjustments.eligible.tax.exists? %>
+          <% @order.all_adjustments.eligible.tax.group_by(&:label).each do |label, adjustments| %>
+            <tr>
+              <td><%= Spree.t(:tax) %> <%= label %>: <%= Spree::Money.new(adjustments.sum(&:amount), currency: @order.currency) %></td>
+            </tr>
+          <% end %>
+        <% end %>
+        <% @order.adjustments.eligible.each do |adjustment| %>
+          <% next if (adjustment.source_type == 'Spree::TaxRate') and (adjustment.amount == 0) %>
+          <tr>
+            <td><%= adjustment.label %>: <%= adjustment.display_amount %></td>
+          </tr>
+        <% end %>
+        <tr>
+          <td>
+            <h5>Totale ordine: <%= @order.display_total %></h5>
+          </td>
+        </tr>
 
-    <p>Arrivederci a presto, <br/> lo staff di <%= link_to "Coalca Shop", root_path %></p>
+        <hr/>
 
-  </body>
-</html>
+        <tr>
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            L'ordine verrà spedito a:
+          </td>
+        </tr>
+
+        <tr>
+          <td class="panel">
+            <table class="twelve columns">
+              <tr>
+                <td> <b><%= @order.ship_address.full_name %></b>
+                </td>
+              </tr>
+              <% unless @order.ship_address.company.blank? %>
+              <tr>
+                <td> <%= @order.ship_address.company %>
+                </td>
+              </tr>
+              <% end %>
+              <tr>
+                <td> <%= @order.ship_address.address1 %>
+                </td>
+              </tr>
+              <% unless @order.ship_address.address2.blank? %>
+              <tr>
+                <td> <%= @order.ship_address.address2 %>
+                </td>
+              </tr>
+              <% end %>
+              <tr>
+                <td> <%= @order.ship_address.city %>
+                </td>
+              </tr>
+              <tr>
+                <td> <%= @order.ship_address.zipcode %>
+                </td>
+              </tr>
+              <tr>
+                <td> <%= @order.ship_address.country.try(:name) %>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr><td></td></tr>
+
+        <tr>
+          <td>
+            <p>Per qualunque domanda relativa al tuo ordine scrivici a
+              <a href="mailto:ecommerce@coalca.it?subject=Domanda riguardo l'ordine <%= @order.number %>">ecommerce@coalca.it</a>,
+              indicando nel soggetto il tuo codice: <b><%= @order.number %></b>.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p>Riceverai un avviso di spedizione appena le merci saranno disponibili all'invio.
+              Puoi rivedere i dettagli del tuo ordine <%= link_to "online", order_url(@order) %>.
+              In allegato puoi trovare le condizioni di vendita, ti preghiamo di conservarle con cura.</p>
+          </td>
+        </tr>
+
+      </table>
+      <p>
+        <%= Spree.t('order_mailer.confirm_email.thanks') %>
+      </p>
+    </td>
+    <td class="expander"></td>
+  </tr>
+</table>

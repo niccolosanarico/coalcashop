@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Lato:700,400,300italic);
+
+      body {
+          font-family: lato, helvetica;
+          font-size: 11pt;
+      }
+      table {
+        border: 1px solid #fbeb4d;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      th {
+        border: 1px solid #fbeb4d;
+        background-color: #fbeb4d;
+        text-align:left;
+      }
+
+      td {
+        padding: 2px;
+      }
+
+      h3 {
+          font-size: 18pt;
+      }
+
+      h4 {
+          font-size: 16pt;
+      }
+
+      .border-group {
+        width:100%;
+        height: 20px;
+        background-color: #fbeb4d;
+        padding: 3px;
+      }
+
+      .border-title {
+        font-weight: bold;
+        font-size: 1.2em;
+        float:left;
+      }
+
+      .border-title a {
+        text-decoration:none;
+        color: black;
+      }
+
+      .border-element {
+        float:left;
+        margin-left: 30px;
+      }
+
+      .title-section {
+        width: 100%;
+        text-align: right;
+      }
+
+      .summary {
+        text-align: right;
+        margin-right: 30%;
+      }
+
+      .address-information {
+        background: #DDD;
+        border-top: 2px solid #777;
+        padding: 15px;
+        margin-bottom: 10px;
+      }
+
+      .address {
+        font-weight: bold;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="border-group">
+      <div class="border-title"><%= link_to "COALCA Shop", root_url %></div>
+      <div class="border-element"><%= link_to "Il tuo account", account_url %></div>
+    </div>
+
+    <div class="title-section">
+      <h3 style="padding-right: 40px; margin-bottom:-0.1em">Spedizione Ordine</h3>
+      <div style="padding-right: 40px;">Ordine n&ordm; <%= link_to @shipment.order.number, order_url(@shipment.order) %></div>
+    </div>
+
+    <p><%= Spree.t('shipment_mailer.shipped_email.dear_customer') %></p>
+
+    <p>Abbiamo consegnato al vettore le merci per la spedizione.
+      Puoi seguirla <%= link_to "online", order_url(@shipment.order) %>.</p>
+
+    <p>
+      <%= Spree.t('shipment_mailer.shipped_email.track_information', :tracking => @shipment.tracking)     if @shipment.tracking %>
+    </p>
+    <p>
+      <%= Spree.t('shipment_mailer.shipped_email.track_link',        :url      => @shipment.tracking_url) if @shipment.tracking_url %>
+    </p>
+
+    <h4><%= Spree.t('shipment_mailer.shipped_email.shipment_summary') %></h4>
+
+    <table>
+      <tr>
+        <th>SKU</th>
+        <th>Prodotto</th>
+      </tr>
+    <% @shipment.manifest.each do |item| %>
+      <tr>
+        <td><%= item.variant.sku %></td>
+        <td><%= raw(item.variant.product.name) %> <%= raw(item.variant.options_text) -%></td>
+      </tr>
+    <% end %>
+    </table>
+
+    <p>
+    Per qualunque domanda relativa al tuo ordine, scrivici a ecommerce@coalca.it, indicando nel soggetto il tuo codice ordine: <b><%= @shipment.order.number %></b>.
+    </p>
+
+    <p><%= Spree.t('shipment_mailer.shipped_email.thanks') %></p>
+
+    <p>Arrivederci a presto, <br/> lo staff di <%= link_to "Coalca Shop", root_url %></p>
+
+  </body>
+</html>
