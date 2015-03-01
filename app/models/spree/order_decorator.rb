@@ -5,8 +5,7 @@ Spree::Order.class_eval do
       approve!
       self.update_columns(
         approver_id: user.id,
-        approved_at: Time.now,
-        considered_risky: false,
+        approved_at: Time.now
       )
 
       deliver_order_approval_email
