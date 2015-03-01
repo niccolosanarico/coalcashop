@@ -22,6 +22,7 @@
                 <td>Quantit&agrave;</td>
                 <td>Prezzo unitario</td>
                 <td>Totale</td>
+                <td class="expander"></td>
               </tr>
             <% @order.line_items.each do |item| %>
               <tr>
@@ -33,6 +34,7 @@
                 <td>(<%=item.quantity%>)</td>
                 <td><%= item.single_money %></td>
                 <td><%= item.display_amount %></td>
+                <td class="expander"></td>
               </tr>
             <% end %>
             </table>
@@ -41,7 +43,7 @@
 
         <tr>
           <td>
-            <strong>Subtotale: <%= @order.display_item_total %></strong>
+            <h6>Subtotale: <%= @order.display_item_total %></h6>
           </td>
         </tr>
 
@@ -74,7 +76,7 @@
         <% end %>
         <tr>
           <td>
-            <strong>Totale ordine: <%= @order.display_total %></strong>
+            <h5>Totale ordine: <%= @order.display_total %></h5>
           </td>
         </tr>
 
