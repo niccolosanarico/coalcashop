@@ -90,6 +90,7 @@ Coalcashop::Application.configure do
   }
 
   config.action_mailer.default_url_options = { :host => 'shop.coalca.it' }
+  config.action_mailer.asset_host = 'https://shop.coalca.it'
   #update to spree 2.3
   config.action_mailer.default(from: "Coalca Shop <noreply@coalca.it>")
 end
