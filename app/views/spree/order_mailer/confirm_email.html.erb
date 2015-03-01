@@ -10,17 +10,27 @@
       <p>
         <%= Spree.t('order_mailer.confirm_email.order_summary') %>
       </p>
+
       <table>
-        <% @order.line_items.each do |item| %>
-          <tr>
-            <td><%= item.variant.sku %></td>
-            <td>
-              <%= raw(item.variant.product.name) %>
-              <%= raw(item.variant.options_text) -%>
-            </td>
-            <td>(<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %></td>
-          </tr>
-        <% end %>
+
+        <tr>
+          <td class="panel">
+            <table>
+            <% @order.line_items.each do |item| %>
+              <tr>
+                <td><%= item.variant.sku %></td>
+                <td>
+                  <%= raw(item.variant.product.name) %>
+                  <%= raw(item.variant.options_text) -%>
+                </td>
+                <td>(<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %></td>
+                <td class="expander"></td>
+              </tr>
+            <% end %>
+            </table>
+          </td>
+        </tr>
+
         <tr>
           <td></td>
           <td>
@@ -88,7 +98,7 @@
         <% banks.each do |bank| %>
         <tr>
           <td>
-            <table>
+            <table class="twelve columns">
               <tr>
                 <td> <label for="bank_name">Banca</label>
                 </td>
@@ -107,6 +117,7 @@
                 <td> <p id="bank_account"><strong><%= bank.account_no %></strong></p>
               </p>
                 </td>
+                <td class="expander"></td>
               </tr>
             </table>
            </td>
@@ -123,45 +134,50 @@
         <% end %>
 
         <tr>
-          <td>
-            L'ordine verrà spedito a:
-          </td>
-        </tr>
-          <div class="address">
-        <tr>
-          <td> <b><%= @order.ship_address.full_name %></b>
-          </td>
-        </tr>
-        <% unless @order.ship_address.company.blank? %>
-        <tr>
-          <td> <%= @order.ship_address.company %>
-          </td>
-        </tr>
-        <% end %>
-        <tr>
-          <td> <%= @order.ship_address.address1 %>
-          </td>
-        </tr>
-        <% unless @order.ship_address.address2.blank? %>
-        <tr>
-          <td> <%= @order.ship_address.address2 %>
-          </td>
-        </tr>
-        <% end %>
-        <tr>
-          <td> <%= @order.ship_address.city %>
-          </td>
-        </tr>
-        <tr>
-          <td> <%= @order.ship_address.state_text %>
-          </td>
-        </tr>
-        <tr>
-          <td> <%= @order.ship_address.zipcode %>
-          </td>
-        </tr>
-        <tr>
-          <td> <%= @order.ship_address.country.try(:name) %>
+          <td class="panel">
+            <table class="twelve columns">
+              <tr>
+                <td>
+                  L'ordine verrà spedito a:
+                </td>
+              </tr>
+              <tr>
+                <td> <b><%= @order.ship_address.full_name %></b>
+                </td>
+              </tr>
+              <% unless @order.ship_address.company.blank? %>
+              <tr>
+                <td> <%= @order.ship_address.company %>
+                </td>
+              </tr>
+              <% end %>
+              <tr>
+                <td> <%= @order.ship_address.address1 %>
+                </td>
+              </tr>
+              <% unless @order.ship_address.address2.blank? %>
+              <tr>
+                <td> <%= @order.ship_address.address2 %>
+                </td>
+              </tr>
+              <% end %>
+              <tr>
+                <td> <%= @order.ship_address.city %>
+                </td>
+              </tr>
+              <tr>
+                <td> <%= @order.ship_address.state_text %>
+                </td>
+              </tr>
+              <tr>
+                <td> <%= @order.ship_address.zipcode %>
+                </td>
+              </tr>
+              <tr>
+                <td> <%= @order.ship_address.country.try(:name) %>
+                </td>
+              </tr>
+            </table>
           </td>
         </tr>
 
