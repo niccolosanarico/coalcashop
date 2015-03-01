@@ -22,7 +22,7 @@
                 <td>Quantit&agrave;</td>
                 <td>Prezzo unitario</td>
                 <td>Totale</td>
-                <td class="expander"></td>
+
               </tr>
             <% @order.line_items.each do |item| %>
               <tr>
@@ -34,11 +34,11 @@
                 <td>(<%=item.quantity%>)</td>
                 <td><%= item.single_money %></td>
                 <td><%= item.display_amount %></td>
-                <td class="expander"></td>
               </tr>
             <% end %>
             </table>
           </td>
+          <td class="expander"></td>
         </tr>
 
         <tr>
@@ -80,11 +80,15 @@
           </td>
         </tr>
 
-
-        <% if @order.payments.first.payment_method.is_a? Spree::PaymentMethod::BankTransfer %>
         <tr>
           <td>
-          Per completare l'ordine, occorre effettuare il pagamento di <%= @order.display_total %> tramite bonifico bancario. Usa le coordinate di seguito indicate:
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Se hai scelto di pagare tramite bonifico bancario, usa le coordinate di seguito indicate per
+            il pagamento di <%= @order.display_total %>:
           </td>
         </tr>
 
@@ -126,7 +130,6 @@
             Una volta completato il pagamento, <%= link_to "inserisci gli estremi dell'effettuato bonifico qui", order_url(@order) %>
           </td>
         </tr>
-        <% end %>
 
         <tr>
           <td class="panel">
