@@ -97,6 +97,6 @@ gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '2-4-s
 gem 'spree_i18n', :github => 'spree/spree_i18n', :branch => '2-4-stable'
 gem 'spree_bootstrap_frontend', :github => '200Creative/spree_bootstrap_frontend', :branch => '2-4-stable'
 gem 'spree_static_content', github: 'spree/spree_static_content', branch: '2-4-stable'
-#gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git', branch: '2-2-stable'
+gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git', branch: '2-4-stable'
 #gem 'spree-bank-transfer', require: 'spree_bank_transfer', :github => 'vinsol/spree_bank_transfer', :branch => '2-3-stable'
 gem 'spree_bank_transfer', github: 'redglory/spree_bank_transfer', :branch => '2-4-stable'
