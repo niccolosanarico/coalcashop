@@ -32,5 +32,14 @@ it:
     incl: "Incluso"
     show_only_considered_risky: "Mostra solo gli ordini a rischio"
     order_number: "Ordine numero %{number}"
-    order:
-      considered_risky: "Considerato a rischio"  
+    order_state:
+      considered_risky: "Considerato a rischio"
+    invoices_settings: "Impostazioni pre-fattura"
+    invoice_font_face: "Font"
+    next_invoice_number: "Prossimo numero di pre-fattura"
+    invoice_logo_scale: "Scala del logo"  
+  active_record:
+    attributes:
+      spree:
+        order:
+          considered_risky: "Considerato a rischio"
