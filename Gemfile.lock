@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: 99d1a896bf9a51c0a0bb95d976e26ec68b6ba60d
+  revision: c928bad50a1632c80bf9c2d6544d860b2653e1ca
   branch: 2-4-stable
   specs:
     spree (2.4.6.beta)
@@ -94,7 +94,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_gateway.git
-  revision: d8e51e5c159b5652a989192fa36c31e38077e552
+  revision: f84c5f9b3fcc1107378e47be07538e8a6ca51182
   branch: 2-4-stable
   specs:
     spree_gateway (2.4.0)
@@ -273,7 +273,7 @@ GEM
       launchy (~> 2.1)
       mail (~> 2.2)
     erubis (2.7.0)
-    execjs (2.3.0)
+    execjs (2.4.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.5.0)
