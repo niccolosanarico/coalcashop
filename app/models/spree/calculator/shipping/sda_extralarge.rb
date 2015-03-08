@@ -5,7 +5,7 @@ module Spree
     class Sda < ShippingCalculator
 
       def self.description
-        "Tariffa SDA"
+        "Tariffa SDA Extra-large"
       end
 
       def compute_package(package)
@@ -17,12 +17,10 @@ module Spree
         #puts weight
 
         case weight
-        when 0...3
-          10
-        when 3...15
-          13
-        when 15...30
+        when 0...50
           15
+        when 50...10000
+          15+(weight-50)*0.35
         end
       end
     end
