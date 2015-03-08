@@ -2,7 +2,7 @@ require_dependency 'spree/shipping_calculator'
 
 module Spree
   module Calculator::Shipping
-    class Sda < ShippingCalculator
+    class SdaExtraLarge < ShippingCalculator
 
       def self.description
         "Tariffa SDA Extra-large"
