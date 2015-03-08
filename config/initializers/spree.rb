@@ -40,3 +40,4 @@ Spree::PermittedAttributes.user_attributes << :lastname
 
 config = Rails.application.config
 config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::Sda
+config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::Sda2
