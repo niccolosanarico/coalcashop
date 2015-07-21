@@ -19,7 +19,7 @@ module Spree
         case weight
         when 0...50
           15
-        when 50...10000
+        when 50...1000000
           15+(weight-50)*0.35
         end
       end

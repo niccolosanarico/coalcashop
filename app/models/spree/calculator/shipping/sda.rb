@@ -21,7 +21,7 @@ module Spree
           10
         when 3...15
           13
-        when 15...30
+        when 15...1000000
           15
         end
       end
