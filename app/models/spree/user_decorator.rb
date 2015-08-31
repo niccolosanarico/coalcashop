@@ -7,7 +7,7 @@ Spree::User.class_eval do
     def add_to_newsletter
       # Add check for acceptance of newsletter subscription
       if newsletter_optin
-        Gibbon::API.lists.subscribe(
+        Gibbon::Request.lists.subscribe(
           {
             :id => ENV['MAILCHIMP-LIST-ID'],
             :email => {:email => self.email},
@@ -19,7 +19,7 @@ Spree::User.class_eval do
 
     def remove_from_newsletter
       if !newsletter_optin
-        Gibbon::API.lists.unsubscribe(
+        Gibbon::Request.lists.unsubscribe(
           {
             :id => ENV['MAILCHIMP-LIST-ID'],
             :email => {:email => self.email},
@@ -30,7 +30,7 @@ Spree::User.class_eval do
 
     def check_newsletter
       # Check whether on update the user has modified a preference
-      subscribers = Gibbon::API.lists.member_info(
+      subscribers = Gibbon::Request.lists.member_info(
         {
           :id => ENV['MAILCHIMP-LIST-ID'],
           :emails => [{:email => self.email}]
