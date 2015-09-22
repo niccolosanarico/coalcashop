@@ -882,6 +882,7 @@ ActiveRecord::Schema.define(version: 20150721105730) do
 
   create_table "spree_stock_locations", force: true do |t|
     t.string   "name"
+    t.boolean  "default",                default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "address1"
@@ -896,7 +897,6 @@ ActiveRecord::Schema.define(version: 20150721105730) do
     t.boolean  "backorderable_default",  default: false
     t.boolean  "propagate_all_variants", default: true
     t.string   "admin_name"
-    t.boolean  "default",                default: false, null: false
   end
 
   add_index "spree_stock_locations", ["active"], name: "index_spree_stock_locations_on_active"

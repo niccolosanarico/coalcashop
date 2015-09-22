@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: ef635b9427a3e1f458091cd81cea4c2ae11cf335
+  revision: d7b72249cd66d967bf6a63103e5819d046dc8328
   branch: 2-4-stable
   specs:
     spree (2.4.11.beta)
@@ -59,7 +59,6 @@ GIT
       font-awesome-rails (~> 4.0)
       friendly_id (~> 5.0.4)
       highline (~> 1.6.18)
-      httparty (~> 0.11)
       json (~> 1.7)
       kaminari (~> 0.15, >= 0.15.1)
       monetize (~> 1.1)
@@ -82,7 +81,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_auth_devise.git
-  revision: 9a86a5c6ef99a9994a5195aa432ceaa9134a425b
+  revision: d1ce9bc2e4318c02d93a866057b0ac604f6173aa
   branch: 2-4-stable
   specs:
     spree_auth_devise (2.4.0)
@@ -102,7 +101,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_i18n.git
-  revision: cd9201e66e140a9376a2f73fa1cd00ad57c67f7c
+  revision: 4dd96942b6a03bab5ab5b53017ec1178bce599d7
   branch: 2-4-stable
   specs:
     spree_i18n (3.0.0)
@@ -110,7 +109,7 @@ GIT
       globalize (~> 4.0.3)
       i18n_data (~> 0.5.1)
       rails-i18n (~> 4.0.1)
-      spree_core (~> 2.4.0)
+      spree_core (~> 2.4.10)
 
 GIT
   remote: git://github.com/spree/spree_print_invoice.git
@@ -190,7 +189,7 @@ GEM
       rails (>= 3.1)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
-    braintree (2.47.0)
+    braintree (2.48.1)
       builder (>= 2.0.0)
     builder (3.2.2)
     camertron-eprun (1.1.0)
@@ -221,8 +220,47 @@ GEM
       xpath (~> 2.0)
     carmen (1.0.2)
       activesupport (>= 3.0.0)
-    celluloid (0.16.0)
-      timers (~> 4.0.0)
+    celluloid (0.17.1.2)
+      bundler
+      celluloid-essentials
+      celluloid-extras
+      celluloid-fsm
+      celluloid-pool
+      celluloid-supervision
+      dotenv
+      nenv
+      rspec-logsplit (>= 0.1.2)
+      timers (>= 4.1.1)
+    celluloid-essentials (0.20.2.1)
+      bundler
+      dotenv
+      nenv
+      rspec-logsplit (>= 0.1.2)
+      timers (>= 4.1.1)
+    celluloid-extras (0.20.1)
+      bundler
+      dotenv
+      nenv
+      rspec-logsplit (>= 0.1.2)
+      timers (>= 4.1.1)
+    celluloid-fsm (0.20.1)
+      bundler
+      dotenv
+      nenv
+      rspec-logsplit (>= 0.1.2)
+      timers (>= 4.1.1)
+    celluloid-pool (0.20.1)
+      bundler
+      dotenv
+      nenv
+      rspec-logsplit (>= 0.1.2)
+      timers (>= 4.1.1)
+    celluloid-supervision (0.20.1.1)
+      bundler
+      dotenv
+      nenv
+      rspec-logsplit (>= 0.1.2)
+      timers (>= 4.1.1)
     childprocess (0.5.6)
       ffi (~> 1.0, >= 1.0.11)
     cldr-plurals-runtime-rb (1.0.0)
@@ -239,7 +277,7 @@ GEM
     coffee-script-source (1.9.1.1)
     colorize (0.7.7)
     connection_pool (2.2.0)
-    css_parser (1.3.6)
+    css_parser (1.3.7)
       addressable
     cucumber (1.3.20)
       builder (>= 2.1.2)
@@ -253,7 +291,7 @@ GEM
       mime-types (>= 1.16, < 3)
       nokogiri (~> 1.5)
       rails (>= 3, < 5)
-    database_cleaner (1.4.1)
+    database_cleaner (1.5.0)
     deface (1.0.1)
       colorize (>= 0.5.8)
       nokogiri (~> 1.6.0)
@@ -269,6 +307,7 @@ GEM
       devise (>= 2.1.0)
     diff-lcs (1.2.5)
     diffy (3.0.7)
+    dotenv (2.0.2)
     email_spec (1.6.0)
       launchy (~> 2.1)
       mail (~> 2.2)
@@ -301,17 +340,14 @@ GEM
       activerecord (>= 4.0.0, < 5)
     highline (1.6.21)
     hike (1.2.3)
-    hitimes (1.2.2)
+    hitimes (1.2.3)
     htmlentities (4.3.4)
-    httparty (0.13.5)
-      json (~> 1.8)
-      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     i18n_data (0.5.1)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
-    jquery-rails (3.1.3)
+    jquery-rails (3.1.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (5.0.5)
@@ -324,7 +360,7 @@ GEM
       addressable (~> 2.3)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    mime-types (2.6.1)
+    mime-types (2.6.2)
     mini_portile (0.6.2)
     minitest (5.8.0)
     mixpanel-ruby (1.4.0)
@@ -334,12 +370,12 @@ GEM
       i18n (>= 0.6.4, <= 0.7.0)
     multi_json (1.11.2)
     multi_test (0.1.2)
-    multi_xml (0.5.5)
     multipart-post (2.0.0)
+    nenv (0.2.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
-    newrelic_rpm (3.13.0.299)
+    newrelic_rpm (3.13.1.300)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     offsite_payments (2.0.1)
@@ -359,20 +395,20 @@ GEM
     paranoia (2.1.3)
       activerecord (~> 4.0)
     pdf-core (0.2.5)
-    pg (0.18.2)
+    pg (0.18.3)
     polyamorous (1.2.0)
       activerecord (>= 3.0)
     polyglot (0.3.5)
     prawn (1.0.0)
       pdf-core (~> 0.2.2)
       ttfunk (~> 1.1.1)
-    premailer (1.8.4)
+    premailer (1.8.6)
       css_parser (>= 1.3.6)
       htmlentities (>= 4.0.0)
     premailer-rails (1.8.2)
       actionmailer (>= 3, < 5)
       premailer (~> 1.7, >= 1.7.9)
-    puma (2.13.4)
+    puma (2.14.0)
     rabl (0.9.4.pre1)
       activesupport (>= 2.3.14)
     rack (1.5.5)
@@ -388,7 +424,7 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.13)
       sprockets-rails (~> 2.0)
-    rails-i18n (4.0.4)
+    rails-i18n (4.0.5)
       i18n (~> 0.6)
       railties (~> 4.0)
     railties (4.1.13)
@@ -414,6 +450,7 @@ GEM
     rspec-expectations (3.3.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
+    rspec-logsplit (0.1.3)
     rspec-mocks (3.3.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
@@ -445,8 +482,8 @@ GEM
       websocket (~> 1.0)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
-    sidekiq (3.4.2)
-      celluloid (~> 0.16.0)
+    sidekiq (3.5.0)
+      celluloid (~> 0.17.0)
       connection_pool (~> 2.2, >= 2.2.0)
       json (~> 1.0)
       redis (~> 3.2, >= 3.2.1)
@@ -456,7 +493,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.3.2)
+    sprockets-rails (2.3.3)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
@@ -470,7 +507,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
-    timers (4.0.1)
+    timers (4.1.1)
       hitimes
     truncate_html (0.9.2)
     ttfunk (1.1.1)
