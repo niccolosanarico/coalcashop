@@ -5,9 +5,7 @@
  *
 
  *= require spree/backend
-
+ *= require spree/backend/spree_bank_transfer
  *= require_self
  *= require_tree .
-
- *= require admin/spree_bank_transfer
 */

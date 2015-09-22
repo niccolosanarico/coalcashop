@@ -11,5 +11,5 @@
 //= require spree/frontend
 //= require bootstrap-sprockets
 //= require spree/frontend/spree_i18n
-//= require store/spree_bank_transfer
+//= require spree/frontend/spree_bank_transfer
 //= require_tree .

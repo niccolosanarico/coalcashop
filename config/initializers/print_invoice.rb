@@ -1,2 +1,4 @@
-Spree::PrintInvoice::Config.set(prawn_options: { page_size: 'A4' })
-Spree::PrintInvoice::Config.set(print_buttons: 'invoice')
+Spree::PrintInvoice::Config.set(
+    page_layout: :portrait,
+    page_size: 'A4'
+)
