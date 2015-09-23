@@ -10,10 +10,10 @@
 
   <% else %>
 
-    <div class="taxonomy-root taxonomy-item"><strong><%= link_to "Macchinari", seo_url(Spree::Taxon.where(name: "Macchinari")) %></strong></div>
-    <div class="taxonomy-root taxonomy-item"><strong><%= link_to "Neutro", seo_url(Spree::Taxon.where(name: "Neutro")) %></strong></div>
-    <div class="taxonomy-root taxonomy-item"><strong><%= link_to "Minuteria", seo_url(Spree::Taxon.where(name: "Minuteria")) %></strong></div>
-    <div class="taxonomy-root taxonomy-item"><strong><%= link_to "Tavola", seo_url(Spree::Taxon.where(name: "Tavola")) %></strong></div>
+    <div class="taxonomy-root taxonomy-item"><strong><%= link_to "Macchinari", seo_url(Spree::Taxon.where(name: "Macchinari").first) %></strong></div>
+    <div class="taxonomy-root taxonomy-item"><strong><%= link_to "Neutro", seo_url(Spree::Taxon.where(name: "Neutro").first) %></strong></div>
+    <div class="taxonomy-root taxonomy-item"><strong><%= link_to "Minuteria", seo_url(Spree::Taxon.where(name: "Minuteria").first) %></strong></div>
+    <div class="taxonomy-root taxonomy-item"><strong><%= link_to "Tavola", seo_url(Spree::Taxon.where(name: "Tavola").first) %></strong></div>
 
   <% end %>
 </nav>
