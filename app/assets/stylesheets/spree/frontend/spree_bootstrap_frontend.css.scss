@@ -147,6 +147,8 @@ input[type=checkbox] {
 #spree-footer {
   background: $gray-dark;
   padding-top: $padding-base-horizontal;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-top: $line-height-computed;
   color: #fff;
 }

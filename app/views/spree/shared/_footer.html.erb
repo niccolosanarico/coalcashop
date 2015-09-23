@@ -1,0 +1,99 @@
+<div class="row">
+	<div id="spree-footer">
+    <div class="col-md-12 style-two">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#lower-nav-bar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar" style="color:white;"></span>
+          <span class="icon-bar" style="color:white;"></span>
+          <span class="icon-bar" style="color:white;"></span>
+        </button>
+      </div>
+
+      <div id='lower-nav-bar' class='navbar-collapse collapse lower-menu'>
+          <ul class='coalca-nav navbar-nav' data-hook>
+            <li id='about-link' data-hook><%= link_to 'Chi siamo', request.base_url+'/about' %></li>
+            <li id='terms-link' data-hook><%= link_to 'Condizioni', request.base_url+'/terms' %></li>
+						<li id='faq-link' data-hook><%= link_to 'FAQ', request.base_url+'/faq' %></li>
+            <li id='contacts-link' data-hook><%= link_to 'Contatti', request.base_url+'/contacts' %></li>
+          </ul>
+      </div>
+
+    </div>
+
+    <div class="col-md-12 style-two">
+      <p style="text-align: center;"><strong>SERVIZIO CLIENTI: </strong>+39 02 2423055, dal luned&igrave; al venerd&igrave;, 10:00-13:00 e 15:00-18:00</p>
+    </div>
+
+		<footer id="footer" class="row" data-hook>
+		  <div id="footer-left" class="col-md-3 col-sm-6 col-xs-12" data-hook>
+        <p>
+          <a href="#">Coalca Shop</a> by <a href="http://www.coalca.it">Coalca s.r.l.</a><br/>
+          <span class="coalca-info">Sede legale: Via G. Clerici, 342 - 20091 - Bresso (MI)
+            <br/>P.IVA 00727120156 - r.e.a. 662765 iscr. trib. mi.
+						<br/>Cap. Soc. &euro; 100.000,00 i.v.
+						</span>
+        </p>
+      </div>
+
+      <div id="footer-center" class="col-md-2 col-sm-6 col-xs-12" data-hook>
+        <a href="//www.iubenda.com/privacy-policy/983640" class="iubenda-white iubenda-embed" title="Privacy Policy">
+        Privacy Policy</a>
+        <script type="text/javascript">
+          (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
+          s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);};
+          if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);
+        </script>
+      </div>
+
+			<div id="footer-social" class="col-md-3 col-sm-6 col-xs-12" data-hook>
+				<div class="fb-page" 	data-href="https://www.facebook.com/coalcasrl"
+															data-small-header="true"
+															data-adapt-container-width="true"
+															data-hide-cover="false"
+															data-show-facepile="false"
+															data-show-posts="false">
+					<div class="fb-xfbml-parse-ignore">
+						<blockquote cite="https://www.facebook.com/coalcasrl">
+							<a href="https://www.facebook.com/coalcasrl">Coalca srl</a>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+
+			<div id="footer-center" class="col-md-2 col-sm-6 col-xs-12" data-hook>
+							<a href="https://twitter.com/coalcasrl" class="twitter-follow-button"
+									data-show-count="false" data-size="large">Follow @coalcasrl</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</div>
+
+		  <div id="footer-right" class="col-md-2 col-sm-12 col-xs-12" data-hook>
+          <%= image_tag('credit_cards.jpg', class: "credit_cards")%>
+      </div>
+
+		</footer>
+	</div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=855924931139687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+       var docHeight = $(window).height();
+       var footerHeight = $("#spree-footer").height();
+       var footerTop = $("#spree-footer").position().top + footerHeight;
+
+       if (footerTop < docHeight) {
+        $("#spree-footer").css("margin-top", 0+(docHeight - footerTop) + "px");
+       }
+
+    });
+</script>
