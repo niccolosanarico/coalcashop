@@ -11,5 +11,5 @@ Deface::Override.new(:virtual_path => 'spree/checkout/_payment',
 Deface::Override.new(:virtual_path => 'spree/checkout/_payment',
                      :name => 'compress_existing_card_expiration_2',
                      :replace => 'erb[loud]:contains("card.month")',
-                     :text => '<%= card.month + "/" + card.year %>'
+                     :text => '<%= card.month.to_s + "/" + card.year.to_s %>'
                      )
