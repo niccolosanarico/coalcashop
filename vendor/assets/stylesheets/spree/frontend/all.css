@@ -7,9 +7,9 @@
  *= require spree/frontend
 
  *= require spree/frontend/spree_i18n
+ *= require spree/frontend/spree_static_content
+ *= require spree/frontend/spree_bank_transfer
  *= require jquery-ui
  *= require_self
  *= require_tree .
- *= require spree/frontend/spree_static_content
- *= require spree/frontend/spree_bank_transfer
 */

@@ -6,9 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-
-//= require spree/backend
-//= require_tree .
-//= require spree/backend/spree_i18n
-
 //= require spree/backend/spree_bank_transfer
+//= require spree/backend
+//= require spree/backend/spree_i18n
+//= require_tree .
