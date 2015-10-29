@@ -27,6 +27,9 @@ Spree.config do |config|
   config.show_raw_product_description = false
   config.show_variant_full_price = true
 
+  config.admin_interface_logo = 'logo/spree_50.png'
+  config.logo = 'logo/spree_50.png'
+
 end
 
 Spree.user_class = "Spree::User"
