@@ -27,8 +27,8 @@ Spree.config do |config|
   config.show_raw_product_description = false
   config.show_variant_full_price = true
 
-  config.admin_interface_logo = 'images/coalca_logo.png'
-  config.logo = 'images/coalca_logo.png'
+  config.admin_interface_logo = 'coalca_logo.png'
+  config.logo = 'coalca_logo.png'
 
 end
 
