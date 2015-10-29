@@ -1,4 +1,5 @@
 Spree::PrintInvoice::Config.set(
     page_layout: :portrait,
-    page_size: 'A4'
+    page_size: 'A4',
+    logo_path: 'images/Coalca_Big.jpg'
 )
