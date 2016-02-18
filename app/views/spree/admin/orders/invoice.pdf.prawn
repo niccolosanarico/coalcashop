@@ -36,6 +36,8 @@ grid([1,0], [6,4]).bounding_box do
     address_cell_shipping = make_cell(content: Spree.t(:shipping_address), font_style: :bold)
 
     billing =  "#{bill_address.firstname} #{bill_address.lastname}"
+    billing << "\n#{bill_address.company}"
+    billing << "\n#{bill_address.partita_iva}"
     billing << "\n#{bill_address.address1}"
     billing << "\n#{bill_address.address2}" unless bill_address.address2.blank?
     billing << "\n#{bill_address.city}, #{bill_address.state_text} #{bill_address.zipcode}"
@@ -43,6 +45,8 @@ grid([1,0], [6,4]).bounding_box do
     billing << "\n#{bill_address.phone}"
 
     shipping =  "#{ship_address.firstname} #{ship_address.lastname}"
+    shipping << "\n#{ship_address.company}"
+    shipping << "\n#{ship_address.partita_iva}"
     shipping << "\n#{ship_address.address1}"
     shipping << "\n#{ship_address.address2}" unless ship_address.address2.blank?
     shipping << "\n#{ship_address.city}, #{ship_address.state_text} #{ship_address.zipcode}"
