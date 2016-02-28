@@ -8,30 +8,30 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: ca76556c2c85a7839ab838743170b13375f17149
+  revision: 62f67c5e810c2d1cbdec6462718216661c08db43
   branch: 3-0-stable
   specs:
-    spree (3.0.6.1)
-      spree_api (= 3.0.6.1)
-      spree_backend (= 3.0.6.1)
-      spree_cmd (= 3.0.6.1)
-      spree_core (= 3.0.6.1)
-      spree_frontend (= 3.0.6.1)
-      spree_sample (= 3.0.6.1)
-    spree_api (3.0.6.1)
+    spree (3.0.7)
+      spree_api (= 3.0.7)
+      spree_backend (= 3.0.7)
+      spree_cmd (= 3.0.7)
+      spree_core (= 3.0.7)
+      spree_frontend (= 3.0.7)
+      spree_sample (= 3.0.7)
+    spree_api (3.0.7)
       rabl (~> 0.11.6)
-      spree_core (= 3.0.6.1)
+      spree_core (= 3.0.7)
       versioncake (~> 2.3.1)
-    spree_backend (3.0.6.1)
+    spree_backend (3.0.7)
       bootstrap-sass (~> 3.3)
       jquery-rails (~> 4.1)
       jquery-ui-rails (~> 5.0)
       select2-rails (= 3.5.9.1)
-      spree_api (= 3.0.6.1)
-      spree_core (= 3.0.6.1)
-    spree_cmd (3.0.6.1)
+      spree_api (= 3.0.7)
+      spree_core (= 3.0.7)
+    spree_cmd (3.0.7)
       thor (~> 0.14)
-    spree_core (3.0.6.1)
+    spree_core (3.0.7)
       activemerchant (~> 1.47.0)
       acts_as_list (~> 0.6)
       awesome_nested_set (~> 3.0.1)
@@ -56,14 +56,14 @@ GIT
       stringex
       truncate_html (= 0.9.2)
       twitter_cldr (~> 3.0)
-    spree_frontend (3.0.6.1)
+    spree_frontend (3.0.7)
       bootstrap-sass (>= 3.3.5.1, < 3.4)
       canonical-rails (~> 0.0.4)
       jquery-rails (~> 4.1)
-      spree_api (= 3.0.6.1)
-      spree_core (= 3.0.6.1)
-    spree_sample (3.0.6.1)
-      spree_core (= 3.0.6.1)
+      spree_api (= 3.0.7)
+      spree_core (= 3.0.7)
+    spree_sample (3.0.7)
+      spree_core (= 3.0.7)
 
 GIT
   remote: git://github.com/spree/spree_auth_devise.git
@@ -87,16 +87,16 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_i18n.git
-  revision: 53853ad1f1f1c94ba90c6ec177568550354a65d4
+  revision: 5c60bcb8ae49973070069da752547968280feadd
   branch: 3-0-stable
   specs:
-    spree_i18n (3.0.0)
+    spree_i18n (3.0.5)
       friendly_id-globalize
       globalize (~> 5.0.1)
       i18n_data (~> 0.7.0)
       kaminari-i18n (~> 0.3.2)
       rails-i18n (~> 4.0.1)
-      spree_core (~> 3.0.4)
+      spree_core (~> 3.0.5)
 
 GIT
   remote: git://github.com/spree/spree_print_invoice.git
@@ -162,9 +162,8 @@ GEM
       activerecord (>= 3.0)
     addressable (2.4.0)
     arel (6.0.3)
-    autoprefixer-rails (6.3.3)
+    autoprefixer-rails (6.3.3.1)
       execjs
-      json
     awesome_nested_set (3.0.3)
       activerecord (>= 4.0.0, < 5)
     bcrypt (3.1.10)
@@ -173,7 +172,7 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
-    braintree (2.57.0)
+    braintree (2.58.0)
       builder (>= 2.0.0)
     builder (3.2.2)
     camertron-eprun (1.1.0)
@@ -220,7 +219,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     colorize (0.7.7)
-    concurrent-ruby (1.0.0)
+    concurrent-ruby (1.0.1)
     connection_pool (2.2.0)
     css_parser (1.3.7)
       addressable
@@ -317,7 +316,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    mime-types (2.99)
+    mime-types (2.99.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     monetize (1.3.0)
@@ -355,7 +354,7 @@ GEM
     premailer-rails (1.9.0)
       actionmailer (>= 3, < 5)
       premailer (~> 1.7, >= 1.7.9)
-    puma (2.16.0)
+    puma (3.0.2)
     rabl (0.11.8)
       activesupport (>= 2.3.14)
     rack (1.6.4)
@@ -401,7 +400,7 @@ GEM
     redis (3.2.2)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
-    rspec-core (3.4.2)
+    rspec-core (3.4.3)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -418,7 +417,7 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
-    rubyzip (1.1.7)
+    rubyzip (1.2.0)
     sass (3.4.21)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
