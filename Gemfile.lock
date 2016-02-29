@@ -7,6 +7,15 @@ GIT
       spree_core (~> 3.0.0.rc2)
 
 GIT
+  remote: git://github.com/spree-contrib/spree_sitemap.git
+  revision: 33c28b228b122fe85df39baafb76a40b40032443
+  branch: 3-0-stable
+  specs:
+    spree_sitemap (3.0.5)
+      sitemap_generator (~> 4.3.1)
+      spree_core (~> 3.0.0)
+
+GIT
   remote: git://github.com/spree/spree.git
   revision: 62f67c5e810c2d1cbdec6462718216661c08db43
   branch: 3-0-stable
@@ -87,7 +96,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_i18n.git
-  revision: 5c60bcb8ae49973070069da752547968280feadd
+  revision: 29c6a015dddcd78408d1ef4ac8f7f77bd0fc4335
   branch: 3-0-stable
   specs:
     spree_i18n (3.0.5)
@@ -118,41 +127,41 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.2.5.1)
-      actionpack (= 4.2.5.1)
-      actionview (= 4.2.5.1)
-      activejob (= 4.2.5.1)
+    actionmailer (4.2.5.2)
+      actionpack (= 4.2.5.2)
+      actionview (= 4.2.5.2)
+      activejob (= 4.2.5.2)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 1.0, >= 1.0.5)
-    actionpack (4.2.5.1)
-      actionview (= 4.2.5.1)
-      activesupport (= 4.2.5.1)
+    actionpack (4.2.5.2)
+      actionview (= 4.2.5.2)
+      activesupport (= 4.2.5.2)
       rack (~> 1.6)
       rack-test (~> 0.6.2)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (4.2.5.1)
-      activesupport (= 4.2.5.1)
+    actionview (4.2.5.2)
+      activesupport (= 4.2.5.2)
       builder (~> 3.1)
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    activejob (4.2.5.1)
-      activesupport (= 4.2.5.1)
+    activejob (4.2.5.2)
+      activesupport (= 4.2.5.2)
       globalid (>= 0.3.0)
     activemerchant (1.47.0)
       activesupport (>= 3.2.14, < 5.0.0)
       builder (>= 2.1.2, < 4.0.0)
       i18n (>= 0.6.9)
       nokogiri (~> 1.4)
-    activemodel (4.2.5.1)
-      activesupport (= 4.2.5.1)
+    activemodel (4.2.5.2)
+      activesupport (= 4.2.5.2)
       builder (~> 3.1)
-    activerecord (4.2.5.1)
-      activemodel (= 4.2.5.1)
-      activesupport (= 4.2.5.1)
+    activerecord (4.2.5.2)
+      activemodel (= 4.2.5.2)
+      activesupport (= 4.2.5.2)
       arel (~> 6.0)
-    activesupport (4.2.5.1)
+    activesupport (4.2.5.2)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -360,16 +369,16 @@ GEM
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
-    rails (4.2.5.1)
-      actionmailer (= 4.2.5.1)
-      actionpack (= 4.2.5.1)
-      actionview (= 4.2.5.1)
-      activejob (= 4.2.5.1)
-      activemodel (= 4.2.5.1)
-      activerecord (= 4.2.5.1)
-      activesupport (= 4.2.5.1)
+    rails (4.2.5.2)
+      actionmailer (= 4.2.5.2)
+      actionpack (= 4.2.5.2)
+      actionview (= 4.2.5.2)
+      activejob (= 4.2.5.2)
+      activemodel (= 4.2.5.2)
+      activerecord (= 4.2.5.2)
+      activesupport (= 4.2.5.2)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.2.5.1)
+      railties (= 4.2.5.2)
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
@@ -382,9 +391,9 @@ GEM
     rails-i18n (4.0.8)
       i18n (~> 0.7)
       railties (~> 4.0)
-    railties (4.2.5.1)
-      actionpack (= 4.2.5.1)
-      activesupport (= 4.2.5.1)
+    railties (4.2.5.2)
+      actionpack (= 4.2.5.2)
+      activesupport (= 4.2.5.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.5.0)
@@ -441,6 +450,8 @@ GEM
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
       redis (~> 3.2, >= 3.2.1)
+    sitemap_generator (4.3.1)
+      builder
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -537,6 +548,7 @@ DEPENDENCIES
   spree_gateway!
   spree_i18n!
   spree_print_invoice!
+  spree_sitemap!
   spree_static_content!
   sqlite3
   turbolinks

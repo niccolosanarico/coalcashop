@@ -42,5 +42,11 @@ namespace :images do
   end
 end
 
+task :refresh_sitemaps do
+  run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake sitemap:refresh"
+end
+
+
 before "deploy:finished", "images:symlink"
 after "deploy:finished", "puma:restart"
+after "deploy", "refresh_sitemaps"

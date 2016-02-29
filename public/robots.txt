@@ -15,3 +15,5 @@ Disallow: /user_sessions
 Disallow: /user_registrations
 Disallow: /users
 Disallow: /account
+
+Sitemap: https://shop.coalca.it/sitemap.xml.gz

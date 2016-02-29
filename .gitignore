@@ -25,3 +25,4 @@ environments/*.rb
 
 # Ignore images
 /public/spree
+/public/sitemap*
