@@ -43,7 +43,13 @@ namespace :images do
 end
 
 task :refresh_sitemaps do
-  run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake sitemap:refresh"
+  on roles :app do
+    within release_path do
+       with rails_env: fetch(:rails_env) do
+        execute :rake, "sitemap:refresh"
+      end
+    end
+  end
 end
 
 
