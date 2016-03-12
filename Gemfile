@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.2.1"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.0'
 gem 'deface'
@@ -42,9 +44,9 @@ end
 group :development, :test do
   gem 'sqlite3'
 
-  gem 'capistrano', '~> 3.2.1'
+  gem 'capistrano', '~> 3.4.0'
   # rails specific capistrano funcitons
-  gem 'capistrano-rails', '~> 1.1.0'
+  gem 'capistrano-rails'
 
   # integrate bundler with capistrano
   gem 'capistrano-bundler'
