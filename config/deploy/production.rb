@@ -11,9 +11,9 @@ set :stage, :production
 # role :db, "coalcashop.cloudapp.net"
 #role :db,  "csdb.cloudapp.net"
 
-role :web, "48.68.212.192"
-role :app, "48.68.212.192"
-role :db, "48.68.212.192"
+role :web, "40.68.212.192"
+role :app, "40.68.212.192"
+role :db, "40.68.212.192"
 
 
 # Extended Server Syntax
@@ -23,7 +23,7 @@ role :db, "48.68.212.192"
 # used to set extended properties on the server.
 
 #server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
-server '48.68.212.192', user: 'coalca', roles: %w{web app db}
+server '40.68.212.192', user: 'coalca', roles: %w{web app db}
 # server 'coalcashop.cloudapp.net', user: 'coalca', roles: %w{web app db}
 #server 'csdb.cloudapp.net', user: 'coalca', roles: %w{db}
 
