@@ -6,10 +6,15 @@ set :stage, :production
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-role :web, "coalcashop.cloudapp.net"
-role :app, "coalcashop.cloudapp.net"
-role :db, "coalcashop.cloudapp.net"
+# role :web, "coalcashop.cloudapp.net"
+# role :app, "coalcashop.cloudapp.net"
+# role :db, "coalcashop.cloudapp.net"
 #role :db,  "csdb.cloudapp.net"
+
+role :web, "48.68.212.192"
+role :app, "48.68.212.192"
+role :db, "48.68.212.192"
+
 
 # Extended Server Syntax
 # ======================
@@ -18,7 +23,8 @@ role :db, "coalcashop.cloudapp.net"
 # used to set extended properties on the server.
 
 #server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
-server 'coalcashop.cloudapp.net', user: 'coalca', roles: %w{web app db}
+server '48.68.212.192', user: 'coalca', roles: %w{web app db}
+# server 'coalcashop.cloudapp.net', user: 'coalca', roles: %w{web app db}
 #server 'csdb.cloudapp.net', user: 'coalca', roles: %w{db}
 
 
