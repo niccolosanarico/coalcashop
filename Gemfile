@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 ruby "2.2.1"
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.0'
 gem 'deface'
 gem 'money', '~>6.5.0'
@@ -12,22 +11,14 @@ gem 'braintree'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', :branch=>'4-0-stable'
-
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
 # Decorate emails with inline style CSS
 gem 'premailer-rails'
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
 # Use jquery & angularjs as the JavaScript library
 gem 'jquery-rails'
-
 gem 'jquery-ui-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -37,24 +28,16 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
 group :development, :test do
   gem 'sqlite3'
-
   gem 'capistrano', '~> 3.4.0'
-  # rails specific capistrano funcitons
   gem 'capistrano-rails'
-
-  # integrate bundler with capistrano
   gem 'capistrano-bundler'
   gem 'capistrano-rvm'
-
-  #Integrate puma with capistrano
   gem 'capistrano3-puma'
-
   gem 'diffy'
 end
 
@@ -104,9 +87,7 @@ gem 'spree', :github => 'spree/spree', :branch => '3-0-stable'
 gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '3-0-stable'
 gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '3-0-stable'
 gem 'spree_i18n', :github => 'spree/spree_i18n', :branch => '3-0-stable'
-# gem 'spree_bootstrap_frontend', :github => '200Creative/spree_bootstrap_frontend', :branch => '2-4-stable'
 gem 'spree_static_content', github: 'spree/spree_static_content', branch: '3-0-stable'
 gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git', branch: '3-0-stable'
-#gem 'spree-bank-transfer', require: 'spree_bank_transfer', :github => 'vinsol/spree_bank_transfer', :branch => '2-3-stable'
 gem 'spree_bank_transfer', github: 'redglory/spree_bank_transfer', :branch => '3-0-stable', require: 'spree_bank_transfer'
 gem 'spree_sitemap', github: 'spree-contrib/spree_sitemap', branch: '3-0-stable'
