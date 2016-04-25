@@ -8,9 +8,9 @@ Deface::Override.new(:virtual_path => 'spree/products/show',
                            <div class="modal-content">
                              <div class="modal-body">
                               <% if defined?(image) && image %>
-                                <%= image_tag image.attachment.url(:large), :itemprop => "image", :class => "img-responsive"  %>
+                                <%= image_tag image.attachment.url(:large), :itemprop => "image", :class => "img-responsive img-modal-center"  %>
                               <% else %>
-                                <%= large_image(@product, :itemprop => "image", :class => "img-responsive") %>
+                                <%= large_image(@product, :itemprop => "image", :class => "img-responsive img-modal-center") %>
                               <% end %>
                              </div>
                              <div class="modal-footer">
