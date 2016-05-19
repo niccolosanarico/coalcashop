@@ -9,18 +9,18 @@ module Spree
       end
 
       def compute_package(package)
-        compute_from_weight(package.weight)#contents.sum(&:quantity))
+        compute_from_weight(package.weight, package.volume)#contents.sum(&:quantity))
       end
 
-      def compute_from_weight(weight)
-        #self.preferred_costo * ( (weight / preferred_colli).floor + 1)
-        #puts weight
+      def compute_from_weight(weight, volume)
+        # SDA: https://www.sda.it/SITO_SDA-HTML-WEB/soluzioni/frm_peso_vol.htm
+        weight = weight + volume/3.333
 
         case weight
-        when 0...25
-          25
-        when 25...1000000
-          25+(weight)*0.50
+        when 0...50
+          20
+        when 50..1000000
+          20+(weight-50)*0.35
         end
       end
     end

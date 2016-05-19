@@ -9,12 +9,13 @@ module Spree
       end
 
       def compute_package(package)
-        compute_from_weight(package.weight)#contents.sum(&:quantity))
+        compute_from_weight(package.weight, package.volume)#contents.sum(&:quantity))
       end
 
-      def compute_from_weight(weight)
+      def compute_from_weight(weight, volume)
         #self.preferred_costo * ( (weight / preferred_colli).floor + 1)
         #puts weight
+        weight = weight + volume/3.333
 
         case weight
         when 0...3
@@ -22,7 +23,7 @@ module Spree
         when 3...15
           13
         when 15...1000000
-          15
+          15+(weight-15)*0.35
         end
       end
     end
