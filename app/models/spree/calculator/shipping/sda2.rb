@@ -17,10 +17,10 @@ module Spree
         #puts weight
 
         case weight
-        when 0...50
-          15
-        when 50...1000000
-          15+(weight-50)*0.35
+        when 0...25
+          25
+        when 25...1000000
+          25+(weight)*0.50
         end
       end
     end
