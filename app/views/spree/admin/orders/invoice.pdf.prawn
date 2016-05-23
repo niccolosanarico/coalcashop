@@ -43,6 +43,7 @@ grid([1,0], [6,4]).bounding_box do
     billing << "\n#{bill_address.city}, #{bill_address.state_text} #{bill_address.zipcode}"
     billing << "\n#{bill_address.country.name}"
     billing << "\n#{bill_address.phone}"
+    billing << "\n#{@order.email}"
 
     shipping =  "#{ship_address.firstname} #{ship_address.lastname}"
     shipping << "\n#{ship_address.company}"
