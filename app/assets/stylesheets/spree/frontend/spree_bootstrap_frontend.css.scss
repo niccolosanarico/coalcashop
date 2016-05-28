@@ -366,6 +366,13 @@ nav#taxonomies {
   }
 }
 
+.carousel-angle {
+  position: absolute;
+  top:50%;
+  z-index:  5;
+  display: inline-block;
+}
+
 .home-taxonomies {
   padding-top: 20px;
 
