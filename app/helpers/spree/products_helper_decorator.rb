@@ -12,7 +12,9 @@ module Spree
     end
 
     def current_sorting?(key)
-      sorting_param == key.to_sym
+      if (defined? sorting_param)
+        sorting_param == key.to_sym
+      end
     end
   end
 end
