@@ -17,6 +17,7 @@ module Spree
       private
 
       def sorting_scope
+        puts "LOVE TO SORT)))))))))))))))))))))))))))))))))))))))))))))))))))))"
         allowed_sortings.include?(sorting_param) ? sorting_param : default_sorting
       end
 
