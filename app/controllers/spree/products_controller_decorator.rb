@@ -6,9 +6,8 @@ module Spree
       def index
         # old_index # Like calling super: http://stackoverflow.com/a/13806783/73673
         @searcher = build_searcher(params.merge(include_images: true))
+        @products = @searcher.retrieve_products.send(sorting_scope)
         @taxonomies = Spree::Taxonomy.includes(root: :children)
-        @products = @searcher.retrieve_products
-        @products = @products.send(sorting_scope)
       end
 
       def sorting_param
