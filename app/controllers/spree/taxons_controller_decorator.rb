@@ -5,13 +5,14 @@
 module Spree
   TaxonsController.class_eval do
     helper_method :sorting_param
-    alias_method :old_show, :show
 
     def show
-      old_show # Like calling super: http://stackoverflow.com/a/13806783/73673
+      @taxon = Taxon.friendly.find(params[:id])
+      return unless @taxon
 
-      # Remove default `:in_taxon` `ORDER_BY` & apply sorting scope if `sorting` param is present
-      @products = @products.reorder('').send(sorting_scope) if params[:sorting].present?
+      @searcher = build_searcher(params.merge(taxon: @taxon.id, include_images: true))
+      @products = @searcher.retrieve_products.reorder('').send(sorting_scope) if params[:sorting].present?
+      @taxonomies = Spree::Taxonomy.includes(root: :children)
     end
 
     def sorting_param
