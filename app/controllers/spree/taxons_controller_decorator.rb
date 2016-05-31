@@ -11,8 +11,11 @@ module Spree
       return unless @taxon
 
       @searcher = build_searcher(params.merge(taxon: @taxon.id, include_images: true))
-      @products = @searcher.retrieve_products.reorder('').send(sorting_scope) if params[:sorting].present?
+      @products = @searcher.retrieve_products
       @taxonomies = Spree::Taxonomy.includes(root: :children)
+
+      # Remove default `:in_taxon` `ORDER_BY` & apply sorting scope if `sorting` param is present
+      @products = @products.reorder('').send(sorting_scope) if params[:sorting].present?
     end
 
     def sorting_param
