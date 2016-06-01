@@ -3,7 +3,6 @@ module Spree
     ##
     # Override cache_key_for_products to add caching per sort param.
     def cache_key_for_products
-      puts "LOVELY SORTING"
       count = @products.count
       # Instead of default max_updated_at, we look at the first product in the list
       # And we add sorting, so that we get a product-cache per sorting param

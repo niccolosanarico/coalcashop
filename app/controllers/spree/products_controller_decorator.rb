@@ -1,12 +1,11 @@
 module Spree
   ProductsController.class_eval do
       helper_method :sorting_param
-      alias_method :old_index, :index
 
       def index
         # old_index # Like calling super: http://stackoverflow.com/a/13806783/73673
         @searcher = build_searcher(params.merge(include_images: true))
-        @products = @searcher.retrieve_products.send(sorting_scope)
+        @products = @searcher.retrieve_products.reorder('').send(sorting_scope)
         @taxonomies = Spree::Taxonomy.includes(root: :children)
       end
 
