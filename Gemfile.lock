@@ -1,58 +1,57 @@
 GIT
   remote: git://github.com/redglory/spree_bank_transfer.git
-  revision: 234d9fad5df03b8b96765a1d5958bb9795226a8d
-  branch: 3-0-stable
+  revision: c60f34a96153ec1817b26473c1a88b8db9b12283
+  branch: 3-1-stable
   specs:
-    spree_bank_transfer (3.0.0)
-      spree_core (~> 3.0.0.rc2)
+    spree_bank_transfer (3.1.0)
+      spree_core (~> 3.1.0)
 
 GIT
   remote: git://github.com/spree-contrib/spree_sitemap.git
-  revision: 33c28b228b122fe85df39baafb76a40b40032443
-  branch: 3-0-stable
+  revision: 7d0941cfed1ac54b25d30d13a1f8e5949170a399
+  branch: 3-1-stable
   specs:
-    spree_sitemap (3.0.5)
-      sitemap_generator (~> 4.3.1)
-      spree_core (~> 3.0.0)
+    spree_sitemap (3.1.0)
+      sitemap_generator (~> 5.1.0)
+      spree_core (~> 3.1.0.beta)
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: b156e0a211ab3b0ffcc0c2544ea6c4366bcc45fe
-  branch: 3-0-stable
+  revision: 5074983b2386d892604559ec2263e8b76ba20c2a
+  branch: 3-1-stable
   specs:
-    spree (3.0.10)
-      spree_api (= 3.0.10)
-      spree_backend (= 3.0.10)
-      spree_cmd (= 3.0.10)
-      spree_core (= 3.0.10)
-      spree_frontend (= 3.0.10)
-      spree_sample (= 3.0.10)
-    spree_api (3.0.10)
-      rabl (~> 0.11.6)
-      spree_core (= 3.0.10)
+    spree (3.1.1)
+      spree_api (= 3.1.1)
+      spree_backend (= 3.1.1)
+      spree_cmd (= 3.1.1)
+      spree_core (= 3.1.1)
+      spree_frontend (= 3.1.1)
+      spree_sample (= 3.1.1)
+    spree_api (3.1.1)
+      rabl (~> 0.12.0)
+      spree_core (= 3.1.1)
       versioncake (~> 2.3.1)
-    spree_backend (3.0.10)
+    spree_backend (3.1.1)
       bootstrap-sass (~> 3.3)
       jquery-rails (~> 4.1)
       jquery-ui-rails (~> 5.0)
       select2-rails (= 3.5.9.1)
-      spree_api (= 3.0.10)
-      spree_core (= 3.0.10)
-    spree_cmd (3.0.10)
+      spree_api (= 3.1.1)
+      spree_core (= 3.1.1)
+    spree_cmd (3.1.1)
       thor (~> 0.14)
-    spree_core (3.0.10)
-      activemerchant (~> 1.47.0)
+    spree_core (3.1.1)
+      activemerchant (~> 1.49.0)
       acts_as_list (= 0.7.2)
       awesome_nested_set (~> 3.0.1)
       cancancan (~> 1.10.1)
       carmen (~> 1.0.0)
       deface (~> 1.0.0)
-      ffaker (~> 1.16)
+      ffaker (~> 2.2.0)
       font-awesome-rails (~> 4.0)
       friendly_id (~> 5.1.0)
       highline (~> 1.6.18)
-      json (~> 1.7)
-      kaminari (~> 0.15, >= 0.15.1)
+      kaminari (~> 0.17)
       monetize (~> 1.1)
       paperclip (~> 4.3.0)
       paranoia (~> 2.1.0)
@@ -63,66 +62,63 @@ GIT
       sprockets-rails
       state_machines-activerecord (~> 0.2)
       stringex
-      truncate_html (= 0.9.2)
+      truncate_html (~> 0.9.3)
       twitter_cldr (~> 3.0)
-    spree_frontend (3.0.10)
+    spree_frontend (3.1.1)
       bootstrap-sass (>= 3.3.5.1, < 3.4)
       canonical-rails (~> 0.0.4)
       jquery-rails (~> 4.1)
-      spree_api (= 3.0.10)
-      spree_core (= 3.0.10)
-    spree_sample (3.0.10)
-      spree_core (= 3.0.10)
+      spree_api (= 3.1.1)
+      spree_core (= 3.1.1)
+    spree_sample (3.1.1)
+      spree_core (= 3.1.1)
 
 GIT
   remote: git://github.com/spree/spree_auth_devise.git
-  revision: 1ac9dcc33049b185a0dd884c832583feb4b91890
-  branch: 3-0-stable
+  revision: 3ed097e07cdc3a8f89b1ebfb509738cda322a4e9
+  branch: 3-1-stable
   specs:
-    spree_auth_devise (3.0.6)
+    spree_auth_devise (3.1.0)
       devise (~> 3.5.4)
       devise-encryptable (= 0.1.2)
-      json
-      multi_json
-      spree_core (~> 3.0.0)
+      spree_core (~> 3.1.0)
 
 GIT
   remote: git://github.com/spree/spree_gateway.git
-  revision: 3cb02b0b3a45be5f4ace9d9295ffb3c11864e605
-  branch: 3-0-stable
+  revision: 1ca1e860daba88a85a2fb7e7c010f45ed301d65a
+  branch: 3-1-stable
   specs:
-    spree_gateway (3.0.0)
-      spree_core (~> 3.0.0)
+    spree_gateway (3.1.0)
+      spree_core (~> 3.1.0.beta)
 
 GIT
   remote: git://github.com/spree/spree_i18n.git
-  revision: fb26046240aef6ec516abd4e2a363e65487adaea
-  branch: 3-0-stable
+  revision: 65707e84aa60c268034a43fa5e9875d3fe1caf02
+  branch: 3-1-stable
   specs:
-    spree_i18n (3.0.5)
-      friendly_id-globalize
-      globalize (~> 5.0.1)
+    spree_i18n (3.1.0)
       i18n_data (~> 0.7.0)
       kaminari-i18n (~> 0.3.2)
       rails-i18n (~> 4.0.1)
-      spree_core (~> 3.0.5)
+      routing-filter (~> 0.5.0)
+      spree_core (~> 3.1.0.beta)
 
 GIT
   remote: git://github.com/spree/spree_print_invoice.git
-  revision: d59b21a8e4b5c2f57385074c9a49bfeb2498f4f0
-  branch: 3-0-stable
+  revision: fa7502f6af6e315d788d4ecd9ba3ad6d3e5ad441
+  branch: master
   specs:
     spree_print_invoice (3.0.0.beta)
-      prawn (~> 1.0.0)
-      spree_core (~> 3.0.0)
+      prawn-rails (~> 0.1.1)
+      spree_core (~> 3.1.0.beta)
 
 GIT
   remote: git://github.com/spree/spree_static_content.git
-  revision: 80a74e1ad8e1843c6bfabcd700dc8edb84822fdd
-  branch: 3-0-stable
+  revision: 5e8d9ba3ee047da114c71f9ea6a05408ea75b494
+  branch: 3-1-stable
   specs:
-    spree_static_content (3.0.1)
-      spree_core (~> 3.0.0)
+    spree_static_content (3.1.0)
+      spree_core (~> 3.1.0.beta)
 
 GEM
   remote: https://rubygems.org/
@@ -149,7 +145,7 @@ GEM
     activejob (4.2.7.1)
       activesupport (= 4.2.7.1)
       globalid (>= 0.3.0)
-    activemerchant (1.47.0)
+    activemerchant (1.49.0)
       activesupport (>= 3.2.14, < 5.0.0)
       builder (>= 2.1.2, < 4.0.0)
       i18n (>= 0.6.9)
@@ -171,7 +167,7 @@ GEM
       activerecord (>= 3.0)
     addressable (2.4.0)
     arel (6.0.3)
-    autoprefixer-rails (6.4.0.2)
+    autoprefixer-rails (6.5.1)
       execjs
     awesome_nested_set (3.0.3)
       activerecord (>= 4.0.0, < 5)
@@ -181,10 +177,10 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
-    braintree (2.65.0)
+    braintree (2.68.1)
       builder (>= 2.0.0)
     builder (3.2.2)
-    camertron-eprun (1.1.0)
+    camertron-eprun (1.1.1)
     cancancan (1.10.1)
     canonical-rails (0.0.11)
       rails (>= 3.1, < 5.0)
@@ -192,10 +188,10 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
-    capistrano-bundler (1.1.4)
+    capistrano-bundler (1.2.0)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
-    capistrano-rails (1.1.7)
+    capistrano-rails (1.1.8)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
     capistrano-rvm (0.1.2)
@@ -204,7 +200,7 @@ GEM
     capistrano3-puma (1.2.1)
       capistrano (~> 3.0)
       puma (>= 2.6)
-    capybara (2.8.0)
+    capybara (2.10.1)
       addressable
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -230,7 +226,7 @@ GEM
     colorize (0.8.1)
     concurrent-ruby (1.0.2)
     connection_pool (2.2.0)
-    css_parser (1.4.5)
+    css_parser (1.4.6)
       addressable
     cucumber (2.4.0)
       builder (>= 2.1.2)
@@ -242,9 +238,9 @@ GEM
       multi_test (>= 0.1.2)
     cucumber-core (1.5.0)
       gherkin (~> 4.0)
-    cucumber-rails (1.4.4)
+    cucumber-rails (1.4.5)
       capybara (>= 1.1.2, < 3)
-      cucumber (>= 1.3.8, < 3)
+      cucumber (>= 1.3.8, < 4)
       mime-types (>= 1.16, < 4)
       nokogiri (~> 1.5)
       railties (>= 3, < 5.1)
@@ -280,7 +276,7 @@ GEM
       railties (>= 3.0.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
-    ffaker (1.32.1)
+    ffaker (2.2.0)
     ffi (1.9.14)
     figaro (1.1.1)
       thor (~> 0.14)
@@ -288,17 +284,12 @@ GEM
       railties (>= 3.2, < 5.1)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
-    friendly_id-globalize (1.0.0.alpha2)
-      friendly_id (~> 5.1.0, < 6.0)
     gherkin (4.0.0)
     gibbon (2.2.4)
       faraday (>= 0.9.1)
       multi_json (>= 1.11.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    globalize (5.0.1)
-      activemodel (>= 4.2.0, < 4.3)
-      activerecord (>= 4.2.0, < 4.3)
     highline (1.6.21)
     htmlentities (4.3.4)
     i18n (0.7.0)
@@ -306,7 +297,7 @@ GEM
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
-    jquery-rails (4.1.1)
+    jquery-rails (4.2.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
@@ -330,7 +321,7 @@ GEM
     mime-types-data (3.2016.0521)
     mimemagic (0.3.0)
     mini_portile2 (2.1.0)
-    minitest (5.9.0)
+    minitest (5.9.1)
     monetize (1.3.0)
       money (~> 6.5.0)
     money (6.5.1)
@@ -341,10 +332,9 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
-    newrelic_rpm (3.16.1.320)
-    nokogiri (1.6.8)
+    newrelic_rpm (3.17.0.325)
+    nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
-      pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
     paperclip (4.3.7)
       activemodel (>= 3.2.0)
@@ -354,15 +344,20 @@ GEM
       mimemagic (= 0.3.0)
     paranoia (2.1.5)
       activerecord (~> 4.0)
-    pdf-core (0.2.5)
-    pg (0.18.4)
-    pkg-config (1.1.7)
+    pdf-core (0.6.1)
+    pg (0.19.0)
     polyamorous (1.3.1)
       activerecord (>= 3.0)
     polyglot (0.3.5)
-    prawn (1.0.0)
-      pdf-core (~> 0.2.2)
-      ttfunk (~> 1.1.1)
+    prawn (2.1.0)
+      pdf-core (~> 0.6.1)
+      ttfunk (~> 1.4.0)
+    prawn-rails (0.1.1)
+      prawn
+      prawn-table
+      rails (>= 3.1.0)
+    prawn-table (0.2.2)
+      prawn (>= 1.3.0, < 3.0.0)
     premailer (1.8.7)
       css_parser (>= 1.4.5)
       htmlentities (>= 4.0.0)
@@ -370,7 +365,7 @@ GEM
       actionmailer (>= 3, < 6)
       premailer (~> 1.7, >= 1.7.9)
     puma (3.6.0)
-    rabl (0.11.8)
+    rabl (0.12.0)
       activesupport (>= 2.3.14)
     rack (1.6.4)
     rack-protection (1.5.3)
@@ -404,7 +399,7 @@ GEM
       activesupport (= 4.2.7.1)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (11.2.2)
+    rake (11.3.0)
     ransack (1.4.1)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
@@ -417,7 +412,10 @@ GEM
     redis (3.3.1)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
-    rspec-core (3.5.2)
+    routing-filter (0.5.1)
+      actionpack (~> 4.2)
+      activesupport (~> 4.2)
+    rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -425,7 +423,7 @@ GEM
     rspec-mocks (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
-    rspec-rails (3.5.1)
+    rspec-rails (3.5.2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
@@ -442,37 +440,33 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    sdoc (0.4.1)
+    sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     select2-rails (3.5.9.1)
       thor (~> 0.14)
-    selenium-webdriver (2.53.4)
+    selenium-webdriver (3.0.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
-    sidekiq (4.1.4)
+    sidekiq (4.2.3)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
       redis (~> 3.2, >= 3.2.1)
-      sinatra (>= 1.4.7)
-    sinatra (1.4.7)
-      rack (~> 1.5)
-      rack-protection (~> 1.4)
-      tilt (>= 1.3, < 3)
-    sitemap_generator (4.3.1)
+    sitemap_generator (5.1.0)
       builder
     sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.1.1)
+    sprockets-rails (3.2.0)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.11)
-    sshkit (1.11.2)
+    sqlite3 (1.3.12)
+    sshkit (1.11.3)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     state_machines (0.4.0)
@@ -486,18 +480,18 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
-    truncate_html (0.9.2)
-    ttfunk (1.1.1)
+    truncate_html (0.9.3)
+    ttfunk (1.4.0)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
-    twitter_cldr (3.5.0)
+    twitter_cldr (3.6.0)
       camertron-eprun
-      cldr-plurals-runtime-rb (~> 1.0.0)
+      cldr-plurals-runtime-rb (~> 1.0)
       tzinfo
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.0.1)
+    uglifier (3.0.2)
       execjs (>= 0.3.0, < 3)
     versioncake (2.3.1)
       actionpack (>= 3.2)
@@ -566,5 +560,8 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
 
+RUBY VERSION
+   ruby 2.2.1p85
+
 BUNDLED WITH
-   1.11.2
+   1.12.5

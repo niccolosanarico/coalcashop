@@ -1,6 +1,6 @@
 set :application, "coalcashop"
 set :repo_url, "https://github.com/niccolosanarico/coalcashop.git"
-set :branch, "master"
+# set :branch, "master"
 set :scm, :git
 
 set :format, :pretty

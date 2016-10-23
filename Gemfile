@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.2.1"
+ruby "2.2.5"
 
 gem 'rails', '~> 4.2.0'
 gem 'deface'
@@ -83,11 +83,11 @@ gem 'gibbon'
 # Update to Rails 4.2
 gem 'responders', '~> 2.0'
 
-gem 'spree', :github => 'spree/spree', :branch => '3-0-stable'
-gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '3-0-stable'
-gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '3-0-stable'
-gem 'spree_i18n', :github => 'spree/spree_i18n', :branch => '3-0-stable'
-gem 'spree_static_content', github: 'spree/spree_static_content', branch: '3-0-stable'
-gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git', branch: '3-0-stable'
-gem 'spree_bank_transfer', github: 'redglory/spree_bank_transfer', :branch => '3-0-stable', require: 'spree_bank_transfer'
-gem 'spree_sitemap', github: 'spree-contrib/spree_sitemap', branch: '3-0-stable'
+gem 'spree', :github => 'spree/spree', :branch => '3-1-stable'
+gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '3-1-stable'
+gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '3-1-stable'
+gem 'spree_i18n', :github => 'spree/spree_i18n', :branch => '3-1-stable'
+gem 'spree_static_content', github: 'spree/spree_static_content', branch: '3-1-stable'
+gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git', branch: 'master'
+gem 'spree_bank_transfer', github: 'redglory/spree_bank_transfer', :branch => '3-1-stable', require: 'spree_bank_transfer'
+gem 'spree_sitemap', github: 'spree-contrib/spree_sitemap', branch: '3-1-stable'

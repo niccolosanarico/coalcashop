@@ -31,6 +31,7 @@ set :rails_env, :staging
 
 set :linked_files, %w{ config/database.yml config/application.yml config/newrelic.yml }
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :branch,        :spree31
 
 namespace :images do
   desc "Prepare assets symlink"

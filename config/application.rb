@@ -38,5 +38,10 @@ module Coalcashop
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = [:en, :it]
     config.i18n.default_locale = :it
+
+    initializer 'spree.register.calculators' do |app|
+      app.config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::Sda
+      app.config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::Sda2
+    end
   end
 end

@@ -4,7 +4,7 @@ preload_app!
 
 environment ENV["RAILS_ENV"] || "production"
 
-daemonize
+# daemonize
 
 #stdout_redirect '/u/apps/lolcat/log/stdout', '/u/apps/lolcat/log/stderr'
 #stdout_redirect '/u/apps/lolcat/log/stdout', '/u/apps/lolcat/log/stderr', true
