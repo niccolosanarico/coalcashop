@@ -1,4 +1,4 @@
-<!-- <% if products.any? && params[:controller] == 'spree/products' %>
+<% if products.any? && params[:controller] == 'spree/products' %>
 <div class="row sorting"><div class="col-sm-6 col-sm-offset-6">
   Ordina per:
   <ul class="list-inline">
@@ -6,4 +6,4 @@
     <li><%= link_to_unless current_sorting?(:descend_by_master_price), "Prezzo più alto", params.merge(sorting: :descend_by_master_price) %></li>
   </ul>
 </div></div>
-<% end %> -->
+<% end %>
