@@ -22,3 +22,5 @@ set :puma_role, :app
 #set :puma_env, fetch(:rack_env, fetch(:rails_env, 'staging'))
 set :puma_init_active_record, true
 set :puma_preload_app, true
+
+set :rvm1_map_bins, %w{rake gem bundle ruby}
