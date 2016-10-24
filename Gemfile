@@ -36,7 +36,8 @@ group :development, :test do
   gem 'capistrano', '~> 3.4.0'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
-  gem 'capistrano-rvm'
+  # gem 'capistrano-rvm'
+  gem 'rvm1-capistrano3', require: false
   gem 'capistrano3-puma'
   gem 'diffy'
 end
