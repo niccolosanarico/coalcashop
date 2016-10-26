@@ -1,4 +1,4 @@
-Spree::FrontendHelper.module_eval do
+Spree::FrontendHelper.class_eval do
   ##
   # Override taxons_tree to use the correct css class highlighting rules
   def taxons_tree(root_taxon, current_taxon, max_level = 1)
