@@ -9,7 +9,8 @@ module Spree
       end
 
       def compute_package(package)
-        compute_from_weight(package.weight, package.volume)#contents.sum(&:quantity))
+        # volume is taken back to cubic meters
+        compute_from_weight(package.weight, package.volume / (100*100*100))#contents.sum(&:quantity))
       end
 
       def compute_from_weight(weight, volume)
