@@ -41,6 +41,10 @@ it:
     adjustment_labels:
       tax_rates:
         excluding_tax: '%{name}%{amount}'
+    shipping_rates:
+      display_price:
+        including_tax: "%{price} (incl. %{tax_amount} %{tax_rate_name})"
+        excluding_tax: "%{price} (+ %{tax_amount} %{tax_rate_name})"    
   active_record:
     attributes:
       spree:
