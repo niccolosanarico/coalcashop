@@ -20,7 +20,7 @@ module Spree
         when 0...50
           20
         when 50..1000000
-          20+((weight-50)*0.35).round(-1) #round to closest round tens
+          20+((weight*300)*0.35).round(-1) #round to closest round tens
         end
       end
     end

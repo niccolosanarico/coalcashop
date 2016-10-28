@@ -24,7 +24,7 @@ module Spree
         when 3...15
           13
         when 15...1000000
-          15 + ((weight-15)*0.35).round(-1) #round to closest round tens
+          15 + ((weight*300)*0.35).round(-1) #round to closest round tens
         end
       end
     end
