@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: 5074983b2386d892604559ec2263e8b76ba20c2a
+  revision: c0102cd55f658297a0514f1b8e377d9b28ba5985
   branch: 3-1-stable
   specs:
     spree (3.1.1)
@@ -191,7 +191,7 @@ GEM
     capistrano-bundler (1.2.0)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
-    capistrano-rails (1.1.8)
+    capistrano-rails (1.2.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
     capistrano3-puma (1.2.1)
@@ -277,7 +277,7 @@ GEM
     ffi (1.9.14)
     figaro (1.1.1)
       thor (~> 0.14)
-    font-awesome-rails (4.6.3.1)
+    font-awesome-rails (4.7.0.0)
       railties (>= 3.2, < 5.1)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
