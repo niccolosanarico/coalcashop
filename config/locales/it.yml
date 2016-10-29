@@ -44,7 +44,18 @@ it:
     shipping_rates:
       display_price:
         including_tax: "%{price} (incl. %{tax_amount} %{tax_rate_name})"
-        excluding_tax: "%{price} (+ %{tax_amount} %{tax_rate_name})"    
+        excluding_tax: "%{price} (+ %{tax_amount} %{tax_rate_name})"
+    print_invoice:
+      date: "Data"
+      document_type: "Tipo di documento"
+      order_invoice: "Fattura"
+      number: "Numero"
+      firstname: "Nome"
+      lastname: "Cognome"
+      email: "Email"
+      total: "Totale"
+      order_packaging_slip: "Documento di Trasporto"
+      documents: "Documenti"
   active_record:
     attributes:
       spree:
