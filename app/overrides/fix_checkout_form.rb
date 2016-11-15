@@ -12,5 +12,5 @@ Deface::Override.new(:virtual_path => 'spree/checkout/payment/_gateway',
                     :name => 'change_credit_card_image',
                     :replace => 'erb[loud]:contains("image_tag")',
                     :text => %q(
-                      <%= image_tag '/assets/credit_cards.jpg', :id => 'credit-card-image', :class => 'pull-right cc-smaller-img' %>
+                      <%= image_tag '/assets/images/credit_cards.jpg', :id => 'credit-card-image', :class => 'pull-right cc-smaller-img' %>
                     ))
