@@ -5,7 +5,7 @@ Deface::Override.new(:virtual_path => 'spree/orders/edit',
                         <div>Acquista</div>
                     ')
 
-Deface::Override.new(:virtual_path => 'spree/orders/edit',
-                     :name => 'remove_coupon_from_orders_edit',
-                     :remove => 'erb[loud]:contains(":placeholder => Spree.t(:coupon_code)")'
-                     )
+# Deface::Override.new(:virtual_path => 'spree/orders/edit',
+#                      :name => 'remove_coupon_from_orders_edit',
+#                      :remove => 'erb[loud]:contains(":placeholder => Spree.t(:coupon_code)")'
+#                      )
