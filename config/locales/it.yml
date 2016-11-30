@@ -29,22 +29,17 @@ it:
       next: "Succ. &rsaquo;"
       truncate: "&hellip;"
   spree:
-    incl: "Incluso"
-    show_only_considered_risky: "Mostra solo gli ordini a rischio"
-    order_number: "Ordine numero %{number}"
-    order_state:
-      considered_risky: "Considerato a rischio"
-    invoices_settings: "Impostazioni pre-fattura"
-    invoice_font_face: "Font"
-    next_invoice_number: "Prossimo numero di pre-fattura"
-    invoice_logo_scale: "Scala del logo"
     adjustment_labels:
       tax_rates:
         excluding_tax: '%{name}%{amount}'
-    shipping_rates:
-      display_price:
-        including_tax: "%{price} (incl. %{tax_amount} %{tax_rate_name})"
-        excluding_tax: "%{price} (+ %{tax_amount} %{tax_rate_name})"
+    incl: "Incluso"
+    invoice_font_face: "Font"
+    invoice_logo_scale: "Scala del logo"
+    invoices_settings: "Impostazioni pre-fattura"
+    next_invoice_number: "Prossimo numero di pre-fattura"
+    order_number: "Ordine numero %{number}"
+    order_state:
+      considered_risky: "Considerato a rischio"
     print_invoice:
       date: "Data"
       document_type: "Tipo di documento"
@@ -56,7 +51,12 @@ it:
       total: "Totale"
       order_packaging_slip: "Documento di Trasporto"
       documents: "Documenti"
-    promotion_label: '(%{name})'
+    promotion_label: "(%{name})"
+    shipping_rates:
+      display_price:
+        including_tax: "%{price} (incl. %{tax_amount} %{tax_rate_name})"
+        excluding_tax: "%{price} (+ %{tax_amount} %{tax_rate_name})"
+    show_only_considered_risky: "Mostra solo gli ordini a rischio"
   active_record:
     attributes:
       spree:
